@@ -11,12 +11,16 @@ var migrate_xml_edict_to_json = function (src, dst) {
     err,
     result
   ) {
-    fs.writeFileSync(
-      dst + '.gz',
-      zlib.gzipSync(JSON.stringify(result, null, 2), {
-        level: zlib.constants.Z_BEST_COMPRESSION
-      })
-    )
+    if (err) {
+      console.error(err)
+    } else {
+      fs.writeFileSync(
+        dst + '.gz',
+        zlib.gzipSync(JSON.stringify(result, null, 2), {
+          level: zlib.constants.Z_BEST_COMPRESSION
+        })
+      )
+    }
   })
 }
 
