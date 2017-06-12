@@ -1,15 +1,14 @@
 {
-  "name": "neko",
+  "name": "convert",
   "version": "1.0.0",
-  "description": "neko chan",
-  "main": "index.js",
+  "description": "",
+  "main": "convert.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.15.3",
     "xml2js": "^0.4.17"
   }
 }

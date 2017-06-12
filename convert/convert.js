@@ -25,6 +25,6 @@ var migrate_xml_edict_to_json = function (src, dst) {
 }
 
 migrate_xml_edict_to_json(
-  path.join(__dirname, '..', 'JMdict_e.gz'),
-  path.join(__dirname, 'edict.json')
+  path.join(__dirname, 'JMdict_e.gz'),
+  path.join(__dirname, 'edict.raw.json')
 )

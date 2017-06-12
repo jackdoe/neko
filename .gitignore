@@ -1,2 +1,3 @@
 node_modules
-edict.json.gz
+.DS_Store
+edict.raw.json.gz
