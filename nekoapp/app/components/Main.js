@@ -23,25 +23,25 @@ export default class Main extends Component {
   }
 
   tokenize (s) {
-    return s.toLowerCase().split(/\W+/).filter(e => {
-      return e.length > 1
+    return s.toLowerCase().split(/[\s"'_\.-]+/).filter(e => {
+      return e.length > 0
     })
   }
 
-  evaluate () {
+  evaluate (sentence, text) {
     let answer = {}
     let total = 0
-    for (let s of this.tokenize(this.state.sentence.a)) {
+    for (let s of this.tokenize(sentence.a)) {
       answer[s] = true
       total++
     }
     let score = 0
-    for (let s of this.tokenize(this.state.text)) {
+    for (let s of this.tokenize(text)) {
       if (answer[s]) {
         score++
       }
     }
-    this.setState({ score: (score / total).toFixed(2) })
+    return (score / total).toFixed(2)
   }
 
   render () {
@@ -60,60 +60,76 @@ export default class Main extends Component {
     }
 
     return (
-      <View style={{ flex: 1, padding: 40 }}>
+      <View style={{ flex: 1 }}>
         <ScrollView>
           <View
-            style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}
+            style={{
+              justifyContent: 'center',
+              padding: 40
+            }}
           >
             <View>
               <Text h1 onPress={e => speak(sentence.q)}>
                 {sentence.q}
               </Text>
             </View>
-            <Divider style={{ backgroundColor: '#000', height: 40 }} />
+            <Divider style={{ backgroundColor: '#fff', height: 40 }} />
             <TextInput
+              autoCapitalize="none"
               style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
-              onChangeText={text => this.setState({ text })}
+              onChangeText={text => {
+                this.setState({
+                  text: text,
+                  score: this.evaluate(sentence, text)
+                })
+              }}
               value={this.state.text}
             />
-            <Divider style={{ backgroundColor: '#000', height: 40 }} />
+            <Divider style={{ backgroundColor: '#fff', height: 40 }} />
             <View
               style={{
                 flex: 1,
                 flexDirection: 'row',
-                justifyContent: 'space-between'
+                justifyContent: 'space-between',
+                alignItems: 'center'
               }}
             >
-              <Button
-                title="Check"
-                style={{ paddingTop: 5 }}
-                onPress={() => this.evaluate()}
-              />
-
-              <Button
-                title={this.state.toggleDebug ? 'Hide Answer' : 'Show Answer'}
-                style={{ paddingTop: 5 }}
+              <TouchableHighlight
+                underlayColor="gray"
                 onPress={() => {
-                  this.setState({ toggleDebug: !this.state.toggleDebug })
+                  this.setState({ showAnswer: !this.state.showAnswer })
                 }}
-              />
+              >
+                <View>
+                  <Text h4>{this.state.showAnswer ? 'Hide' : 'Show'}</Text>
+                </View>
+              </TouchableHighlight>
+              <View style={{ flex: 1, alignItems: 'center' }}>
+                <Text h8>
+                  score: {this.state.score}
+                </Text>
 
-              <Button
-                title="Next"
-                style={{ paddingTop: 5 }}
+              </View>
+              <TouchableHighlight
+                underlayColor="gray"
                 onPress={() =>
-                  this.setState({ sentence: data.pick(), text: '', score: 0 })}
-              />
-
+                  this.setState({
+                    sentence: data.pick(),
+                    text: '',
+                    score: 0,
+                    showAnswer: false
+                  })}
+              >
+                <View>
+                  <Text h4>Next</Text>
+                </View>
+              </TouchableHighlight>
             </View>
-            <Divider style={{ backgroundColor: '#000', height: 40 }} />
-            <Text h8>
-              score: {this.state.score}
-            </Text>
+            <Divider style={{ backgroundColor: '#fff', height: 40 }} />
 
-            <Divider style={{ backgroundColor: '#000', height: 40 }} />
+            <Divider style={{ backgroundColor: '#fff', height: 40 }} />
             <Text h8>
-              {this.state.toggleDebug ? sentence.a : ''}
+              {this.state.showAnswer ? sentence.a : ''}
             </Text>
           </View>
         </ScrollView>
