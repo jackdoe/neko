@@ -53,7 +53,17 @@ export default class Main extends Component {
 
   renderEntry (entry, gloss, style) {
     let kele = undefined, rele = undefined, g = undefined, seen = {}
-
+    let speak = function (text) {
+      return Speech.isSpeaking()
+        .then(s => {
+          if (!s)
+            return Speech.speak({
+              text: text,
+              voice: 'ja-JP'
+            })
+        })
+        .catch(e => {})
+    }
     if (entry.K_ELE) {
       kele = entry.K_ELE.map((e, i) => {
         let text = e.KEB.join(' , ')
@@ -61,16 +71,7 @@ export default class Main extends Component {
         seen[text] = true
 
         return (
-          <Text
-            h1
-            key={i}
-            onPress={e => {
-              Speech.speak({
-                text: text,
-                voice: 'ja-JP'
-              })
-            }}
-          >
+          <Text h1 key={i} onPress={e => speak(text)}>
             {text}
           </Text>
         )
@@ -81,16 +82,7 @@ export default class Main extends Component {
         let text = e.REB.join(' , ')
         if (seen[text]) return
         return (
-          <Text
-            h3
-            key={i}
-            onPress={e => {
-              Speech.speak({
-                text: text,
-                voice: 'ja-JP'
-              })
-            }}
-          >
+          <Text h3 key={i} onPress={e => speak(text)}>
             {e.REB.join(' , ')}
           </Text>
         )
