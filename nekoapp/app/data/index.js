@@ -1,12 +1,9 @@
 'use strict'
 
-const DICT = require('./edict.json')
+const SENTENCES = require('./sentences.json')
 
 var pick = function () {
-  let element = DICT[Math.floor(Math.random() * DICT.length)]
-  let entry =
-    element.entries[Math.floor(Math.random() * element.entries.length)]
-  return entry
+  return SENTENCES[Math.floor(Math.random() * SENTENCES.length)]
 }
 
 module.exports = {
