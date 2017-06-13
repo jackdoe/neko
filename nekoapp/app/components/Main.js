@@ -68,8 +68,8 @@ export default class Main extends Component {
               padding: 40
             }}
           >
-            <View>
-              <Text h1 onPress={e => speak(sentence.q)}>
+            <View style={{ alignItems: 'center' }}>
+              <Text h2 onPress={e => speak(sentence.q)}>
                 {sentence.q}
               </Text>
             </View>
