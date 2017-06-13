@@ -7,23 +7,23 @@ import {
   TouchableHighlight
 } from 'react-native'
 import { Button, Text, Divider } from 'react-native-elements'
+var Speech = require('react-native-speech')
 
 const data = require('../data')
-const shuffle = function (a) {
-  var j, x, i
-  for (i = a.length; i; i--) {
-    j = Math.floor(Math.random() * i)
-    x = a[i - 1]
-    a[i - 1] = a[j]
-    a[j] = x
-  }
-}
 
 export default class Main extends Component {
+  pick () {
+    let picks = [data.pick(), data.pick(), data.pick(), data.pick()]
+
+    return {
+      picked: picks[Math.floor(Math.random() * picks.length)],
+      picks: picks
+    }
+  }
   constructor (props) {
     super(props)
     this.state = {
-      picked: data.pick(),
+      ...this.pick(),
       initial: true,
       nShown: 1,
       nCorrect: 0
@@ -44,12 +44,13 @@ export default class Main extends Component {
     this.setState({
       correct: correct,
       prevPicked: this.state.picked,
-      picked: data.pick(),
+      ...this.pick(),
       initial: false,
       nShown: this.state.nShown + 1,
       nCorrect: correct ? this.state.nCorrect + 1 : this.state.nCorrect
     })
   }
+
   renderEntry (entry, gloss, style) {
     let kele = undefined, rele = undefined, g = undefined, seen = {}
 
@@ -59,14 +60,40 @@ export default class Main extends Component {
         if (seen[text]) return
         seen[text] = true
 
-        return <Text h1 key={i}>{text}</Text>
+        return (
+          <Text
+            h1
+            key={i}
+            onPress={e => {
+              Speech.speak({
+                text: text,
+                voice: 'ja-JP'
+              })
+            }}
+          >
+            {text}
+          </Text>
+        )
       })
     }
     if (entry.R_ELE) {
       rele = entry.R_ELE.map((e, i) => {
         let text = e.REB.join(' , ')
         if (seen[text]) return
-        return <Text h3 key={i}>{e.REB.join(' , ')}</Text>
+        return (
+          <Text
+            h3
+            key={i}
+            onPress={e => {
+              Speech.speak({
+                text: text,
+                voice: 'ja-JP'
+              })
+            }}
+          >
+            {e.REB.join(' , ')}
+          </Text>
+        )
       })
     }
 
@@ -87,9 +114,8 @@ export default class Main extends Component {
   }
   render () {
     let picked = this.state.picked
-    let choices = [data.pick(), data.pick(), data.pick(), picked]
     //    shuffle(choices)
-    let buttons = choices.map((e, i) => {
+    let buttons = this.state.picks.map((e, i) => {
       let title = e.SENSE[0].GLOSS.join(', ')
 
       return (
@@ -133,10 +159,21 @@ export default class Main extends Component {
             </View>
             <Divider style={{ backgroundColor: '#000', height: 40 }} />
             <View>
-              <Text h8>
-                score: {(this.state.nCorrect / this.state.nShown).toFixed(2)}
+              <Text
+                h8
+                onPress={e => {
+                  this.setState({ toggleDebug: !this.state.toggleDebug })
+                }}
+              >
+                score:
+                {(this.state.nCorrect / this.state.nShown).toFixed(2)}
               </Text>
             </View>
+            <Text h8>
+              {this.state.toggleDebug
+                ? JSON.stringify(this.state.picked, null, 2)
+                : ''}
+            </Text>
           </View>
         </ScrollView>
       </View>
