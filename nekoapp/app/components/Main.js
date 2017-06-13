@@ -76,7 +76,13 @@ export default class Main extends Component {
             <Divider style={{ backgroundColor: '#fff', height: 40 }} />
             <TextInput
               autoCapitalize="none"
-              style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
+              style={{
+                height: 40,
+                borderColor: 'gray',
+                borderWidth: 0.5,
+                paddingLeft: 10,
+                paddingRight: 10
+              }}
               onChangeText={text => {
                 this.setState({
                   text: text,
