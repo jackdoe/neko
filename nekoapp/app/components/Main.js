@@ -18,7 +18,8 @@ export default class Main extends Component {
     this.state = {
       sentence: data.pick(),
       text: '',
-      score: 0
+      score: 0,
+      correct: []
     }
   }
 
@@ -31,6 +32,7 @@ export default class Main extends Component {
   evaluate (sentence, text) {
     let answer = {}
     let total = 0
+    let correct = []
     for (let s of this.tokenize(sentence.a)) {
       answer[s] = true
       total++
@@ -38,10 +40,11 @@ export default class Main extends Component {
     let score = 0
     for (let s of this.tokenize(text)) {
       if (answer[s]) {
+        correct.push(s)
         score++
       }
     }
-    return (score / total).toFixed(2)
+    return { score: (score / total).toFixed(2), correct: correct }
   }
 
   render () {
@@ -58,7 +61,9 @@ export default class Main extends Component {
         })
         .catch(e => {})
     }
-
+    let correct = this.state.correct.map((e, i) => {
+      return <Text h8 key={i}>{e}</Text>
+    })
     return (
       <View style={{ flex: 1 }}>
         <ScrollView>
@@ -68,8 +73,8 @@ export default class Main extends Component {
               padding: 40
             }}
           >
-            <View>
-              <Text h2 onPress={e => speak(sentence.q)}>
+            <View style={{ alignItems: 'center' }}>
+              <Text h4 onPress={e => speak(sentence.q)}>
                 {sentence.q}
               </Text>
             </View>
@@ -84,14 +89,18 @@ export default class Main extends Component {
                 paddingRight: 10
               }}
               onChangeText={text => {
+                let ev = this.evaluate(sentence, text)
                 this.setState({
                   text: text,
-                  score: this.evaluate(sentence, text)
+                  score: ev.score,
+                  correct: ev.correct
                 })
               }}
               value={this.state.text}
             />
-            <Divider style={{ backgroundColor: '#fff', height: 40 }} />
+            <Divider style={{ backgroundColor: '#fff', height: 10 }} />
+            <View>{correct}</View>
+            <Divider style={{ backgroundColor: '#fff', height: 10 }} />
             <View
               style={{
                 flex: 1,
@@ -123,6 +132,7 @@ export default class Main extends Component {
                     sentence: data.pick(),
                     text: '',
                     score: 0,
+                    correct: [],
                     showAnswer: false
                   })}
               >
