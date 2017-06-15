@@ -1,4 +1,4 @@
-package com.nekoapp;
+package com.neko;
 
 import android.app.Application;
 
