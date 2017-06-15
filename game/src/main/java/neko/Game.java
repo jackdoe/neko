@@ -158,11 +158,15 @@ public class Game {
     public Game game;
     public int you;
     public MessageType type;
+    public int totalActivePlayers;
+    public int totalGames;
 
     public Message(Game game, int you, MessageType type) {
       this.game = game;
       this.you = you;
       this.type = type;
+      this.totalActivePlayers = userToGame.size();
+      this.totalGames = games.size();
     }
   }
 
