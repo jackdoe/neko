@@ -12,7 +12,7 @@ public class Sentence {
   public static String splitPattern = "[ \"'_\\.,\\-?]+";
 
   public String question;
-  public String answer; // hmm should people see the answer in multi player setting?
+  public transient String answer; // hmm should people see the answer in multi player setting?
   public transient String[] tokenized;
   public transient Map<String, Integer> freq;
 
