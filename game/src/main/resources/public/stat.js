@@ -3,7 +3,7 @@ setInterval(function() {
   xhr.open('GET', '/stats');
   xhr.onload = function() {
       if (xhr.status === 200) {
-          document.getElementById('stats').innerHTML = xhr.responseText);
+          document.getElementById('stats').innerHTML = xhr.responseText;
       }
   };
   xhr.send();
