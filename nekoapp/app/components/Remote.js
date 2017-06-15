@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import { View, ScrollView, TextInput, TouchableOpacity } from 'react-native'
 import { Badge, Text, Divider } from 'react-native-elements'
 
-var Speech = require('react-native-speech')
+import Speak from './Speak'
 var randomColor = require('randomcolor')
 
 export default class Remote extends Component {
@@ -166,25 +166,12 @@ export default class Remote extends Component {
             alignItems: 'center'
           }}
         >
-          <Text h6 onPress={() => this.reconnect()}>waiting...</Text>
+          <Text h6 onPress={() => this.reconnect()}>connecting...</Text>
         </View>
       )
     }
 
     let sentence = message.game.selectedSentence
-
-    let speak = function (text) {
-      return Speech.isSpeaking()
-        .then(s => {
-          if (!s) {
-            return Speech.speak({
-              text: text,
-              voice: 'ja-JP'
-            })
-          }
-        })
-        .catch(e => {})
-    }
 
     return (
       <View style={{ flex: 1 }}>
@@ -202,12 +189,11 @@ export default class Remote extends Component {
                   : ''}
               </Text>
               <Divider style={{ backgroundColor: '#fff', height: 40 }} />
-              <Text h4 onPress={e => speak(sentence.question)}>
-                {sentence.question}
-              </Text>
+              <Speak text={sentence.question} />
             </View>
             <Divider style={{ backgroundColor: '#fff', height: 40 }} />
             <TextInput
+              underlineColorAndroid="transparent"
               autoCapitalize="none"
               style={{
                 height: 40,

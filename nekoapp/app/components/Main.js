@@ -20,11 +20,12 @@ export default class Main extends Component {
     let inner = this.state.multi ? <Remote /> : <Local />
     return (
       <View style={{ flex: 1 }}>
-        <View style={{ flex: 10 }}>
+        <View style={{ flex: 10, backgroundColor: '#fff' }}>
           {inner}
         </View>
         <View
           style={{
+            backgroundColor: '#fff',
             flex: 1,
             justifyContent: 'center',
             alignItems: 'center'

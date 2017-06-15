@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { View, ScrollView, TextInput, TouchableOpacity } from 'react-native'
 import { Text, Divider } from 'react-native-elements'
-var Speech = require('react-native-speech')
-
+import Speak from './Speak'
 const data = require('../data')
 
 export default class Local extends Component {
@@ -17,7 +16,7 @@ export default class Local extends Component {
   }
 
   tokenize (s) {
-    return s.toLowerCase().split(/[\s"'_\.-]+/).filter(e => {
+    return s.toLowerCase().split(/[\s"'_\.,-]+/).filter(e => {
       return e.length > 0
     })
   }
@@ -67,12 +66,11 @@ export default class Local extends Component {
             }}
           >
             <View style={{ alignItems: 'center' }}>
-              <Text h4 onPress={e => speak(sentence.q)}>
-                {sentence.q}
-              </Text>
+              <Speak text={sentence.q} />
             </View>
             <Divider style={{ backgroundColor: '#fff', height: 40 }} />
             <TextInput
+              underlineColorAndroid="transparent"
               autoCapitalize="none"
               style={{
                 height: 40,
