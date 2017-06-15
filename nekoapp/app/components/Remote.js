@@ -22,7 +22,7 @@ export default class Remote extends Component {
       this.ws.close()
     }
 
-    this.ws = new WebSocket('wss://www.neko.science/chat')
+    this.ws = new WebSocket('wss://neko.science/chat')
 
     this.ws.onopen = () => {
       this.lastReceived = new Date().getTime()
