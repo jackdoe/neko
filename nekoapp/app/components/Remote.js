@@ -27,9 +27,13 @@ export default class Remote extends Component {
     this.ws.onopen = () => {
       this.lastReceived = new Date().getTime()
       clearInterval(this.pinger)
-      this.ws.send('__ping__')
-      this.pinger = setInterval(() => {
+      try {
         this.ws.send('__ping__')
+      } catch (e) {}
+      this.pinger = setInterval(() => {
+        try {
+          this.ws.send('__ping__')
+        } catch (e) {}
         let now = new Date().getTime()
         // if it takes more than 10 seconds to receive a pong just disconnect
         if (now - this.lastReceived > 10000) {
@@ -206,7 +210,9 @@ export default class Remote extends Component {
                 this.setState({
                   text: text
                 })
-                this.ws.send(text)
+                try {
+                  this.ws.send(text)
+                } catch (e) {}
               }}
               value={this.state.text}
             />
