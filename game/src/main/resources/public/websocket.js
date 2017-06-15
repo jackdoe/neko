@@ -1,4 +1,4 @@
-var ws = new WebSocket("ws://neko.science/chat");
+var ws = new WebSocket("wss://neko.science/chat");
 webSocket.onmessage = function (msg) { id("gameState").innerHTML = msg.data };
 
 id("send").addEventListener("click", function () {
