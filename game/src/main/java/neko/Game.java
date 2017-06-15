@@ -143,8 +143,6 @@ public class Game {
           v.currentScore = 0f;
         });
     this.broadcast(MessageType.SENTENCE_CHANGED);
-
-    logger.info(this + " new sentence picked");
   }
 
   public enum MessageType {
@@ -158,13 +156,21 @@ public class Game {
     public Game game;
     public int you;
     public MessageType type;
-    public int totalActivePlayers;
-    public int totalGames;
+    public Stats stats;
 
     public Message(Game game, int you, MessageType type) {
       this.game = game;
       this.you = you;
       this.type = type;
+      this.stats = new Stats();
+    }
+  }
+
+  public static class Stats {
+    public int totalActivePlayers;
+    public int totalGames;
+
+    public Stats() {
       this.totalActivePlayers = userToGame.size();
       this.totalGames = games.size();
     }
@@ -190,10 +196,10 @@ public class Game {
     userToGame.forEach(
         (k, game) -> {
           if (game.timeLeft() <= 0) {
-            logger.info(game + ":picking new sentence");
+            logger.debug(game + ":picking new sentence");
             game.pickNewSentence();
           }
-          logger.info(game.toString());
+          logger.debug(game.toString());
         });
     logger.info("number of user: " + userToGame.size() + " number of games: " + games.size());
   }
