@@ -20,7 +20,7 @@ public class Main {
     staticFileLocation("/public");
     webSocket("/chat", ChatWebSocketHandler.class);
     get(
-        "/stat",
+        "/stats",
         (req, res) -> {
           res.status(200);
           res.type("application/json");
