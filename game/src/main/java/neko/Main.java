@@ -7,6 +7,7 @@ import static spark.Spark.webSocket;
 public class Main {
 
   public static void main(String[] args) {
+    Sentence.load();
     staticFileLocation("/public");
     webSocket("/chat", ChatWebSocketHandler.class);
     init();

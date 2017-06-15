@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "browserify-zlib": "^0.2.0",
+    "randomcolor": "^0.5.3",
     "react": "16.0.0-alpha.12",
     "react-native": "0.45.1",
     "react-native-elements": "^0.12.2",

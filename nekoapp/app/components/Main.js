@@ -5,150 +5,40 @@ import {
   Animated,
   ScrollView,
   TextInput,
-  TouchableHighlight
+  TouchableOpacity,
+  AppRegistry
 } from 'react-native'
 import { Button, Text, Divider } from 'react-native-elements'
-var Speech = require('react-native-speech')
-
-const data = require('../data')
-
+import Local from './Local'
+import Remote from './Remote'
 export default class Main extends Component {
   constructor (props) {
     super(props)
-    this.state = {
-      sentence: data.pick(),
-      text: '',
-      score: 0,
-      correct: []
-    }
+    this.state = { multi: false }
   }
-
-  tokenize (s) {
-    return s.toLowerCase().split(/[\s"'_\.-]+/).filter(e => {
-      return e.length > 0
-    })
-  }
-
-  evaluate (sentence, text) {
-    let answer = {}
-    let total = 0
-    let correct = []
-    for (let s of this.tokenize(sentence.a)) {
-      answer[s] = true
-      total++
-    }
-    let score = 0
-    for (let s of this.tokenize(text)) {
-      if (answer[s]) {
-        correct.push(s)
-        score++
-      }
-    }
-    return { score: (score / total).toFixed(2), correct: correct }
-  }
-
   render () {
-    let sentence = this.state.sentence
-    let speak = function (text) {
-      return Speech.isSpeaking()
-        .then(s => {
-          if (!s) {
-            return Speech.speak({
-              text: text,
-              voice: 'ja-JP'
-            })
-          }
-        })
-        .catch(e => {})
-    }
-    let correct = this.state.correct.map((e, i) => {
-      return <Text h8 key={i}>{e}</Text>
-    })
+    let inner = this.state.multi ? <Remote /> : <Local />
     return (
       <View style={{ flex: 1 }}>
-        <ScrollView>
-          <View
-            style={{
-              justifyContent: 'center',
-              padding: 40
+        <View style={{ flex: 10 }}>
+          {inner}
+        </View>
+        <View
+          style={{
+            flex: 1,
+            justifyContent: 'center',
+            alignItems: 'center'
+          }}
+        >
+          <TouchableOpacity
+            activeOpacity={0.5}
+            onPress={() => {
+              this.setState({ multi: this.state.multi ? false : true })
             }}
           >
-            <View style={{ alignItems: 'center' }}>
-              <Text h4 onPress={e => speak(sentence.q)}>
-                {sentence.q}
-              </Text>
-            </View>
-            <Divider style={{ backgroundColor: '#fff', height: 40 }} />
-            <TextInput
-              autoCapitalize="none"
-              style={{
-                height: 40,
-                borderColor: 'gray',
-                borderWidth: 0.5,
-                paddingLeft: 10,
-                paddingRight: 10
-              }}
-              onChangeText={text => {
-                let ev = this.evaluate(sentence, text)
-                this.setState({
-                  text: text,
-                  score: ev.score,
-                  correct: ev.correct
-                })
-              }}
-              value={this.state.text}
-            />
-            <Divider style={{ backgroundColor: '#fff', height: 10 }} />
-            <View>{correct}</View>
-            <Divider style={{ backgroundColor: '#fff', height: 10 }} />
-            <View
-              style={{
-                flex: 1,
-                flexDirection: 'row',
-                justifyContent: 'space-between',
-                alignItems: 'center'
-              }}
-            >
-              <TouchableHighlight
-                underlayColor="gray"
-                onPress={() => {
-                  this.setState({ showAnswer: !this.state.showAnswer })
-                }}
-              >
-                <View>
-                  <Text h4>{this.state.showAnswer ? 'Hide' : 'Show'}</Text>
-                </View>
-              </TouchableHighlight>
-              <View style={{ flex: 1, alignItems: 'center' }}>
-                <Text h8>
-                  score: {this.state.score}
-                </Text>
-
-              </View>
-              <TouchableHighlight
-                underlayColor="gray"
-                onPress={() =>
-                  this.setState({
-                    sentence: data.pick(),
-                    text: '',
-                    score: 0,
-                    correct: [],
-                    showAnswer: false
-                  })}
-              >
-                <View>
-                  <Text h4>Next</Text>
-                </View>
-              </TouchableHighlight>
-            </View>
-            <Divider style={{ backgroundColor: '#fff', height: 40 }} />
-
-            <Divider style={{ backgroundColor: '#fff', height: 40 }} />
-            <Text h8>
-              {this.state.showAnswer ? sentence.a : ''}
-            </Text>
-          </View>
-        </ScrollView>
+            <Text>{this.state.multi ? 'single player' : 'join a game'}</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     )
   }
