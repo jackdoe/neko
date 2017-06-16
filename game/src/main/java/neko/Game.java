@@ -21,7 +21,7 @@ public class Game {
 
   private static Map<Session, Game> userToGame = new ConcurrentHashMap<>();
   private static Map<Game, Boolean> games = new ConcurrentHashMap<>();
-
+  public GameSetting setting;
   public long id;
   public Sentence selectedSentence;
   public long sentencePickedAt;
@@ -43,7 +43,8 @@ public class Game {
         1000);
   }
 
-  public Game() {
+  public Game(GameSetting setting) {
+    this.setting = setting;
     this.id = counter.getAndIncrement();
     pickNewSentence();
   }
@@ -74,24 +75,31 @@ public class Game {
     userToGame.remove(user);
   }
 
-  public static Game findGame(Session user) {
-    return userToGame.computeIfAbsent(
-        user,
-        (k) -> {
-          for (Game game : games.keySet()) {
-            if (game.members() < 5) {
+  public static void findOrMakeGame(Session user, GameSetting setting) {
+    clearUser(user); // XXX: could be just changing settings
+    userToGame
+        .computeIfAbsent(
+            user,
+            (k) -> {
+              for (Game game : games.keySet()) {
+                if (game.setting.equals(setting) && game.members() < 5) {
+                  game.addMember(user);
+                  return game;
+                }
+              }
+
+              Game game = new Game(setting);
               game.addMember(user);
+
+              games.put(game, true);
+
               return game;
-            }
-          }
+            })
+        .broadcast(MessageType.USER_JOINED);
+  }
 
-          Game game = new Game();
-          game.addMember(user);
-
-          games.put(game, true);
-
-          return game;
-        });
+  public static Game findGame(Session user) {
+    return userToGame.get(user);
   }
 
   @JsonProperty("state")
@@ -135,7 +143,7 @@ public class Game {
   }
 
   public synchronized void pickNewSentence() {
-    this.selectedSentence = Sentence.pick();
+    this.selectedSentence = Sentence.pick(this.setting);
     this.sentencePickedAt = System.currentTimeMillis();
     users.forEach(
         (k, v) -> {
@@ -193,8 +201,8 @@ public class Game {
   }
 
   public static void ticker() {
-    userToGame.forEach(
-        (k, game) -> {
+    games.forEach(
+        (game, v) -> {
           if (game.timeLeft() <= 0) {
             logger.debug(game + ":picking new sentence");
             game.pickNewSentence();

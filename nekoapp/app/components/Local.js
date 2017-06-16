@@ -8,15 +8,36 @@ export default class Local extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      sentence: data.pick(),
+      sentence: data.pick(this.props.language, this.props.level),
       text: '',
       score: 0,
-      correct: []
+      correct: [],
+      language: this.props.language,
+      level: this.props.level
+    }
+
+    this.changeLanguage = lang => {
+      this.setState({ language: lang })
+      this.pickNewSentence(lang, this.state.level)
+    }
+    this.changeLevel = level => {
+      this.setState({ level: level })
+      this.pickNewSentence(this.state.language, level)
     }
   }
 
+  pickNewSentence (language, level) {
+    this.setState({
+      sentence: data.pick(language, level),
+      text: '',
+      score: 0,
+      correct: [],
+      showAnswer: false
+    })
+  }
+
   tokenize (s) {
-    return s.toLowerCase().split(/[\s"'_\.,-]+/).filter(e => {
+    return s.toLowerCase().split(/[\s"'_.,-]+/).filter(e => {
       return e.length > 0
     })
   }
@@ -41,18 +62,6 @@ export default class Local extends Component {
 
   render () {
     let sentence = this.state.sentence
-    let speak = function (text) {
-      return Speech.isSpeaking()
-        .then(s => {
-          if (!s) {
-            return Speech.speak({
-              text: text,
-              voice: 'ja-JP'
-            })
-          }
-        })
-        .catch(e => {})
-    }
     let correct = this.state.correct.map((e, i) => {
       return <Text h8 key={i}>{e}</Text>
     })
@@ -66,7 +75,7 @@ export default class Local extends Component {
             }}
           >
             <View style={{ alignItems: 'center' }}>
-              <Speak text={sentence.q} />
+              <Speak text={sentence.q} language={this.props.language} />
             </View>
             <Divider style={{ backgroundColor: '#fff', height: 40 }} />
             <TextInput
@@ -119,13 +128,7 @@ export default class Local extends Component {
               <TouchableOpacity
                 activeOpacity={0.5}
                 onPress={() =>
-                  this.setState({
-                    sentence: data.pick(),
-                    text: '',
-                    score: 0,
-                    correct: [],
-                    showAnswer: false
-                  })}
+                  this.pickNewSentence(this.state.language, this.state.level)}
               >
                 <View>
                   <Text h4>Next</Text>

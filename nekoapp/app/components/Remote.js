@@ -13,7 +13,27 @@ export default class Remote extends Component {
     this.state = {
       text: '',
       error: '',
-      timeLeft: 0
+      timeLeft: 0,
+      language: this.props.language,
+      level: this.props.level
+    }
+
+    this.changeLanguage = lang => {
+      this.setState({ language: lang })
+      this.changeSetting(lang, this.state.level)
+    }
+    this.changeLevel = level => {
+      this.setState({ level: level })
+      this.changeSetting(this.state.language, level)
+    }
+    this.changeSetting = (language, level) => {
+      try {
+        this.ws.send(
+          JSON.stringify({
+            setting: { language: language, level: level }
+          })
+        )
+      } catch (e) {}
     }
   }
 
@@ -27,12 +47,10 @@ export default class Remote extends Component {
     this.ws.onopen = () => {
       this.lastReceived = new Date().getTime()
       clearInterval(this.pinger)
-      try {
-        this.ws.send('__ping__')
-      } catch (e) {}
+      this.changeSetting(this.state.language, this.state.level)
       this.pinger = setInterval(() => {
         try {
-          this.ws.send('__ping__')
+          this.ws.send(JSON.stringify({ ping: true }))
         } catch (e) {}
         let now = new Date().getTime()
         // if it takes more than 10 seconds to receive a pong just disconnect
@@ -49,15 +67,14 @@ export default class Remote extends Component {
     }
 
     this.ws.onmessage = e => {
-      if (e.data.startsWith('pong:')) {
+      let message = JSON.parse(e.data)
+      if (message.pongSentAt) {
         this.lastReceived = new Date().getTime()
         this.setState({
-          timeLeft: parseInt(e.data.substring(e.data.indexOf(':') + 1))
+          timeLeft: message.currentGameTimeLeft
         })
         return
       }
-
-      let message = JSON.parse(e.data)
       if (message.type === 'SENTENCE_CHANGED') {
         this.setState({ text: '', timeLeft: 0 })
       }
@@ -193,7 +210,7 @@ export default class Remote extends Component {
                   : ''}
               </Text>
               <Divider style={{ backgroundColor: '#fff', height: 40 }} />
-              <Speak text={sentence.question} />
+              <Speak text={sentence.question} language={this.state.language} />
             </View>
             <Divider style={{ backgroundColor: '#fff', height: 40 }} />
             <TextInput

@@ -15,7 +15,6 @@ public class Score {
 
   public Score(int id) {
     this.id = id;
-    logger.info("new score created with id: ", id);
   }
 
   public boolean score(Sentence sentence, String input) {
