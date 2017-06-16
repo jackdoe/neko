@@ -111,7 +111,7 @@ public class Game {
     users.computeIfAbsent(user, (k) -> new Score(user.hashCode()));
     users.forEach(
         (k, score) -> {
-          score.totalScore = 0;
+          score.totalScore = 0; // XXX: should we reset the score or keep per-user view?
         });
     broadcast(MessageType.USER_JOINED);
   }
