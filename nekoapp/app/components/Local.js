@@ -90,11 +90,15 @@ export default class Local extends Component {
               }}
               onChangeText={text => {
                 let ev = this.evaluate(sentence, text)
-                this.setState({
-                  text: text,
-                  score: ev.score,
-                  correct: ev.correct
-                })
+                if (ev.score > 0.99) {
+                  this.pickNewSentence(this.state.language, this.state.level)
+                } else {
+                  this.setState({
+                    text: text,
+                    score: ev.score,
+                    correct: ev.correct
+                  })
+                }
               }}
               value={this.state.text}
             />

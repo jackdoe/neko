@@ -46,7 +46,7 @@ public class Sentence {
     try {
       List<Sentence> ja =
           mapper.readValue(
-              Sentence.class.getClassLoader().getResourceAsStream("sentences.json"),
+              Sentence.class.getClassLoader().getResourceAsStream("sentences_ja_advanced.json"),
               new TypeReference<List<Sentence>>() {});
 
       sentences.put(new GameSetting(Level.advanced, Language.ja), ja);

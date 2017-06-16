@@ -1,6 +1,9 @@
 'use strict'
 
-const SENTENCES = { ja_advanced: require('./sentences_ja_advanced.json') }
+const SENTENCES = {
+  ja_advanced: require('./sentences_ja_advanced.json'),
+  ja_beginner: require('./sentences_ja_beginner.json')
+}
 
 var pick = function (language, level) {
   let list = SENTENCES[language + '_' + level]
