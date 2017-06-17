@@ -227,6 +227,7 @@ export default class Remote extends Component {
             <View style={{ backgroundColor: '#fff', height: 40 }} />
             <TextInput
               underlineColorAndroid="transparent"
+              autoCorrect={false}
               autoCapitalize="none"
               style={{
                 height: 40,

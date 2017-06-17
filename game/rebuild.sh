@@ -1,3 +1,7 @@
+#!/bin/bash
+base=`dirname $0`
+pushd $base/../sentences && sh copy.sh && popd
+
 mvn clean package
 sudo docker build . -t neko
 sudo docker kill $(sudo docker ps | grep 4567 | cut -f 1 -d ' ')

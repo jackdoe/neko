@@ -85,6 +85,7 @@ export default class Local extends Component {
             </View>
             <View style={{ backgroundColor: '#fff', height: 40 }} />
             <TextInput
+              autoCorrect={false}
               underlineColorAndroid="transparent"
               autoCapitalize="none"
               style={{

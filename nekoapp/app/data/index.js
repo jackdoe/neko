@@ -1,8 +1,12 @@
 'use strict'
 
 const SENTENCES = {
-  ja_advanced: require('./sentences_ja_advanced.json'),
-  ja_beginner: require('./sentences_ja_beginner.json')
+  ja_advanced: require('./sentences/ja_advanced.json'),
+  ja_intermediate: require('./sentences/ja_intermediate.json'),
+  ja_beginner: require('./sentences/ja_beginner.json'),
+  nl_advanced: require('./sentences/nl_advanced.json'),
+  nl_intermediate: require('./sentences/nl_intermediate.json'),
+  nl_beginner: require('./sentences/nl_beginner.json')
 }
 
 var pick = function (language, level) {
