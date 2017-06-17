@@ -1,3 +1,5 @@
 node_modules
 .DS_Store
 edict.raw.json.gz
+nekoapp/app/data/*.json
+game/src/main/resources/*.json
