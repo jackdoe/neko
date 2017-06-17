@@ -61,7 +61,7 @@ public class Sentence {
           GameSetting s = new GameSetting(level, lang);
           if (!sentences.containsKey(s)) {
             List<Sentence> notSupported = new ArrayList<>();
-            String message = String.format("%s/%s not supported", level, lang);
+            String message = String.format("%s/%s not supported yet", level, lang);
             notSupported.add(new Sentence(message, message));
             sentences.put(s, notSupported);
           }

@@ -156,7 +156,7 @@ export default class Remote extends Component {
       words.sort()
       return (
         <View key={e.id} style={{ backgroundColor: this.colors[e.id] }}>
-          <Text style={ts.h8} backgroundColor={this.colors[e.id]}>
+          <Text style={[ts.h8, { padding: 2 }]}>
             {e.id === this.state.message.you ? this.meSymbol() : ''}
             {e.currentScore.toFixed(1)}
             {' '}
