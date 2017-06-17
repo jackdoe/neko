@@ -53,13 +53,17 @@ export default class Local extends Component {
     let total = 0
     let correct = []
     for (let s of this.tokenize(sentence.a)) {
-      answer[s] = true
+      answer[s] = (answer[s] || 0) + 1
       total++
     }
+
     let score = 0
     for (let s of this.tokenize(text)) {
-      if (answer[s]) {
+      let freq = answer[s]
+
+      if (freq > 0) {
         correct.push(s)
+        answer[s]--
         score++
       }
     }
