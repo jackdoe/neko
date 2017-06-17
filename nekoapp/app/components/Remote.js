@@ -137,7 +137,7 @@ export default class Remote extends Component {
               <Text style={ts.h6}>
                 {this.state.error}
               </Text>
-              <Viewr style={{ height: 20, backgroundColor: '#fff' }} />
+              <View style={{ height: 20, backgroundColor: '#fff' }} />
               <Text style={ts.h6}>
                 click here to reconnect
               </Text>

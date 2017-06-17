@@ -126,7 +126,7 @@ export default class Local extends Component {
                 }}
               >
                 <View>
-                  <Text style={ts.h4}>
+                  <Text style={ts.h6}>
                     {this.state.showAnswer ? 'Hide' : 'Show'}
                   </Text>
                 </View>
@@ -143,7 +143,7 @@ export default class Local extends Component {
                   this.pickNewSentence(this.state.language, this.state.level)}
               >
                 <View>
-                  <Text style={ts.h4}>Next</Text>
+                  <Text style={ts.h6}>Next</Text>
                 </View>
               </TouchableOpacity>
             </View>
