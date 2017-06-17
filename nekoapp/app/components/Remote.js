@@ -229,6 +229,7 @@ export default class Remote extends Component {
               underlineColorAndroid="transparent"
               autoCorrect={false}
               autoCapitalize="none"
+              placeholder="translate as many words as you can.."
               style={{
                 height: 40,
                 borderColor: 'gray',
