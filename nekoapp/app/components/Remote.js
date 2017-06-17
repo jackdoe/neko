@@ -240,7 +240,7 @@ export default class Remote extends Component {
                   text: text
                 })
                 try {
-                  this.ws.send(text)
+                  this.ws.send(JSON.stringify({ value: text }))
                 } catch (e) {}
               }}
               value={this.state.text}
