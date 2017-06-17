@@ -4,3 +4,4 @@ edict.raw.json.gz
 nekoapp/app/data/*.json
 game/src/main/resources/sentences/**.json
 bundle.web.map
+bundle.web.js
