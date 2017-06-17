@@ -30,7 +30,9 @@ export default class Main extends Component {
             this.refs.inner.changeLevel(e)
           }}
         >
-          <Text> {this.state.level === e ? '>' + e + '<' : e}</Text>
+          <Text style={{ paddingRight: 5 }}>
+            {this.state.level === e ? '>' + e + '<' : e}
+          </Text>
         </TouchableOpacity>
       )
     })
@@ -45,37 +47,52 @@ export default class Main extends Component {
             this.refs.inner.changeLanguage(e)
           }}
         >
-          <Text> {this.state.language === e ? '>' + e + '<' : e}</Text>
+          <Text style={{ paddingRight: 5 }}>
+            {this.state.language === e ? '>' + e + '<' : e}
+          </Text>
         </TouchableOpacity>
       )
     })
 
     return (
       <View style={{ flex: 1 }}>
-        <View style={{ flex: 10, backgroundColor: '#fff' }}>
+        <View style={{ flex: 9, backgroundColor: '#fff' }}>
           {inner}
         </View>
         <View
           style={{
             backgroundColor: '#fff',
-            flex: 1,
+            flex: 2,
             justifyContent: 'center',
             alignItems: 'center'
           }}
         >
-          <TouchableOpacity
-            activeOpacity={0.5}
-            onPress={() => {
-              this.setState({ multi: this.state.multi ? false : true })
-            }}
-          >
-            <Text>{this.state.multi ? 'single player' : 'join a game'}</Text>
-          </TouchableOpacity>
           <View
             style={{
               flex: 1,
               flexDirection: 'row',
-              justifyContent: 'space-around'
+              justifyContent: 'center',
+              alignItems: 'center'
+            }}
+          >
+            <TouchableOpacity
+              activeOpacity={0.5}
+              onPress={() => {
+                this.setState({ multi: this.state.multi ? false : true })
+              }}
+            >
+              <Text>
+                {this.state.multi ? 'single player' : 'join a game'}
+              </Text>
+            </TouchableOpacity>
+          </View>
+
+          <View
+            style={{
+              flex: 1,
+              flexDirection: 'row',
+              justifyContent: 'center',
+              alignItems: 'center'
             }}
           >
             {levels}
@@ -84,12 +101,12 @@ export default class Main extends Component {
             style={{
               flex: 1,
               flexDirection: 'row',
-              justifyContent: 'space-around'
+              justifyContent: 'center',
+              alignItems: 'center'
             }}
           >
             {languages}
           </View>
-
         </View>
       </View>
     )

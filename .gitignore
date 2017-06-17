@@ -3,3 +3,4 @@ node_modules
 edict.raw.json.gz
 nekoapp/app/data/*.json
 game/src/main/resources/*.json
+bundle.web.map

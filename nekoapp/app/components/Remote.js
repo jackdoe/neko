@@ -147,15 +147,17 @@ export default class Remote extends Component {
       )
     }
   }
-
+  meSymbol () {
+    return '웃 '
+  }
   renderUsers () {
     let users = this.state.message.game.state.map(e => {
       let words = Object.keys(e.matchingWords)
       words.sort()
       return (
-        <View key={e.id} backgroundColor={this.colors[e.id]}>
-          <Text style={ts.h8}>
-            {e.id === this.state.message.you ? '「私」' : ''}
+        <View key={e.id} style={{ backgroundColor: this.colors[e.id] }}>
+          <Text style={ts.h8} backgroundColor={this.colors[e.id]}>
+            {e.id === this.state.message.you ? this.meSymbol() : ''}
             {e.currentScore.toFixed(1)}
             {' '}
             {words.join(', ')}
