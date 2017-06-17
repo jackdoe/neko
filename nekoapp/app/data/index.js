@@ -11,7 +11,6 @@ const SENTENCES = {
 
 var pick = function (language, level) {
   let list = SENTENCES[language + '_' + level]
-  console.log(language + '_' + level)
   if (!list) {
     let message = level + '/' + language + ' is not supported yet'
     return { q: message, a: message }
