@@ -1,6 +1,6 @@
 #!/bin/bash
 base=`dirname $0`
-pushd $base/../sentences && sh copy.sh && popd
+cd $base/../sentences && sh copy.sh && cd -
 
 mvn clean package
 sudo docker build . -t neko
