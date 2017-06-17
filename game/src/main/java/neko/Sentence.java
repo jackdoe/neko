@@ -72,7 +72,6 @@ public class Sentence {
       String me = clazz.getName().replace(".", "/") + ".class";
       dirURL = clazz.getClassLoader().getResource(me);
     }
-    System.out.println(dirURL.toString());
     if (dirURL.getProtocol().equals("jar")) {
       /* A JAR path */
       String jarPath =
