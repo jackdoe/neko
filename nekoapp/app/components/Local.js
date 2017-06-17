@@ -72,9 +72,6 @@ export default class Local extends Component {
 
   render () {
     let sentence = this.state.sentence
-    let correct = this.state.correct.map((e, i) => {
-      return <Text style={ts.h8} key={i}>{e}</Text>
-    })
     return (
       <View style={{ flex: 1 }}>
         <ScrollView>
@@ -114,7 +111,7 @@ export default class Local extends Component {
               value={this.state.text}
             />
             <View style={{ backgroundColor: '#fff', height: 10 }} />
-            <View>{correct}</View>
+            <Text style={ts.h8}>{this.state.correct.join(', ')}</Text>
             <View style={{ backgroundColor: '#fff', height: 10 }} />
             <View
               style={{
