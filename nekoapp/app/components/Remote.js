@@ -75,6 +75,7 @@ export default class Remote extends Component {
         })
         return
       }
+
       if (message.type === 'SENTENCE_CHANGED') {
         this.setState({ text: '', timeLeft: 0 })
       }
@@ -140,7 +141,7 @@ export default class Remote extends Component {
       )
     }
   }
-  renderTimer () {}
+
   renderUsers () {
     let users = this.state.message.game.state.map(e => {
       let words = Object.keys(e.matchingWords)
@@ -159,6 +160,7 @@ export default class Remote extends Component {
     })
     return <View>{users}</View>
   }
+
   render () {
     if (this.state.error) {
       return (

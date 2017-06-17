@@ -1,6 +1,7 @@
 package neko;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import neko.Game.Stats;
 import org.eclipse.jetty.websocket.api.Session;
 import org.eclipse.jetty.websocket.api.annotations.OnWebSocketClose;
 import org.eclipse.jetty.websocket.api.annotations.OnWebSocketConnect;
@@ -31,11 +32,14 @@ public class ChatWebSocketHandler {
     public GameSetting setting;
   }
 
-  public static class Pong {
+  public static class Pong extends BasicMessage {
     public long currentGameTimeLeft;
     public long pongSentAt;
+    public Stats stats;
 
     public Pong(long t) {
+      super(MessageType.PONG);
+      this.stats = new Game.Stats();
       this.currentGameTimeLeft = t;
       this.pongSentAt = System.currentTimeMillis();
     }

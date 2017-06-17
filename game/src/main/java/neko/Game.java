@@ -153,20 +153,13 @@ public class Game {
     this.broadcast(MessageType.SENTENCE_CHANGED);
   }
 
-  public enum MessageType {
-    USER_JOINED,
-    USER_LEFT,
-    STATE_CHANGED,
-    SENTENCE_CHANGED
-  }
-
-  public static class Message {
+  public static class Message extends BasicMessage {
     public Game game;
     public int you;
-    public MessageType type;
     public Stats stats;
 
     public Message(Game game, int you, MessageType type) {
+      super(type);
       this.game = game;
       this.you = you;
       this.type = type;
