@@ -1,10 +1,16 @@
 import React, { Component } from 'react'
 
-import { View, ScrollView, TextInput, TouchableOpacity } from 'react-native'
-import { Badge, Text, Divider } from 'react-native-elements'
-
+import {
+  View,
+  Text,
+  ScrollView,
+  TextInput,
+  TouchableOpacity
+} from 'react-native'
 import Speak from './Speak'
+
 var randomColor = require('randomcolor')
+const { ts } = require('./textSizes')
 
 export default class Remote extends Component {
   constructor (props) {
@@ -126,13 +132,13 @@ export default class Remote extends Component {
             }}
           >
             <View>
-              <Text h4>Connection Error</Text>
-              <Divider style={{ height: 20, backgroundColor: '#fff' }} />
-              <Text h6>
+              <Text style={ts.h4}>Connection Error</Text>
+              <View style={{ height: 20, backgroundColor: '#fff' }} />
+              <Text style={ts.h6}>
                 {this.state.error}
               </Text>
-              <Divider style={{ height: 20, backgroundColor: '#fff' }} />
-              <Text h6>
+              <Viewr style={{ height: 20, backgroundColor: '#fff' }} />
+              <Text style={ts.h6}>
                 click here to reconnect
               </Text>
             </View>
@@ -148,13 +154,13 @@ export default class Remote extends Component {
       words.sort()
       return (
         <View key={e.id} backgroundColor={this.colors[e.id]}>
-          <Text h5>
+          <Text style={ts.h8}>
             {e.id === this.state.message.you ? '「私」' : ''}
             {e.currentScore.toFixed(1)}
             {' '}
             {words.join(', ')}
           </Text>
-          <Divider style={{ backgroundColor: '#fff', height: 5 }} />
+          <View style={{ backgroundColor: '#fff', height: 5 }} />
         </View>
       )
     })
@@ -189,7 +195,9 @@ export default class Remote extends Component {
             alignItems: 'center'
           }}
         >
-          <Text h6 onPress={() => this.reconnect()}>connecting...</Text>
+          <Text style={ts.h6} onPress={() => this.reconnect()}>
+            connecting...
+          </Text>
         </View>
       )
     }
@@ -206,15 +214,15 @@ export default class Remote extends Component {
             }}
           >
             <View style={{ alignItems: 'center' }}>
-              <Text h10>
+              <Text style={ts.h8}>
                 {this.state.timeLeft > 0
                   ? (this.state.timeLeft / 1000).toFixed(0) + ' seconds left'
                   : ''}
               </Text>
-              <Divider style={{ backgroundColor: '#fff', height: 40 }} />
+              <View style={{ backgroundColor: '#fff', height: 40 }} />
               <Speak text={sentence.question} language={this.state.language} />
             </View>
-            <Divider style={{ backgroundColor: '#fff', height: 40 }} />
+            <View style={{ backgroundColor: '#fff', height: 40 }} />
             <TextInput
               underlineColorAndroid="transparent"
               autoCapitalize="none"
@@ -235,7 +243,7 @@ export default class Remote extends Component {
               }}
               value={this.state.text}
             />
-            <Divider style={{ backgroundColor: '#fff', height: 10 }} />
+            <View style={{ backgroundColor: '#fff', height: 10 }} />
             {this.renderUsers()}
           </View>
         </ScrollView>

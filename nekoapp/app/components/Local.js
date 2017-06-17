@@ -1,8 +1,14 @@
 import React, { Component } from 'react'
-import { View, ScrollView, TextInput, TouchableOpacity } from 'react-native'
-import { Text, Divider } from 'react-native-elements'
+import {
+  Text,
+  View,
+  ScrollView,
+  TextInput,
+  TouchableOpacity
+} from 'react-native'
 import Speak from './Speak'
 const data = require('../data')
+const { ts } = require('./textSizes')
 
 export default class Local extends Component {
   constructor (props) {
@@ -63,7 +69,7 @@ export default class Local extends Component {
   render () {
     let sentence = this.state.sentence
     let correct = this.state.correct.map((e, i) => {
-      return <Text h8 key={i}>{e}</Text>
+      return <Text style={ts.h8} key={i}>{e}</Text>
     })
     return (
       <View style={{ flex: 1 }}>
@@ -77,7 +83,7 @@ export default class Local extends Component {
             <View style={{ alignItems: 'center' }}>
               <Speak text={sentence.q} language={this.props.language} />
             </View>
-            <Divider style={{ backgroundColor: '#fff', height: 40 }} />
+            <View style={{ backgroundColor: '#fff', height: 40 }} />
             <TextInput
               underlineColorAndroid="transparent"
               autoCapitalize="none"
@@ -102,9 +108,9 @@ export default class Local extends Component {
               }}
               value={this.state.text}
             />
-            <Divider style={{ backgroundColor: '#fff', height: 10 }} />
+            <View style={{ backgroundColor: '#fff', height: 10 }} />
             <View>{correct}</View>
-            <Divider style={{ backgroundColor: '#fff', height: 10 }} />
+            <View style={{ backgroundColor: '#fff', height: 10 }} />
             <View
               style={{
                 flex: 1,
@@ -120,11 +126,13 @@ export default class Local extends Component {
                 }}
               >
                 <View>
-                  <Text h4>{this.state.showAnswer ? 'Hide' : 'Show'}</Text>
+                  <Text style={ts.h4}>
+                    {this.state.showAnswer ? 'Hide' : 'Show'}
+                  </Text>
                 </View>
               </TouchableOpacity>
               <View style={{ flex: 1, alignItems: 'center' }}>
-                <Text h8>
+                <Text style={ts.h8}>
                   score: {this.state.score}
                 </Text>
 
@@ -135,14 +143,17 @@ export default class Local extends Component {
                   this.pickNewSentence(this.state.language, this.state.level)}
               >
                 <View>
-                  <Text h4>Next</Text>
+                  <Text style={ts.h4}>Next</Text>
                 </View>
               </TouchableOpacity>
             </View>
-            <Divider style={{ backgroundColor: '#fff', height: 40 }} />
-
-            <Divider style={{ backgroundColor: '#fff', height: 40 }} />
-            <Text h8>
+            <View
+              style={{
+                backgroundColor: '#fff',
+                height: 40
+              }}
+            />
+            <Text style={ts.h8}>
               {this.state.showAnswer ? sentence.a : ''}
             </Text>
           </View>

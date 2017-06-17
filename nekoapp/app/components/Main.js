@@ -1,14 +1,5 @@
 import React, { Component } from 'react'
-import {
-  View,
-  StatusBar,
-  Animated,
-  ScrollView,
-  TextInput,
-  TouchableOpacity,
-  AppRegistry
-} from 'react-native'
-import { Button, Text, Divider } from 'react-native-elements'
+import { View, TouchableOpacity, Text } from 'react-native'
 import Local from './Local'
 import Remote from './Remote'
 export default class Main extends Component {

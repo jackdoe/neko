@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { Platform } from 'react-native'
+import { Text, Platform } from 'react-native'
 
-import { Text } from 'react-native-elements'
+const { ts } = require('./textSizes')
 var Speech = Platform.OS === 'ios' ? require('react-native-speech') : undefined
 
 const mappedLanguageCodes = {
@@ -31,7 +31,7 @@ export default class Speak extends Component {
   render () {
     return (
       <Text
-        h4
+        style={ts.h2}
         onPress={e =>
           this.speak(this.props.text, iso639_to_rfc3306(this.props.language))}
       >
