@@ -40,16 +40,21 @@ public class Sentence {
 
   private static Map<GameSetting, List<Sentence>> sentences = new HashMap<>();
   private static Random random = new Random();
+  private static ObjectMapper mapper = new ObjectMapper();
+
+  static List<Sentence> parse(String file) throws Exception {
+    return mapper.readValue(
+        Sentence.class.getClassLoader().getResourceAsStream(file),
+        new TypeReference<List<Sentence>>() {});
+  }
 
   static void load() {
-    ObjectMapper mapper = new ObjectMapper();
     try {
-      List<Sentence> ja =
-          mapper.readValue(
-              Sentence.class.getClassLoader().getResourceAsStream("sentences_ja_advanced.json"),
-              new TypeReference<List<Sentence>>() {});
+      sentences.put(
+          new GameSetting(Level.advanced, Language.ja), parse("sentences_ja_advanced.json"));
 
-      sentences.put(new GameSetting(Level.advanced, Language.ja), ja);
+      sentences.put(
+          new GameSetting(Level.beginner, Language.ja), parse("sentences_ja_beginner.json"));
 
       for (Language lang : Language.values()) {
         for (Level level : Level.values()) {
