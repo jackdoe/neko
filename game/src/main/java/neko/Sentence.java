@@ -121,7 +121,7 @@ public class Sentence {
   }
 
   static void process(Level level, Language language) throws Exception {
-    GameSetting setting = new GameSetting(Level.advanced, Language.ja);
+    GameSetting setting = new GameSetting(level, language);
     sentences.put(setting, parse(setting));
   }
 
