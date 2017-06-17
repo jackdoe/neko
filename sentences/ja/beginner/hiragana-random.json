@@ -1,1202 +1,802 @@
 [
   {
-    "q": "や ぴょ く ひ ぬ べ びゅ め な て じゅ ひゅ ず ぎ ぺ にゃ へ め ざ び こ びゃ ぴゅ ぎょ で。",
-    "a": "ya pyo ku hi nu be byu me na te ju hyu zu gi pe nya he me za bi ko bya pyu gyo de."
+    "q": "ぴゅ、 と、 ひゃ、 あ、 べ、 しゃ、 で、 べ、 げ、 が、 げ。",
+    "a": "pyu, to, hya, a, be, sha, de, be, ge, ga, ge."
   },
   {
-    "q": "にょ ぎょ だ ぞ ち じゃ ぎょ ち みょ よ ちょ ぷ が が え ちゅ だ げ ぎゅ しょ が ぬ け べ せ ぐ にゃ ひょ みょ に びゃ ふ ちゃ。",
-    "a": "nyo gyo da zo chi ja gyo chi myo yo cho pu ga ga e chu da ge gyu sho ga nu ke be se gu nya hyo myo ni bya fu cha."
+    "q": "く、 ぴ、 べ、 ね、 け、 そ、 か、 さ、 に、 さ、 け。",
+    "a": "ku, pi, be, ne, ke, so, ka, sa, ni, sa, ke."
   },
   {
-    "q": "ぷ きゅ りゅ ご りゅ にゅ は ぴゃ べ き は ぬ びゅ ろ ぶ れ。",
-    "a": "pu kyu ryu go ryu nyu ha pya be ki ha nu byu ro bu re."
+    "q": "りゃ、 びょ、 く、 ぴゅ、 ば、 だ、 ぜ、 げ、 ゆ、 ぴ、 ず、 ちゅ、 へ、 つ。",
+    "a": "rya, byo, ku, pyu, ba, da, ze, ge, yu, pi, zu, chu, he, tsu."
   },
   {
-    "q": "にょ う ち た ぼ も ぎゃ せ きゅ にゅ にゃ と ひゃ ど だ ば。",
-    "a": "nyo u chi ta bo mo gya se kyu nyu nya to hya do da ba."
+    "q": "む、 ぱ、 じょ、 げ、 き、 ちゅ、 ば、 み、 しゃ、 ざ。",
+    "a": "mu, pa, jo, ge, ki, chu, ba, mi, sha, za."
   },
   {
-    "q": "こ しゃ し ろ みゃ ず う う か て ゆ こ き ぞ の い ちゅ にゃ は きゅ ぞ か ぴ へ て ぴ え ぎゅ ね ぎ じ ぴょ。",
-    "a": "ko sha shi ro mya zu u u ka te yu ko ki zo no i chu nya ha kyu zo ka pi he te pi e gyu ne gi ji pyo."
+    "q": "こ、 しゅ、 じょ、 ぜ、 じ、 あ、 ぶ。",
+    "a": "ko, shu, jo, ze, ji, a, bu."
   },
   {
-    "q": "き ぎょ みょ て ひょ じゃ べ ゆ ひゃ せ きゅ あ れ け みゃ せ びゃ にゃ ちょ へ れ か だ。",
-    "a": "ki gyo myo te hyo ja be yu hya se kyu a re ke mya se bya nya cho he re ka da."
+    "q": "せ、 ぴゃ、 う、 りゃ、 お、 みょ、 あ、 き、 みゅ、 ひゃ、 りゃ、 にゃ、 み。",
+    "a": "se, pya, u, rya, o, myo, a, ki, myu, hya, rya, nya, mi."
   },
   {
-    "q": "あ ぎゅ ぴょ じゅ わ た きょ ぎ つ ほ りょ め びょ ぼ ぬ め りょ ぷ ちゃ ちゅ る きょ ろ る ぬ れ ちゅ ぜ ぱ。",
-    "a": "a gyu pyo ju wa ta kyo gi tsu ho ryo me byo bo nu me ryo pu cha chu ru kyo ro ru nu re chu ze pa."
+    "q": "きゃ、 ぱ、 りゅ、 に、 の、 ぎ、 ふ、 さ、 び、 ぷ、 を、 お、 や、 ろ、 よ、 りょ、 ほ、 お。",
+    "a": "kya, pa, ryu, ni, no, gi, fu, sa, bi, pu, wo, o, ya, ro, yo, ryo, ho, o."
   },
   {
-    "q": "だ ぼ みゃ きょ ぎ ふ げ ほ き わ け ぴゅ ひゃ ら な ひょ ま ぎゃ ね の にゃ と ば て む の ぶ ちゅ ぞ す ぬ。",
-    "a": "da bo mya kyo gi fu ge ho ki wa ke pyu hya ra na hyo ma gya ne no nya to ba te mu no bu chu zo su nu."
+    "q": "そ、 りゃ、 ほ、 にょ、 ご、 た、 りゃ、 ぜ、 う。",
+    "a": "so, rya, ho, nyo, go, ta, rya, ze, u."
   },
   {
-    "q": "ちゃ にゅ え ぴゃ う ぴゃ び ぴ と が へ ぎゅ しゃ ぐ みゅ みゃ ぴゅ べ ぎゃ れ きょ ぎょ へ ゆ。",
-    "a": "cha nyu e pya u pya bi pi to ga he gyu sha gu myu mya pyu be gya re kyo gyo he yu."
+    "q": "ぬ、 ほ、 ば、 ら、 きょ、 う、 ま、 げ、 ぜ、 ひ、 む、 にゅ、 ひょ、 みょ、 ひゅ。",
+    "a": "nu, ho, ba, ra, kyo, u, ma, ge, ze, hi, mu, nyu, hyo, myo, hyu."
   },
   {
-    "q": "きゅ にょ びゃ こ え びゅ ぎゅ ひ ぞ さ ざ へ じゅ きょ ぴゃ み きゅ ちょ ぎょ の じゅ ぴゅ ひゃ て。",
-    "a": "kyu nyo bya ko e byu gyu hi zo sa za he ju kyo pya mi kyu cho gyo no ju pyu hya te."
+    "q": "きゃ、 お、 みゃ、 べ、 ひゅ、 きょ、 ひゅ、 ぎゃ、 ぴ。",
+    "a": "kya, o, mya, be, hyu, kyo, hyu, gya, pi."
   },
   {
-    "q": "ぜ み ず べ き ふ ぽ く し ぴゅ じゃ。",
-    "a": "ze mi zu be ki fu po ku shi pyu ja."
+    "q": "え、 ちゅ、 ど、 じゅ、 じ、 の、 ゆ。",
+    "a": "e, chu, do, ju, ji, no, yu."
   },
   {
-    "q": "て りゃ しゅ ほ ご み きゃ と ろ だ や く の き きょ ちゃ せ め みゃ ぴ こ ぎゃ ひゅ ふ。",
-    "a": "te rya shu ho go mi kya to ro da ya ku no ki kyo cha se me mya pi ko gya hyu fu."
+    "q": "にょ、 ぶ、 せ、 ぎゅ、 きゃ、 じ、 う、 て、 しゅ、 りょ、 ゆ、 る、 きょ、 き、 い、 む、 そ、 と、 よ、 ぼ。",
+    "a": "nyo, bu, se, gyu, kya, ji, u, te, shu, ryo, yu, ru, kyo, ki, i, mu, so, to, yo, bo."
   },
   {
-    "q": "ぞ わ め う さ ぷ ぴょ ぷ ね ど も ち げ る にゅ ぽ ひょ ふ ぞ ぜ す お あ ひ が う ちょ きゅ ぴょ よ りょ ね み へ ひょ ぶ ふ。",
-    "a": "zo wa me u sa pu pyo pu ne do mo chi ge ru nyu po hyo fu zo ze su o a hi ga u cho kyu pyo yo ryo ne mi he hyo bu fu."
+    "q": "あ、 にょ、 は、 ぼ、 し、 む、 きゃ、 た、 ぽ、 は。",
+    "a": "a, nyo, ha, bo, shi, mu, kya, ta, po, ha."
   },
   {
-    "q": "みゅ しゃ じゃ を は き ば も こ みゃ あ す きゃ え へ きゅ お りょ な。",
-    "a": "myu sha ja wo ha ki ba mo ko mya a su kya e he kyu o ryo na."
+    "q": "りゅ、 を、 ぎ、 ぴょ、 ぽ、 た、 ぴゅ、 じゅ、 み、 う、 みゃ、 ひ。",
+    "a": "ryu, wo, gi, pyo, po, ta, pyu, ju, mi, u, mya, hi."
   },
   {
-    "q": "みゃ きゅ ぴ ぎゅ に きゃ ぎゅ ぴゅ れ みょ ぷ ゆ ぬ ゆ しゅ ぎ ほ た れ を ら ぎゅ え を し ず しょ ご へ つ げ。",
-    "a": "mya kyu pi gyu ni kya gyu pyu re myo pu yu nu yu shu gi ho ta re wo ra gyu e wo shi zu sho go he tsu ge."
+    "q": "ば、 ひゃ、 びゅ、 の、 ひ、 げ、 ね。",
+    "a": "ba, hya, byu, no, hi, ge, ne."
   },
   {
-    "q": "びょ び も ろ を あ ぺ そ ゆ で じゅ び ひゅ ち み にゃ が ね じ せ ぎ みゃ べ ひょ。",
-    "a": "byo bi mo ro wo a pe so yu de ju bi hyu chi mi nya ga ne ji se gi mya be hyo."
+    "q": "も、 ぼ、 じゃ、 こ、 りゃ、 び、 ひょ、 みゃ、 りょ、 が、 た、 は。",
+    "a": "mo, bo, ja, ko, rya, bi, hyo, mya, ryo, ga, ta, ha."
   },
   {
-    "q": "にゃ びゅ い に え れ りょ ゆ で きゃ ぶ ぴゃ を ご び ほ しゃ ちょ ひ お び せ ほ か に た き え。",
-    "a": "nya byu i ni e re ryo yu de kya bu pya wo go bi ho sha cho hi o bi se ho ka ni ta ki e."
+    "q": "じょ、 にょ、 こ、 え、 く、 は、 ぴゅ、 こ。",
+    "a": "jo, nyo, ko, e, ku, ha, pyu, ko."
   },
   {
-    "q": "や に ぽ にゅ お べ ず みょ む ね ぷ う の も ぶ だ せ ぼ ぱ け れ ぴ ぜ。",
-    "a": "ya ni po nyu o be zu myo mu ne pu u no mo bu da se bo pa ke re pi ze."
+    "q": "ざ、 え、 に、 り、 こ、 ざ、 ぱ、 ざ、 お、 ま、 せ、 ね、 ほ、 ぱ、 ひ、 ぽ。",
+    "a": "za, e, ni, ri, ko, za, pa, za, o, ma, se, ne, ho, pa, hi, po."
   },
   {
-    "q": "は ち ひょ みゅ も びゅ そ そ きゃ て く ざ ぺ ぺ び じ れ る の ふ りゅ り りゃ びゅ か あ ま きょ。",
-    "a": "ha chi hyo myu mo byu so so kya te ku za pe pe bi ji re ru no fu ryu ri rya byu ka a ma kyo."
+    "q": "ぞ、 ひゅ、 く、 ぴゃ、 ぺ、 も、 にょ、 ぱ、 にょ、 ぞ、 び、 ぴょ、 べ、 ご、 ふ、 こ。",
+    "a": "zo, hyu, ku, pya, pe, mo, nyo, pa, nyo, zo, bi, pyo, be, go, fu, ko."
   },
   {
-    "q": "ぎゃ せ ぴょ い あ ぽ げ しゃ きょ ざ ぴ ぺ。",
-    "a": "gya se pyo i a po ge sha kyo za pi pe."
+    "q": "ぷ、 りゃ、 きゃ、 ちゃ、 ぴ、 こ、 れ、 ぎゅ、 しょ、 む、 びょ、 みゅ、 と、 ち、 ぴゅ。",
+    "a": "pu, rya, kya, cha, pi, ko, re, gyu, sho, mu, byo, myu, to, chi, pyu."
   },
   {
-    "q": "しゅ ば さ じゅ ぞ ぐ す ほ る と じょ しゅ か ぎょ く びゅ ちょ びゃ ら う ぼ りょ じゃ に つ ろ ちゃ に し わ ら お きゃ ぎょ よ う は の りゅ る。",
-    "a": "shu ba sa ju zo gu su ho ru to jo shu ka gyo ku byu cho bya ra u bo ryo ja ni tsu ro cha ni shi wa ra o kya gyo yo u ha no ryu ru."
+    "q": "ち、 ぺ、 せ、 う、 ご、 しゅ、 ぴゅ、 め、 ぴゅ、 う、 ひ。",
+    "a": "chi, pe, se, u, go, shu, pyu, me, pyu, u, hi."
   },
   {
-    "q": "だ い ち の ろ さ ぎゃ りゅ け い ぽ や う りゃ びょ よ ろ ま ず じゅ ほ さ で す。",
-    "a": "da i chi no ro sa gya ryu ke i po ya u rya byo yo ro ma zu ju ho sa de su."
+    "q": "ちゃ、 に、 そ、 じゃ、 に、 にゃ、 ろ、 う、 ろ、 じ、 い、 ぬ、 にょ、 ち、 にょ、 ず、 ら、 じゅ。",
+    "a": "cha, ni, so, ja, ni, nya, ro, u, ro, ji, i, nu, nyo, chi, nyo, zu, ra, ju."
   },
   {
-    "q": "きゃ しゅ ぎょ ほ びょ な ぽ ぴゅ え こ の ち きゃ ぎょ ぴゅ ぱ ら み が え みゅ みゃ きょ ちょ ね しゃ ぶ にゅ びゅ ぴゅ ふ ゆ きゅ ちゃ しょ お へ そ が にゃ。",
-    "a": "kya shu gyo ho byo na po pyu e ko no chi kya gyo pyu pa ra mi ga e myu mya kyo cho ne sha bu nyu byu pyu fu yu kyu cha sho o he so ga nya."
+    "q": "に、 や、 か、 ほ、 へ、 が、 ご、 そ、 た、 ぎゃ、 ぱ、 さ、 ぐ、 ぴゅ、 つ、 ぽ、 あ、 か、 へ。",
+    "a": "ni, ya, ka, ho, he, ga, go, so, ta, gya, pa, sa, gu, pyu, tsu, po, a, ka, he."
   },
   {
-    "q": "ひゃ は る ぴ ひ ぞ しゃ ほ みゅ じゅ わ みゅ は びゃ ひ の りょ び にゃ ち みゅ りゃ だ びゅ。",
-    "a": "hya ha ru pi hi zo sha ho myu ju wa myu ha bya hi no ryo bi nya chi myu rya da byu."
+    "q": "む、 で、 つ、 ぽ、 りゅ、 よ、 にゃ、 ちょ、 にゃ、 みょ、 え、 にゅ、 が、 べ、 ろ、 ひゅ、 お。",
+    "a": "mu, de, tsu, po, ryu, yo, nya, cho, nya, myo, e, nyu, ga, be, ro, hyu, o."
   },
   {
-    "q": "ぷ みゅ びゅ る ひ が げ ぱ へ み に ちょ も れ れ ちゅ じゅ み ちょ め みゅ びゃ い ゆ あ ぐ ちゃ ぷ も ちゅ ぶ りょ ど ぴ れ ひゃ あ ぴ。",
-    "a": "pu myu byu ru hi ga ge pa he mi ni cho mo re re chu ju mi cho me myu bya i yu a gu cha pu mo chu bu ryo do pi re hya a pi."
+    "q": "こ、 し、 ちゅ、 にゃ、 を、 りゃ、 よ、 ぴょ、 じ、 ふ。",
+    "a": "ko, shi, chu, nya, wo, rya, yo, pyo, ji, fu."
   },
   {
-    "q": "じょ ひゃ りょ ひゅ ま て ぴょ く ちょ み け しょ へ ちょ か きょ ぜ の ちゅ な お ぎょ ぞ ぺ ま びゃ。",
-    "a": "jo hya ryo hyu ma te pyo ku cho mi ke sho he cho ka kyo ze no chu na o gyo zo pe ma bya."
+    "q": "ぱ、 し、 ろ、 あ、 ゆ、 で、 ちょ、 りょ、 ぎ、 ぱ、 こ、 ろ、 へ、 ぞ、 み、 ぐ。",
+    "a": "pa, shi, ro, a, yu, de, cho, ryo, gi, pa, ko, ro, he, zo, mi, gu."
   },
   {
-    "q": "じ わ と にゃ る つ ぞ ぐ ね りゅ み げ りゃ び さ し む ゆ ざ ぴ ち。",
-    "a": "ji wa to nya ru tsu zo gu ne ryu mi ge rya bi sa shi mu yu za pi chi."
+    "q": "にゅ、 ち、 ぴゃ、 ち、 も、 よ、 りょ、 を、 く、 りょ、 しょ、 え。",
+    "a": "nyu, chi, pya, chi, mo, yo, ryo, wo, ku, ryo, sho, e."
   },
   {
-    "q": "ぎゅ む じ みゃ か つ きゅ しゅ そ びゃ ち ろ みゃ ぼ ぷ ぽ ね しゅ へ。",
-    "a": "gyu mu ji mya ka tsu kyu shu so bya chi ro mya bo pu po ne shu he."
+    "q": "しょ、 みゅ、 り、 じゅ、 ど、 ぞ、 りょ。",
+    "a": "sho, myu, ri, ju, do, zo, ryo."
   },
   {
-    "q": "ぷ え びゅ ぴゃ へ ず そ み りゃ りゃ じょ ざ げ ぬ さ ちゅ にゃ りゅ じゅ ち ぎゅ ぷ ぺ お ぴょ しゅ ふ て ぶ む こ しゃ ぬ ぬ て ら。",
-    "a": "pu e byu pya he zu so mi rya rya jo za ge nu sa chu nya ryu ju chi gyu pu pe o pyo shu fu te bu mu ko sha nu nu te ra."
+    "q": "ま、 む、 ろ、 ど、 ぴょ、 い、 え、 ぴ、 びょ、 りゅ、 ぴゅ、 る、 ちゅ、 よ、 あ。",
+    "a": "ma, mu, ro, do, pyo, i, e, pi, byo, ryu, pyu, ru, chu, yo, a."
   },
   {
-    "q": "げ じゅ ぬ な お にゅ ぐ な び りゅ あ ね しゃ。",
-    "a": "ge ju nu na o nyu gu na bi ryu a ne sha."
+    "q": "て、 ぐ、 ぐ、 きょ、 みゅ、 の、 よ、 じゃ、 の、 く、 て。",
+    "a": "te, gu, gu, kyo, myu, no, yo, ja, no, ku, te."
   },
   {
-    "q": "ま ぷ ぼ は た ちょ ちょ ひゃ ず にゅ か ば く で わ ぎ ひ よ ほ きゃ ぜ す と じ ぐ め ぴょ べ きゃ へ い ひゅ て じゅ は。",
-    "a": "ma pu bo ha ta cho cho hya zu nyu ka ba ku de wa gi hi yo ho kya ze su to ji gu me pyo be kya he i hyu te ju ha."
+    "q": "い、 た、 ず、 ふ、 ひゃ、 く。",
+    "a": "i, ta, zu, fu, hya, ku."
   },
   {
-    "q": "ひゃ ぎゅ ば びょ も が ひゃ きゃ ぎ た れ じゅ け ぴ び こ や い ぎ で ゆ ち げ げ な の よ にゃ め しゅ の み。",
-    "a": "hya gyu ba byo mo ga hya kya gi ta re ju ke pi bi ko ya i gi de yu chi ge ge na no yo nya me shu no mi."
+    "q": "ぐ、 く、 け、 べ、 い、 きゃ、 い、 ぎゃ、 ぐ、 わ、 ぴゅ、 ぎゅ、 よ、 みゅ、 きょ、 で、 ぼ。",
+    "a": "gu, ku, ke, be, i, kya, i, gya, gu, wa, pyu, gyu, yo, myu, kyo, de, bo."
   },
   {
-    "q": "に て お げ ぎょ る みょ ぴ な は びゅ きゃ ぎゃ ご わ びゅ じ び りゃ ぴゅ も や ぶ びゃ ぴゅ す や じゅ。",
-    "a": "ni te o ge gyo ru myo pi na ha byu kya gya go wa byu ji bi rya pyu mo ya bu bya pyu su ya ju."
+    "q": "く、 にょ、 た、 ぬ、 び、 ぴゃ、 め、 きょ、 た、 る、 す、 ほ、 よ、 だ、 み。",
+    "a": "ku, nyo, ta, nu, bi, pya, me, kyo, ta, ru, su, ho, yo, da, mi."
   },
   {
-    "q": "じゅ ぽ ぺ お す ひゅ ぐ ぴ ら ほ し あ ぜ ぷ か きゅ ほ びゅ きゃ ぜ へ ず。",
-    "a": "ju po pe o su hyu gu pi ra ho shi a ze pu ka kyu ho byu kya ze he zu."
+    "q": "ひょ、 ぶ、 の、 ぽ、 ぷ、 りょ、 て、 びゃ、 ね、 しゅ、 わ、 み。",
+    "a": "hyo, bu, no, po, pu, ryo, te, bya, ne, shu, wa, mi."
   },
   {
-    "q": "や う ぱ ぎゅ に ぞ じ ぱ に め ぷ が た ぴゅ。",
-    "a": "ya u pa gyu ni zo ji pa ni me pu ga ta pyu."
+    "q": "と、 き、 ひゃ、 ら、 す、 ぴ、 ぞ、 ほ。",
+    "a": "to, ki, hya, ra, su, pi, zo, ho."
   },
   {
-    "q": "ば め みょ みゃ が にょ も ば で ろ と ぎゅ ず で び ぎゅ。",
-    "a": "ba me myo mya ga nyo mo ba de ro to gyu zu de bi gyu."
+    "q": "も、 ほ、 ちゃ、 ぽ、 みゅ、 す、 にゅ、 みょ、 わ。",
+    "a": "mo, ho, cha, po, myu, su, nyu, myo, wa."
   },
   {
-    "q": "ぺ そ にゃ の と ぼ しゅ へ の みゅ は ぐ ぐ こ ど ま な ず ちゃ ぴゃ にゃ よ ぎ にゅ つ ぷ。",
-    "a": "pe so nya no to bo shu he no myu ha gu gu ko do ma na zu cha pya nya yo gi nyu tsu pu."
+    "q": "ぷ、 ぜ、 ろ、 ぎょ、 きゅ、 ぴ、 ぶ、 て、 びゃ、 みょ、 ぴ、 ご、 げ、 と。",
+    "a": "pu, ze, ro, gyo, kyu, pi, bu, te, bya, myo, pi, go, ge, to."
   },
   {
-    "q": "あ ぎゃ ぐ びゃ わ みょ ち び け ぴゅ ほ みゅ ぽ にゅ て びょ む。",
-    "a": "a gya gu bya wa myo chi bi ke pyu ho myu po nyu te byo mu."
+    "q": "ぼ、 ゆ、 べ、 ぞ、 じゅ、 じ、 く。",
+    "a": "bo, yu, be, zo, ju, ji, ku."
   },
   {
-    "q": "び る りゃ お こ びょ か ひ ぴゅ ぎょ ちょ にょ た しゅ ぜ ひょ びゅ す ちょ しゃ へ。",
-    "a": "bi ru rya o ko byo ka hi pyu gyo cho nyo ta shu ze hyo byu su cho sha he."
+    "q": "ちゃ、 ご、 ぎゃ、 りょ、 ぴゃ、 よ、 ぺ。",
+    "a": "cha, go, gya, ryo, pya, yo, pe."
   },
   {
-    "q": "にゃ にょ ご しゅ こ び ど びゃ は む しょ きょ ぞ え ご にゃ ざ みょ ろ みゃ みゅ さ ぽ ぴょ し にゃ き じ きゅ ね も しゅ ひゃ。",
-    "a": "nya nyo go shu ko bi do bya ha mu sho kyo zo e go nya za myo ro mya myu sa po pyo shi nya ki ji kyu ne mo shu hya."
+    "q": "び、 ぷ、 ちゅ、 みょ、 め、 ぬ、 じょ。",
+    "a": "bi, pu, chu, myo, me, nu, jo."
   },
   {
-    "q": "きゅ あ ら で い へ ち み ち ま ま で り。",
-    "a": "kyu a ra de i he chi mi chi ma ma de ri."
+    "q": "で、 りゅ、 しゅ、 みょ、 け、 ぴゅ、 じゅ、 み、 ね。",
+    "a": "de, ryu, shu, myo, ke, pyu, ju, mi, ne."
   },
   {
-    "q": "に せ べ ま せ は ぎょ か ぎ ちゃ びゅ ざ で ぐ ぎゃ しゃ ず ぎ みゃ ざ ぴょ ぷ つ う ほ な を や び みょ にゅ びょ ね りゃ み ぜ りょ。",
-    "a": "ni se be ma se ha gyo ka gi cha byu za de gu gya sha zu gi mya za pyo pu tsu u ho na wo ya bi myo nyu byo ne rya mi ze ryo."
+    "q": "め、 りゃ、 む、 ひゅ、 う、 みゅ、 ぞ、 べ、 みょ、 び、 て、 ぴ、 ぴょ、 あ、 ほ、 や、 ぎょ、 ぷ、 き。",
+    "a": "me, rya, mu, hyu, u, myu, zo, be, myo, bi, te, pi, pyo, a, ho, ya, gyo, pu, ki."
   },
   {
-    "q": "ざ ぎゃ ちゃ ぼ ほ う れ い さ て め あ みゅ じょ しゃ じゅ く や も の で え き ば みゃ ゆ き り ろ び ご ぐ にょ しゃ け ぐ び。",
-    "a": "za gya cha bo ho u re i sa te me a myu jo sha ju ku ya mo no de e ki ba mya yu ki ri ro bi go gu nyo sha ke gu bi."
+    "q": "る、 ず、 ぴ、 さ、 く、 ら、 ぴゅ、 みゅ、 みゅ。",
+    "a": "ru, zu, pi, sa, ku, ra, pyu, myu, myu."
   },
   {
-    "q": "ぼ ちょ う い びょ じょ みょ ぞ よ ひ ぴゃ。",
-    "a": "bo cho u i byo jo myo zo yo hi pya."
+    "q": "にゃ、 ご、 を、 こ、 こ、 ひ、 は、 り、 と。",
+    "a": "nya, go, wo, ko, ko, hi, ha, ri, to."
   },
   {
-    "q": "りゅ や を ち う に ち を りゅ りゃ ぴ む りょ わ き ど り ね も あ ゆ みょ。",
-    "a": "ryu ya wo chi u ni chi wo ryu rya pi mu ryo wa ki do ri ne mo a yu myo."
+    "q": "う、 じ、 ね、 にゃ、 お、 め。",
+    "a": "u, ji, ne, nya, o, me."
   },
   {
-    "q": "しゃ り は れ きょ ぴょ ろ ぎゃ で ぐ にょ く よ う び ぜ じゅ ざ さ ご ぎゃ け げ さ ぞ びゃ り だ じゅ りゃ ぺ しょ た ぴょ が た しょ。",
-    "a": "sha ri ha re kyo pyo ro gya de gu nyo ku yo u bi ze ju za sa go gya ke ge sa zo bya ri da ju rya pe sho ta pyo ga ta sho."
+    "q": "びゅ、 を、 よ、 にゅ、 ぜ、 も、 た、 で、 え、 じゅ、 ぐ、 ぴゃ、 びょ、 る、 て、 ぺ、 しょ、 め、 じょ。",
+    "a": "byu, wo, yo, nyu, ze, mo, ta, de, e, ju, gu, pya, byo, ru, te, pe, sho, me, jo."
   },
   {
-    "q": "ゆ じゅ い す ぎ ぴゅ ちょ ぐ ぺ い で にょ しゅ きゅ び ぞ と が ぬ け ど つ ぎゃ ぴゃ。",
-    "a": "yu ju i su gi pyu cho gu pe i de nyo shu kyu bi zo to ga nu ke do tsu gya pya."
+    "q": "く、 ほ、 に、 き、 が、 げ、 え、 れ、 みょ、 お、 お、 と、 こ、 ち、 そ、 ちゃ、 お、 り。",
+    "a": "ku, ho, ni, ki, ga, ge, e, re, myo, o, o, to, ko, chi, so, cha, o, ri."
   },
   {
-    "q": "きゃ きょ ぶ ひ ひょ きゅ ぬ び ね す ぽ にょ じょ は ぴ じゅ や た びゃ お みゅ く な は ぴゅ じ。",
-    "a": "kya kyo bu hi hyo kyu nu bi ne su po nyo jo ha pi ju ya ta bya o myu ku na ha pyu ji."
+    "q": "の、 け、 ぺ、 ぴゃ、 え、 な、 べ、 ふ。",
+    "a": "no, ke, pe, pya, e, na, be, fu."
   },
   {
-    "q": "りゅ ひゃ が ぴょ びゃ ば あ びゃ む か ざ ご た ぐ ご りょ びゅ だ ひ ぬ あ りゃ た みゅ せ びょ あ にょ ゆ し ひ。",
-    "a": "ryu hya ga pyo bya ba a bya mu ka za go ta gu go ryo byu da hi nu a rya ta myu se byo a nyo yu shi hi."
+    "q": "と、 ひゃ、 にょ、 を、 ぽ、 みゃ、 が、 き、 ま、 ちゃ、 ぞ、 う、 め、 し、 みゃ、 て、 で、 ゆ。",
+    "a": "to, hya, nyo, wo, po, mya, ga, ki, ma, cha, zo, u, me, shi, mya, te, de, yu."
   },
   {
-    "q": "さ ぎょ げ ば ま り ちょ りゃ す ね りょ ぴゅ だ ご す ゆ びゃ ず ひゅ ぎょ しゅ く。",
-    "a": "sa gyo ge ba ma ri cho rya su ne ryo pyu da go su yu bya zu hyu gyo shu ku."
+    "q": "こ、 りゃ、 みゃ、 よ、 びゅ、 や、 ぎゅ、 へ、 た。",
+    "a": "ko, rya, mya, yo, byu, ya, gyu, he, ta."
   },
   {
-    "q": "ぷ な みょ ぐ ぴゅ にゃ きゃ あ ぎ にゅ は にょ が も ちゅ りょ ぎ あ ば お。",
-    "a": "pu na myo gu pyu nya kya a gi nyu ha nyo ga mo chu ryo gi a ba o."
+    "q": "ぴゃ、 は、 ご、 と、 じゃ、 にょ、 が、 ぴゅ、 ぼ、 を、 く、 ぴゅ、 む、 ず。",
+    "a": "pya, ha, go, to, ja, nyo, ga, pyu, bo, wo, ku, pyu, mu, zu."
   },
   {
-    "q": "しょ ぴゅ つ にゃ が だ にゅ ば く ぬ も め け さ ど。",
-    "a": "sho pyu tsu nya ga da nyu ba ku nu mo me ke sa do."
+    "q": "が、 ぺ、 ふ、 ぎゃ、 め、 よ、 びゅ。",
+    "a": "ga, pe, fu, gya, me, yo, byu."
   },
   {
-    "q": "びゃ しゅ ち ぼ へ ふ りゅ にょ は にゅ と く や ば みょ え ぎょ れ ぴ に あ ぎゃ の せ か ぼ あ じ し。",
-    "a": "bya shu chi bo he fu ryu nyo ha nyu to ku ya ba myo e gyo re pi ni a gya no se ka bo a ji shi."
+    "q": "ば、 ふ、 びゅ、 ま、 ね、 び、 も、 ふ、 ぬ、 ぎゃ、 ず、 き、 わ、 む。",
+    "a": "ba, fu, byu, ma, ne, bi, mo, fu, nu, gya, zu, ki, wa, mu."
   },
   {
-    "q": "あ ち が じゅ ちゃ を ぬ ぞ え きょ う し も ひ。",
-    "a": "a chi ga ju cha wo nu zo e kyo u shi mo hi."
+    "q": "す、 りゅ、 ぱ、 じゅ、 お、 わ、 ず、 み、 か、 ぱ、 ぬ、 ぱ、 ぽ、 て、 びょ。",
+    "a": "su, ryu, pa, ju, o, wa, zu, mi, ka, pa, nu, pa, po, te, byo."
   },
   {
-    "q": "ず に ぎ か は が ほ ざ た り ぎゃ き け ご げ ひょ ぎゅ も。",
-    "a": "zu ni gi ka ha ga ho za ta ri gya ki ke go ge hyo gyu mo."
+    "q": "ちゅ、 べ、 ぴ、 か、 か、 ぜ、 きゃ、 え、 じゃ、 げ、 ま、 ぴゃ、 しょ、 す、 じ、 ちゃ、 ぎょ、 きょ、 ろ、 あ。",
+    "a": "chu, be, pi, ka, ka, ze, kya, e, ja, ge, ma, pya, sho, su, ji, cha, gyo, kyo, ro, a."
   },
   {
-    "q": "ぽ びゃ が しゃ ま あ や きょ れ だ びゃ げ ぺ ぼ が た ぜ び りょ で て みゃ せ ぴ は じゅ りゃ す ろ しゅ びょ ち ぱ しゅ ざ ぬ し しょ。",
-    "a": "po bya ga sha ma a ya kyo re da bya ge pe bo ga ta ze bi ryo de te mya se pi ha ju rya su ro shu byo chi pa shu za nu shi sho."
+    "q": "しゃ、 びょ、 す、 て、 け、 り、 ぎゅ。",
+    "a": "sha, byo, su, te, ke, ri, gyu."
   },
   {
-    "q": "よ き ず こ にゅ にゃ ぎゅ ぬ ひゃ け わ だ べ しょ。",
-    "a": "yo ki zu ko nyu nya gyu nu hya ke wa da be sho."
+    "q": "に、 ひゃ、 ぱ、 せ、 で、 ほ、 ぎゅ、 ろ、 て、 にょ、 ぜ、 ぴ、 にゃ、 せ、 ぴゃ、 も、 せ、 き、 べ、 ぴゃ。",
+    "a": "ni, hya, pa, se, de, ho, gyu, ro, te, nyo, ze, pi, nya, se, pya, mo, se, ki, be, pya."
   },
   {
-    "q": "ひゅ ぞ ぜ お で る ら だ ゆ よ しゅ む な ぞ しゅ ほ い ざ ゆ。",
-    "a": "hyu zo ze o de ru ra da yu yo shu mu na zo shu ho i za yu."
+    "q": "す、 ざ、 りゃ、 ほ、 しゃ、 ぴゅ、 じゃ、 へ、 ひゅ、 わ、 だ、 みゃ、 け、 そ、 きゃ、 し、 ひ。",
+    "a": "su, za, rya, ho, sha, pyu, ja, he, hyu, wa, da, mya, ke, so, kya, shi, hi."
   },
   {
-    "q": "ぴゅ り つ ぴゃ や ご す ひゃ が え ぴ しょ だ そ みょ や りょ びょ ぎ ぴゅ ら ぴゅ そ ぽ む が も る にょ りょ ひゃ ぎょ く。",
-    "a": "pyu ri tsu pya ya go su hya ga e pi sho da so myo ya ryo byo gi pyu ra pyu so po mu ga mo ru nyo ryo hya gyo ku."
+    "q": "ちょ、 ば、 う、 ら、 う、 ぴ、 きゅ、 み、 せ、 お、 ぴゅ、 を、 い、 ね、 ぴ、 ご、 な、 く、 せ、 ひゅ。",
+    "a": "cho, ba, u, ra, u, pi, kyu, mi, se, o, pyu, wo, i, ne, pi, go, na, ku, se, hyu."
   },
   {
-    "q": "ぼ び ひょ で え そ あ びゅ ひ ぎゅ る じ こ け さ を べ あ ぎゃ びゅ い く き ず ろ ひゅ か ぷ り う き。",
-    "a": "bo bi hyo de e so a byu hi gyu ru ji ko ke sa wo be a gya byu i ku ki zu ro hyu ka pu ri u ki."
+    "q": "ぴゅ、 び、 ひ、 じゅ、 みゃ、 で、 ち、 は、 は。",
+    "a": "pyu, bi, hi, ju, mya, de, chi, ha, ha."
   },
   {
-    "q": "ぐ し びゅ し で よ しょ きゅ べ ま び ぶ で む て ぷ く の び わ。",
-    "a": "gu shi byu shi de yo sho kyu be ma bi bu de mu te pu ku no bi wa."
+    "q": "の、 しょ、 ぎ、 て、 か、 ぎゃ、 こ、 が、 お、 ぷ、 で。",
+    "a": "no, sho, gi, te, ka, gya, ko, ga, o, pu, de."
   },
   {
-    "q": "りゅ にゃ が き ふ り ゆ ぐ みゃ じょ じゃ きゅ ぺ あ ぎょ て ば にゃ こ じゃ ぎ り きょ きゅ ぴゅ ひゅ げ ぎゅ ふ ほ く い く ちゃ じゅ じゅ。",
-    "a": "ryu nya ga ki fu ri yu gu mya jo ja kyu pe a gyo te ba nya ko ja gi ri kyo kyu pyu hyu ge gyu fu ho ku i ku cha ju ju."
+    "q": "ひゃ、 しゃ、 ま、 しゃ、 ぎ、 ぶ、 ぺ、 にゅ、 みょ、 み、 じゃ、 く、 に、 しゅ、 ど。",
+    "a": "hya, sha, ma, sha, gi, bu, pe, nyu, myo, mi, ja, ku, ni, shu, do."
   },
   {
-    "q": "け りゃ ち りょ ぜ ぎゃ ひょ の る で ひょ う ぜ う す にゃ ろ く ま ぴゅ れ べ く りゅ つ ぞ ぎ にゅ ふ にょ じ びょ さ わ ぎ きゅ ちゃ にゅ る よ。",
-    "a": "ke rya chi ryo ze gya hyo no ru de hyo u ze u su nya ro ku ma pyu re be ku ryu tsu zo gi nyu fu nyo ji byo sa wa gi kyu cha nyu ru yo."
+    "q": "そ、 に、 る、 が、 す、 ち、 ひゅ、 み、 う、 きゅ、 る、 け、 しゅ、 ぬ、 す、 は、 さ。",
+    "a": "so, ni, ru, ga, su, chi, hyu, mi, u, kyu, ru, ke, shu, nu, su, ha, sa."
   },
   {
-    "q": "りょ みょ え ぴょ だ た う つ にゃ ゆ ち ら う ち け ぎゅ ぬ びゅ ぱ びゅ そ じ りゃ も ぐ の る や わ は にょ にゃ。",
-    "a": "ryo myo e pyo da ta u tsu nya yu chi ra u chi ke gyu nu byu pa byu so ji rya mo gu no ru ya wa ha nyo nya."
+    "q": "きょ、 ぴょ、 ぺ、 し、 ぎゃ、 が、 にゅ、 ほ。",
+    "a": "kyo, pyo, pe, shi, gya, ga, nyu, ho."
   },
   {
-    "q": "ぱ ち が い しゅ か きゃ た ご ど ぶ え ひゅ ぞ きゃ ちゃ わ みゅ ぴゃ ぽ。",
-    "a": "pa chi ga i shu ka kya ta go do bu e hyu zo kya cha wa myu pya po."
+    "q": "ぱ、 へ、 びょ、 きゃ、 にゅ、 も、 にゅ、 じゅ、 しゃ、 や、 ろ、 ず。",
+    "a": "pa, he, byo, kya, nyu, mo, nyu, ju, sha, ya, ro, zu."
   },
   {
-    "q": "す ぽ ぎ じ み ぼ びゃ さ じ ぴ へ げ ば れ げ を。",
-    "a": "su po gi ji mi bo bya sa ji pi he ge ba re ge wo."
+    "q": "にょ、 ぷ、 お、 ぴゅ、 み、 る、 ぱ、 ぶ、 は、 ぜ、 そ、 せ、 で。",
+    "a": "nyo, pu, o, pyu, mi, ru, pa, bu, ha, ze, so, se, de."
   },
   {
-    "q": "ぴゃ や ちゃ ぶ ば べ く ぽ ぐ ご る ひゃ びゅ みゅ。",
-    "a": "pya ya cha bu ba be ku po gu go ru hya byu myu."
+    "q": "せ、 ろ、 さ、 ち、 れ、 ちゃ、 る、 じゅ、 す、 ね、 ぷ、 つ、 て、 み、 びゅ、 びゅ、 う、 きょ。",
+    "a": "se, ro, sa, chi, re, cha, ru, ju, su, ne, pu, tsu, te, mi, byu, byu, u, kyo."
   },
   {
-    "q": "け へ じょ じょ け りゃ しゅ きょ ちゅ わ ぎゃ ど ば みゅ む み にゅ は にゅ ご じょ る あ ぎゅ みゅ た。",
-    "a": "ke he jo jo ke rya shu kyo chu wa gya do ba myu mu mi nyu ha nyu go jo ru a gyu myu ta."
+    "q": "しゅ、 ぞ、 ゆ、 ざ、 せ、 に、 ち、 ふ、 しゅ、 ね、 みゃ、 ぷ、 じゃ、 きょ、 ぎゅ、 お、 ひょ。",
+    "a": "shu, zo, yu, za, se, ni, chi, fu, shu, ne, mya, pu, ja, kyo, gyu, o, hyo."
   },
   {
-    "q": "じゅ け く た く みゃ ぽ びゅ え ひゃ べ し の ば。",
-    "a": "ju ke ku ta ku mya po byu e hya be shi no ba."
+    "q": "ふ、 え、 と、 ひょ、 ざ、 む、 け、 ば、 や、 て、 ぎゅ、 ひ、 を、 ひゅ。",
+    "a": "fu, e, to, hyo, za, mu, ke, ba, ya, te, gyu, hi, wo, hyu."
   },
   {
-    "q": "が よ え あ べ あ び た ぼ め り ず せ みゃ え で りょ ぽ びょ つ ぎ ひゃ そ ろ ひゃ ま な ぜ た し にょ ほ きょ ちょ りゃ い わ りょ。",
-    "a": "ga yo e a be a bi ta bo me ri zu se mya e de ryo po byo tsu gi hya so ro hya ma na ze ta shi nyo ho kyo cho rya i wa ryo."
+    "q": "ぷ、 びょ、 ぐ、 みゃ、 あ、 ゆ、 ぎょ、 せ、 きょ、 りゅ、 や、 ろ。",
+    "a": "pu, byo, gu, mya, a, yu, gyo, se, kyo, ryu, ya, ro."
   },
   {
-    "q": "ぴゅ え よ ひゃ しゃ ろ れ びゃ や ぬ き ひゃ げ きょ ぺ びょ し ぴ ま びゃ え びゅ で じゅ ま ちゃ ぽ しゅ つ で べ ち ま ゆ りゃ ちゅ め も ぴゅ。",
-    "a": "pyu e yo hya sha ro re bya ya nu ki hya ge kyo pe byo shi pi ma bya e byu de ju ma cha po shu tsu de be chi ma yu rya chu me mo pyu."
+    "q": "りゅ、 へ、 しゅ、 ず、 ひょ、 す、 しゅ、 く、 ぴゅ、 を、 りゅ、 みゅ、 ぽ、 に、 ぶ。",
+    "a": "ryu, he, shu, zu, hyo, su, shu, ku, pyu, wo, ryu, myu, po, ni, bu."
   },
   {
-    "q": "ぷ げ ちゃ う ぎゅ ぬ りょ か じょ り ぐ ぎゃ びゅ る さ ね ぴゅ う さ みょ ぎゅ つ じょ さ き ちゃ り び にょ にょ も こ か ね にゃ。",
-    "a": "pu ge cha u gyu nu ryo ka jo ri gu gya byu ru sa ne pyu u sa myo gyu tsu jo sa ki cha ri bi nyo nyo mo ko ka ne nya."
+    "q": "え、 ぶ、 ひ、 か、 も、 し、 ぶ、 ゆ、 ぺ。",
+    "a": "e, bu, hi, ka, mo, shi, bu, yu, pe."
   },
   {
-    "q": "ざ ろ みゃ みゃ ひ さ ろ き で る ぎゃ む りょ ぜ ぶ ば しゅ ど ず ゆ。",
-    "a": "za ro mya mya hi sa ro ki de ru gya mu ryo ze bu ba shu do zu yu."
+    "q": "わ、 で、 きゅ、 にゃ、 ぴゅ、 しゅ、 ひゃ、 ぐ、 りゅ、 じ、 ちゅ。",
+    "a": "wa, de, kyu, nya, pyu, shu, hya, gu, ryu, ji, chu."
   },
   {
-    "q": "ね きょ は みゃ ぴょ て じ わ びゃ ざ て しょ を お きゃ へ ひゃ ぴ も びょ い じ にゃ よ きゃ にょ ゆ ちゅ よ じ げ みゅ ぜ ぼ ひ ご みゅ す しゃ。",
-    "a": "ne kyo ha mya pyo te ji wa bya za te sho wo o kya he hya pi mo byo i ji nya yo kya nyo yu chu yo ji ge myu ze bo hi go myu su sha."
+    "q": "ね、 よ、 きゃ、 にょ、 ち、 け、 ちょ、 きゃ、 ほ、 が、 ら、 にゃ、 ひ、 ご、 しゅ、 こ、 ざ。",
+    "a": "ne, yo, kya, nyo, chi, ke, cho, kya, ho, ga, ra, nya, hi, go, shu, ko, za."
   },
   {
-    "q": "る にゃ で に ば じ も む きょ わ げ ず う な き みょ ひゅ ば びゅ せ。",
-    "a": "ru nya de ni ba ji mo mu kyo wa ge zu u na ki myo hyu ba byu se."
+    "q": "い、 な、 りゃ、 み、 が、 ら、 ほ、 つ、 だ、 びょ、 な、 け、 は、 ど、 へ、 を、 みゃ、 や、 お、 を。",
+    "a": "i, na, rya, mi, ga, ra, ho, tsu, da, byo, na, ke, ha, do, he, wo, mya, ya, o, wo."
   },
   {
-    "q": "り ち じ ぎゃ き ぐ う みゃ ぎゃ げ ぎゃ げ ふ を あ ご め びゅ る みゃ へ む か にゃ え に。",
-    "a": "ri chi ji gya ki gu u mya gya ge gya ge fu wo a go me byu ru mya he mu ka nya e ni."
+    "q": "ひゃ、 びゃ、 き、 ほ、 に、 ぜ、 け、 ざ、 ぶ、 が、 な、 は、 さ、 にょ、 が、 ぎ、 ぺ、 ちょ、 け、 わ。",
+    "a": "hya, bya, ki, ho, ni, ze, ke, za, bu, ga, na, ha, sa, nyo, ga, gi, pe, cho, ke, wa."
   },
   {
-    "q": "にゃ に みゅ みゅ しょ た べ が ち みゅ す が て。",
-    "a": "nya ni myu myu sho ta be ga chi myu su ga te."
+    "q": "りゅ、 ひゅ、 ぴ、 じゅ、 て、 へ、 りょ、 ぷ、 りゅ、 ろ、 ぴゅ、 じ、 う、 りゅ、 も。",
+    "a": "ryu, hyu, pi, ju, te, he, ryo, pu, ryu, ro, pyu, ji, u, ryu, mo."
   },
   {
-    "q": "きょ し つ ぬ れ え ぬ だ りゅ ど ざ ち ま ゆ へ か こ え にゅ ぴ そ ぽ ぎ きょ じゅ つ ぎゅ ろ つ こ しゅ む ぎ み。",
-    "a": "kyo shi tsu nu re e nu da ryu do za chi ma yu he ka ko e nyu pi so po gi kyo ju tsu gyu ro tsu ko shu mu gi mi."
+    "q": "きょ、 ず、 じゅ、 ず、 み、 ぶ、 ぴゃ、 ち、 じゅ、 きゅ、 つ、 ほ、 つ、 わ、 ま、 ひ。",
+    "a": "kyo, zu, ju, zu, mi, bu, pya, chi, ju, kyu, tsu, ho, tsu, wa, ma, hi."
   },
   {
-    "q": "め き ぴゃ しゅ みゃ で しゃ ぶ ひゃ を ま。",
-    "a": "me ki pya shu mya de sha bu hya wo ma."
+    "q": "で、 べ、 にょ、 ぐ、 ぼ、 ぐ、 せ、 ぽ、 りゃ、 ひ、 き。",
+    "a": "de, be, nyo, gu, bo, gu, se, po, rya, hi, ki."
   },
   {
-    "q": "む ちゅ い ぎゃ あ と て む へ りょ じゃ へ びょ ご ふ ぎゃ ぽ ず だ しょ り る みゅ で ひ よ さ みゅ しゃ しゅ ず ちゅ て ぴゃ みょ ど と き。",
-    "a": "mu chu i gya a to te mu he ryo ja he byo go fu gya po zu da sho ri ru myu de hi yo sa myu sha shu zu chu te pya myo do to ki."
+    "q": "にょ、 ぱ、 げ、 しょ、 ぞ、 ぷ、 にょ、 ほ、 びゅ。",
+    "a": "nyo, pa, ge, sho, zo, pu, nyo, ho, byu."
   },
   {
-    "q": "や つ め て きゃ みょ ね ぽ ぴゃ ぷ ぽ さ ぼ ご ぐ きゅ びょ きょ ぎゃ が は にゃ り ぎょ と ほ。",
-    "a": "ya tsu me te kya myo ne po pya pu po sa bo go gu kyu byo kyo gya ga ha nya ri gyo to ho."
+    "q": "しゅ、 よ、 ば、 も、 ふ、 ぐ、 さ、 ふ、 れ、 ぴょ、 みゃ、 べ、 りょ、 ちゃ。",
+    "a": "shu, yo, ba, mo, fu, gu, sa, fu, re, pyo, mya, be, ryo, cha."
   },
   {
-    "q": "と きゃ せ びょ ほ べ を じゃ ぎゃ せ しょ ほ え ぐ ぴゅ そ げ け ば きゅ ね あ ほ びょ せ ご て つ。",
-    "a": "to kya se byo ho be wo ja gya se sho ho e gu pyu so ge ke ba kyu ne a ho byo se go te tsu."
+    "q": "ら、 ひ、 ぎょ、 しゃ、 し、 る、 しゃ、 し、 にゅ。",
+    "a": "ra, hi, gyo, sha, shi, ru, sha, shi, nyu."
   },
   {
-    "q": "ぎゃ みゅ は ば ぴ しゃ びゅ に の す りゃ しょ ぷ ぎょ お りょ ぴゅ も ぐ ぱ ぴゃ す ぎゃ の め あ よ は にゃ ぞ。",
-    "a": "gya myu ha ba pi sha byu ni no su rya sho pu gyo o ryo pyu mo gu pa pya su gya no me a yo ha nya zo."
+    "q": "しょ、 ぬ、 や、 じゅ、 ぴ、 さ、 しゃ、 ぴゃ、 ひゅ、 け、 じゅ、 ば、 ち、 や、 つ、 る、 が、 ぎゅ、 が、 お。",
+    "a": "sho, nu, ya, ju, pi, sa, sha, pya, hyu, ke, ju, ba, chi, ya, tsu, ru, ga, gyu, ga, o."
   },
   {
-    "q": "りゅ ぞ じょ び ご し ぺ り い りゃ ろ だ ぼ ひ。",
-    "a": "ryu zo jo bi go shi pe ri i rya ro da bo hi."
+    "q": "を、 や、 う、 ち、 は、 あ、 は、 む、 ひゃ、 ぎょ。",
+    "a": "wo, ya, u, chi, ha, a, ha, mu, hya, gyo."
   },
   {
-    "q": "を ぴょ ぐ きょ ぎゃ す べ お ぎ ぐ ふ だ な ぴょ ぞ ひゅ は わ び きょ みゃ ぴょ こ し ひょ ぴゃ け りゃ ば よ で ね みゅ ほ よ。",
-    "a": "wo pyo gu kyo gya su be o gi gu fu da na pyo zo hyu ha wa bi kyo mya pyo ko shi hyo pya ke rya ba yo de ne myu ho yo."
+    "q": "の、 ぎょ、 ちょ、 ち、 ぎゃ、 じ、 う、 て、 ぴゃ、 じゃ、 つ、 びょ。",
+    "a": "no, gyo, cho, chi, gya, ji, u, te, pya, ja, tsu, byo."
   },
   {
-    "q": "て じゃ ぺ だ ま え ぷ る ちょ にゃ にょ ど しゅ り ず べ ぱ え ぜ へ な ど る さ う ほ じ。",
-    "a": "te ja pe da ma e pu ru cho nya nyo do shu ri zu be pa e ze he na do ru sa u ho ji."
+    "q": "た、 よ、 ぷ、 と、 ぽ、 ね、 わ、 び、 ち、 ちゅ、 な、 ぬ、 ぎ。",
+    "a": "ta, yo, pu, to, po, ne, wa, bi, chi, chu, na, nu, gi."
   },
   {
-    "q": "ちょ びょ きょ な ぷ け に ば し に り ふ さ りょ き あ み ぴょ め ぎ みょ ば きゃ ぴょ せ びょ にゃ い ちゃ りゃ そ べ。",
-    "a": "cho byo kyo na pu ke ni ba shi ni ri fu sa ryo ki a mi pyo me gi myo ba kya pyo se byo nya i cha rya so be."
+    "q": "ふ、 ぎゃ、 じょ、 ざ、 で、 を、 り、 りゃ、 ぼ、 しゅ、 びゃ、 ま、 ぶ。",
+    "a": "fu, gya, jo, za, de, wo, ri, rya, bo, shu, bya, ma, bu."
   },
   {
-    "q": "りゃ て ぬ す て が え ら きゃ ひゃ ね も び た て じ も ぜ も え だ れ。",
-    "a": "rya te nu su te ga e ra kya hya ne mo bi ta te ji mo ze mo e da re."
+    "q": "ぞ、 じゃ、 ね、 か、 しゅ、 む、 ぱ、 び、 ぴょ、 ぎゅ、 ぜ、 ひゅ、 ひょ、 ほ、 ひゅ、 きょ。",
+    "a": "zo, ja, ne, ka, shu, mu, pa, bi, pyo, gyu, ze, hyu, hyo, ho, hyu, kyo."
   },
   {
-    "q": "に きゃ ひ ぷ お じ れ は を みょ ぽ ま みょ にゅ わ ぴ ひょ は にゅ さ ら ゆ ぶ りゅ ば ぱ ば も ひょ ぷ ぎゃ。",
-    "a": "ni kya hi pu o ji re ha wo myo po ma myo nyu wa pi hyo ha nyu sa ra yu bu ryu ba pa ba mo hyo pu gya."
+    "q": "ぎょ、 が、 りゅ、 あ、 ど、 い、 ぬ、 く、 きゅ。",
+    "a": "gyo, ga, ryu, a, do, i, nu, ku, kyu."
   },
   {
-    "q": "きょ ば ぶ ひゃ にょ ほ く む ば ぬ り ゆ ま や う ば ざ ぜ ば ち ぽ て ぼ しょ ば ぴ ず。",
-    "a": "kyo ba bu hya nyo ho ku mu ba nu ri yu ma ya u ba za ze ba chi po te bo sho ba pi zu."
+    "q": "りょ、 ちゅ、 ほ、 ま、 も、 の、 ざ、 と、 みゅ、 ぴょ、 せ、 ぼ、 せ。",
+    "a": "ryo, chu, ho, ma, mo, no, za, to, myu, pyo, se, bo, se."
   },
   {
-    "q": "わ な や り じ ひゅ びょ る だ ご み ひょ ろ ぺ きょ にゅ れ じゅ ぐ う ちゃ げ ひゅ ぐ りょ の び さ つ い じょ ちょ。",
-    "a": "wa na ya ri ji hyu byo ru da go mi hyo ro pe kyo nyu re ju gu u cha ge hyu gu ryo no bi sa tsu i jo cho."
+    "q": "りゅ、 な、 きゃ、 ち、 も、 きゅ、 き、 ぴゅ、 ぬ、 ち。",
+    "a": "ryu, na, kya, chi, mo, kyu, ki, pyu, nu, chi."
   },
   {
-    "q": "ぎ ぜ ぱ る め ぶ そ しゃ そ ざ ぎゃ わ ぱ びゅ て ず みょ ぴゃ ぱ ふ み ひょ を ぶ う み にゅ。",
-    "a": "gi ze pa ru me bu so sha so za gya wa pa byu te zu myo pya pa fu mi hyo wo bu u mi nyu."
+    "q": "み、 だ、 み、 び、 ね、 か、 ちゅ、 せ、 ゆ、 ざ、 な、 げ、 り、 せ、 な、 え、 りゃ。",
+    "a": "mi, da, mi, bi, ne, ka, chu, se, yu, za, na, ge, ri, se, na, e, rya."
   },
   {
-    "q": "りょ り りゅ む じょ ぶ る し せ にょ め ゆ ゆ びゅ ろ き にゅ ぴょ ぼ。",
-    "a": "ryo ri ryu mu jo bu ru shi se nyo me yu yu byu ro ki nyu pyo bo."
+    "q": "ゆ、 み、 を、 せ、 や、 ぴゃ、 みゅ、 ちゅ、 ぴょ、 ぽ、 く、 ほ、 こ、 み、 し。",
+    "a": "yu, mi, wo, se, ya, pya, myu, chu, pyo, po, ku, ho, ko, mi, shi."
   },
   {
-    "q": "きょ ぐ じゃ ふ しゅ にゅ ず びょ と しゃ き み りょ きょ げ じょ た ぞ びゅ ちょ む み を て め ぺ ら ぞ。",
-    "a": "kyo gu ja fu shu nyu zu byo to sha ki mi ryo kyo ge jo ta zo byu cho mu mi wo te me pe ra zo."
+    "q": "ろ、 ね、 びゃ、 ぽ、 ろ、 あ、 く、 ろ、 ざ、 ゆ、 お、 れ、 び、 を、 ぞ、 じょ。",
+    "a": "ro, ne, bya, po, ro, a, ku, ro, za, yu, o, re, bi, wo, zo, jo."
   },
   {
-    "q": "こ ぞ か ぷ にょ ひゅ べ か と よ にゅ じ あ ち ぜ ぎゅ で つ ち し へ ぺ びゅ な じゃ ちゃ だ ぷ け せ。",
-    "a": "ko zo ka pu nyo hyu be ka to yo nyu ji a chi ze gyu de tsu chi shi he pe byu na ja cha da pu ke se."
+    "q": "ず、 せ、 に、 ゆ、 す、 ぐ、 み、 を、 ば、 て、 ぷ、 ば、 りゅ、 み、 だ、 も。",
+    "a": "zu, se, ni, yu, su, gu, mi, wo, ba, te, pu, ba, ryu, mi, da, mo."
   },
   {
-    "q": "ひ ひ ひ を に じ げ りゃ じょ て ぎ ら ぐ しゃ ぱ しょ きゃ ぼ む の を も ぎゃ の ぱ や ぞ ひ ちゅ く を が ざ びょ りゃ な ぎゃ。",
-    "a": "hi hi hi wo ni ji ge rya jo te gi ra gu sha pa sho kya bo mu no wo mo gya no pa ya zo hi chu ku wo ga za byo rya na gya."
+    "q": "ぐ、 ひゃ、 く、 ぞ、 ぴゅ、 め、 ぼ、 ば、 た、 にゃ、 ぷ、 つ、 びょ、 も、 じょ。",
+    "a": "gu, hya, ku, zo, pyu, me, bo, ba, ta, nya, pu, tsu, byo, mo, jo."
   },
   {
-    "q": "が びゃ び あ と よ む け じょ し ぶ あ ぞ りょ びゃ びょ ぎ ざ き。",
-    "a": "ga bya bi a to yo mu ke jo shi bu a zo ryo bya byo gi za ki."
+    "q": "い、 ちょ、 し、 す、 び、 か、 びょ、 ぺ、 ぬ、 ま、 め、 じ、 し、 ひょ、 か、 ど。",
+    "a": "i, cho, shi, su, bi, ka, byo, pe, nu, ma, me, ji, shi, hyo, ka, do."
   },
   {
-    "q": "に か は ぼ ちゃ にょ れ み を こ ら よ ぷ な だ び つ ぶ りゅ あ ぬ ひゅ。",
-    "a": "ni ka ha bo cha nyo re mi wo ko ra yo pu na da bi tsu bu ryu a nu hyu."
+    "q": "へ、 ぴ、 て、 き、 ぎゅ、 ち、 ね。",
+    "a": "he, pi, te, ki, gyu, chi, ne."
   },
   {
-    "q": "そ ず が びょ を の す ぐ で ぎ ま ぴゅ ど にゅ りょ ま。",
-    "a": "so zu ga byo wo no su gu de gi ma pyu do nyu ryo ma."
+    "q": "ろ、 ざ、 ぷ、 しょ、 れ、 は、 ぴゃ、 え、 ちゅ、 え、 が、 て、 み、 ぎ、 る、 み、 ふ、 みゅ。",
+    "a": "ro, za, pu, sho, re, ha, pya, e, chu, e, ga, te, mi, gi, ru, mi, fu, myu."
   },
   {
-    "q": "で あ ざ ぴゃ ぷ い ろ ば め せ ぽ る ろ か つ ちゃ ゆ べ ぜ び ふ ぎゃ。",
-    "a": "de a za pya pu i ro ba me se po ru ro ka tsu cha yu be ze bi fu gya."
+    "q": "ぎゅ、 ひょ、 り、 しょ、 へ、 と、 しゅ、 も、 に。",
+    "a": "gyu, hyo, ri, sho, he, to, shu, mo, ni."
   },
   {
-    "q": "じ す か ぎゃ じょ は み せ べ と き ぬ み ぱ ざ つ しゅ りょ ね じゃ ちょ へ ば あ ぜ ぱ ど じ の しょ みょ み げ は。",
-    "a": "ji su ka gya jo ha mi se be to ki nu mi pa za tsu shu ryo ne ja cho he ba a ze pa do ji no sho myo mi ge ha."
+    "q": "ず、 ぷ、 も、 びょ、 の、 あ、 ぜ、 ぞ、 べ、 ぴょ、 の、 は、 みょ、 ぷ、 あ、 に、 へ、 ゆ、 しょ、 にょ。",
+    "a": "zu, pu, mo, byo, no, a, ze, zo, be, pyo, no, ha, myo, pu, a, ni, he, yu, sho, nyo."
   },
   {
-    "q": "びゃ じゅ こ りょ ご ひゃ む お ぎゃ ど ぜ だ び ふ び ご を た ぴ ふ みょ よ め ふ ら く し ひゃ へ にゅ す い しゃ よ あ。",
-    "a": "bya ju ko ryo go hya mu o gya do ze da bi fu bi go wo ta pi fu myo yo me fu ra ku shi hya he nyu su i sha yo a."
+    "q": "じょ、 う、 しゅ、 へ、 じゅ、 ゆ、 で、 せ、 ど、 じゅ、 ず、 げ、 ほ。",
+    "a": "jo, u, shu, he, ju, yu, de, se, do, ju, zu, ge, ho."
   },
   {
-    "q": "ま に みゅ く し びゅ ば きゃ ひ ぷ みゃ し ふ きゅ りゃ ぺ む や ち ろ え お ぱ お す りゅ ぎゅ しょ ぞ に た。",
-    "a": "ma ni myu ku shi byu ba kya hi pu mya shi fu kyu rya pe mu ya chi ro e o pa o su ryu gyu sho zo ni ta."
+    "q": "ぼ、 ゆ、 じょ、 ふ、 ほ、 ぽ、 き、 え、 じょ、 ひゅ、 ず、 ご、 び、 や、 ひゅ、 ず、 ぺ、 り、 え。",
+    "a": "bo, yu, jo, fu, ho, po, ki, e, jo, hyu, zu, go, bi, ya, hyu, zu, pe, ri, e."
   },
   {
-    "q": "ぱ ぱ ず し か きょ ちょ ぷ に を け つ。",
-    "a": "pa pa zu shi ka kyo cho pu ni wo ke tsu."
+    "q": "せ、 み、 みゃ、 ぱ、 び、 ぱ、 わ、 ちゅ、 し、 ち、 ど、 ず、 ゆ、 ら、 ぽ、 ざ、 ぴょ。",
+    "a": "se, mi, mya, pa, bi, pa, wa, chu, shi, chi, do, zu, yu, ra, po, za, pyo."
   },
   {
-    "q": "げ で しょ きゃ り みょ ぎゅ め こ は ぎょ ぐ え ぼ にょ か ぺ な。",
-    "a": "ge de sho kya ri myo gyu me ko ha gyo gu e bo nyo ka pe na."
+    "q": "ぽ、 へ、 い、 え、 ぷ、 き、 ちゅ、 と、 きゅ、 ら、 お。",
+    "a": "po, he, i, e, pu, ki, chu, to, kyu, ra, o."
   },
   {
-    "q": "び ら ず び う は みゅ け ぞ じゅ ぽ ちゅ も しゃ ら ば びょ わ。",
-    "a": "bi ra zu bi u ha myu ke zo ju po chu mo sha ra ba byo wa."
+    "q": "ね、 ぞ、 よ、 ぱ、 ちゃ、 え、 す、 の、 ぎょ、 え、 ちゃ。",
+    "a": "ne, zo, yo, pa, cha, e, su, no, gyo, e, cha."
   },
   {
-    "q": "ぎ ぎゅ と ひ な た く め へ ざ め ぴゅ げ つ い きゃ は は きゃ く しゃ。",
-    "a": "gi gyu to hi na ta ku me he za me pyu ge tsu i kya ha ha kya ku sha."
+    "q": "ち、 ぶ、 や、 ま、 ひゅ、 き、 ぴ、 しょ、 の、 も、 へ、 ぶ、 びゃ、 み。",
+    "a": "chi, bu, ya, ma, hyu, ki, pi, sho, no, mo, he, bu, bya, mi."
   },
   {
-    "q": "げ ひゃ ちゅ ぜ て て ぬ に れ ね い ぽ ど きゅ び と る き じゃ に は く ぺ ぱ し ゆ れ い ど きゃ ば こ い みゃ。",
-    "a": "ge hya chu ze te te nu ni re ne i po do kyu bi to ru ki ja ni ha ku pe pa shi yu re i do kya ba ko i mya."
+    "q": "ろ、 ぜ、 こ、 こ、 む、 ぎゃ、 よ、 ちょ、 ぎゃ、 ひょ、 ち、 と、 は、 べ、 にゃ、 ぞ。",
+    "a": "ro, ze, ko, ko, mu, gya, yo, cho, gya, hyo, chi, to, ha, be, nya, zo."
   },
   {
-    "q": "ば る む ぜ む ま びゃ め ざ ぎょ みょ ぎ ちゅ び い ご ざ びゃ さ ど ぎゃ に ご びょ きょ。",
-    "a": "ba ru mu ze mu ma bya me za gyo myo gi chu bi i go za bya sa do gya ni go byo kyo."
+    "q": "よ、 だ、 さ、 ちゃ、 よ、 て、 か、 は。",
+    "a": "yo, da, sa, cha, yo, te, ka, ha."
   },
   {
-    "q": "び む しゅ け じ わ ろ あ ぞ にゅ ご よ わ ぎゅ ろ き ぽ ぽ き ざ へ れ ぴゅ け じょ ぞ じ きゅ や ざ ご みゅ だ す き け。",
-    "a": "bi mu shu ke ji wa ro a zo nyu go yo wa gyu ro ki po po ki za he re pyu ke jo zo ji kyu ya za go myu da su ki ke."
+    "q": "にゃ、 げ、 う、 ぼ、 ば、 しょ、 ぬ。",
+    "a": "nya, ge, u, bo, ba, sho, nu."
   },
   {
-    "q": "の ひゅ き る ぴゃ ろ も ぎ ぴょ ひゃ ゆ み し じょ ぱ。",
-    "a": "no hyu ki ru pya ro mo gi pyo hya yu mi shi jo pa."
+    "q": "にょ、 つ、 が、 ぎゃ、 りゃ、 ご、 りょ、 しゅ、 る、 わ、 ゆ、 しゅ、 し、 わ、 み。",
+    "a": "nyo, tsu, ga, gya, rya, go, ryo, shu, ru, wa, yu, shu, shi, wa, mi."
   },
   {
-    "q": "ぽ も せ げ よ ば きょ お じゅ ゆ ご ひゃ。",
-    "a": "po mo se ge yo ba kyo o ju yu go hya."
+    "q": "ず、 きゅ、 じ、 が、 ぎゃ、 にょ、 へ、 ぎょ、 で。",
+    "a": "zu, kyu, ji, ga, gya, nyo, he, gyo, de."
   },
   {
-    "q": "しゅ ふ み ど りょ ぴょ あ も ね ふ て れ た わ む ちゅ か げ ぐ ろ ら ぎょ ち ざ に べ こ さ ば そ ぴょ ぷ にょ ぎ ぴゃ ぞ わ みょ。",
-    "a": "shu fu mi do ryo pyo a mo ne fu te re ta wa mu chu ka ge gu ro ra gyo chi za ni be ko sa ba so pyo pu nyo gi pya zo wa myo."
+    "q": "じ、 ぎょ、 お、 じゃ、 りゅ、 みゅ、 びょ、 を、 ま。",
+    "a": "ji, gyo, o, ja, ryu, myu, byo, wo, ma."
   },
   {
-    "q": "ず べ にゃ ちゅ ちゃ さ か びゃ え りゅ みょ ちゃ ぽ ひゅ ら りゅ ぶ れ じ にゅ あ ひ ず じゅ わ ぜ きょ て ぎゅ け じょ。",
-    "a": "zu be nya chu cha sa ka bya e ryu myo cha po hyu ra ryu bu re ji nyu a hi zu ju wa ze kyo te gyu ke jo."
+    "q": "り、 び、 な、 ほ、 ぷ、 ち、 ば、 じ、 せ、 みゃ、 ぬ。",
+    "a": "ri, bi, na, ho, pu, chi, ba, ji, se, mya, nu."
   },
   {
-    "q": "え きょ な ぴ ど びゅ り と か わ ば ひょ お ぴょ ぞ む す と ゆ ど て ず ち じ ぎゃ み ちゃ め ひゃ じ びゃ じゅ す。",
-    "a": "e kyo na pi do byu ri to ka wa ba hyo o pyo zo mu su to yu do te zu chi ji gya mi cha me hya ji bya ju su."
+    "q": "ちゃ、 ぴゃ、 で、 に、 ひ、 ぐ、 ちゃ、 にゅ、 ご、 し、 じょ、 る、 ふ、 う、 ひゃ、 な、 ぴゃ、 の、 れ。",
+    "a": "cha, pya, de, ni, hi, gu, cha, nyu, go, shi, jo, ru, fu, u, hya, na, pya, no, re."
   },
   {
-    "q": "ぎょ お だ ふ た ちゅ ね ご ね が ぼ る せ。",
-    "a": "gyo o da fu ta chu ne go ne ga bo ru se."
+    "q": "み、 つ、 ご、 わ、 れ、 びょ、 た。",
+    "a": "mi, tsu, go, wa, re, byo, ta."
   },
   {
-    "q": "か きゃ と ふ びょ ぎょ な き にゃ む の へ ちょ し りゃ しょ ひゃ き け しゅ ちゅ の よ は ちゅ む みゃ み じゃ ど で ひょ だ ひゅ び て し みゃ。",
-    "a": "ka kya to fu byo gyo na ki nya mu no he cho shi rya sho hya ki ke shu chu no yo ha chu mu mya mi ja do de hyo da hyu bi te shi mya."
+    "q": "ま、 ち、 れ、 げ、 そ、 か、 へ、 り、 ぴゅ、 ぎょ、 ぞ、 び、 ち、 ちゃ、 きゃ、 じ、 ご。",
+    "a": "ma, chi, re, ge, so, ka, he, ri, pyu, gyo, zo, bi, chi, cha, kya, ji, go."
   },
   {
-    "q": "し ぎゅ にゃ が あ ず え ら ぎ ぴ ぴょ ぶ ぶ て ぴ と ひょ ば びゅ みょ や ぎゃ こ ぽ ば る に く しょ く ざ しゅ ぶ を め ち みゅ。",
-    "a": "shi gyu nya ga a zu e ra gi pi pyo bu bu te pi to hyo ba byu myo ya gya ko po ba ru ni ku sho ku za shu bu wo me chi myu."
+    "q": "え、 ぺ、 にょ、 じ、 る、 わ、 ぷ、 そ。",
+    "a": "e, pe, nyo, ji, ru, wa, pu, so."
   },
   {
-    "q": "べ れ ど れ う く しゅ ろ ま つ ざ ぎょ ぱ ふ い ぶ の ぬ ぎ ご さ け にゃ ば ぎょ ふ ど ちゅ に。",
-    "a": "be re do re u ku shu ro ma tsu za gyo pa fu i bu no nu gi go sa ke nya ba gyo fu do chu ni."
+    "q": "ひゃ、 と、 ゆ、 よ、 よ、 ぜ、 て、 て、 にゅ、 き、 ぐ、 と、 け、 ち、 す、 しょ、 へ、 り、 ゆ。",
+    "a": "hya, to, yu, yo, yo, ze, te, te, nyu, ki, gu, to, ke, chi, su, sho, he, ri, yu."
   },
   {
-    "q": "め ぜ な しゃ を ぷ う ず く ま ぎょ か きゅ れ む ま ひょ ふ ぎ。",
-    "a": "me ze na sha wo pu u zu ku ma gyo ka kyu re mu ma hyo fu gi."
+    "q": "ぱ、 ぺ、 み、 ぴゅ、 ぽ、 く、 き、 きゅ、 ぺ、 ち。",
+    "a": "pa, pe, mi, pyu, po, ku, ki, kyu, pe, chi."
   },
   {
-    "q": "て ぱ ぎょ ぴょ み みゃ ぴ ろ しょ て ちゅ ぎゃ わ こ ま じ にょ じょ で く げ びょ の ぼ ぬ びょ じゃ じょ か ぬ。",
-    "a": "te pa gyo pyo mi mya pi ro sho te chu gya wa ko ma ji nyo jo de ku ge byo no bo nu byo ja jo ka nu."
+    "q": "へ、 り、 け、 じゃ、 ず、 にゅ、 ぺ、 く、 ちょ。",
+    "a": "he, ri, ke, ja, zu, nyu, pe, ku, cho."
   },
   {
-    "q": "みょ し ぷ く ば ぎゅ ち ご そ ぎ く ちょ あ りゅ にゅ りゅ れ ど ふ りょ にゃ く お にょ。",
-    "a": "myo shi pu ku ba gyu chi go so gi ku cho a ryu nyu ryu re do fu ryo nya ku o nyo."
+    "q": "しょ、 か、 ちゃ、 りゃ、 た、 よ、 こ、 にゅ、 べ、 な、 ぷ、 げ。",
+    "a": "sho, ka, cha, rya, ta, yo, ko, nyu, be, na, pu, ge."
   },
   {
-    "q": "しゅ びょ にゃ あ む そ う た さ げ しゅ ね く び ぎ ぞ ちゅ ぽ た。",
-    "a": "shu byo nya a mu so u ta sa ge shu ne ku bi gi zo chu po ta."
+    "q": "き、 う、 ぷ、 ぷ、 は、 じょ、 え、 か、 ぼ、 も、 ね、 ぶ、 きゅ、 れ。",
+    "a": "ki, u, pu, pu, ha, jo, e, ka, bo, mo, ne, bu, kyu, re."
   },
   {
-    "q": "ぞ け ひゅ べ と ま く ざ ほ の ぎゃ び お あ で にゃ りょ ご な の ぜ に ぶ え い びゃ びゃ びょ。",
-    "a": "zo ke hyu be to ma ku za ho no gya bi o a de nya ryo go na no ze ni bu e i bya bya byo."
+    "q": "け、 ぴゃ、 せ、 の、 ち、 お、 ほ、 な、 ち、 しゃ、 ぼ、 せ、 ぐ、 こ、 へ、 め、 しゃ、 ど。",
+    "a": "ke, pya, se, no, chi, o, ho, na, chi, sha, bo, se, gu, ko, he, me, sha, do."
   },
   {
-    "q": "も ぴゃ ぎょ つ ぎゅ も ぎ え ぴゃ お か け て。",
-    "a": "mo pya gyo tsu gyu mo gi e pya o ka ke te."
+    "q": "ぴゅ、 だ、 が、 そ、 ね、 しゅ、 ご。",
+    "a": "pyu, da, ga, so, ne, shu, go."
   },
   {
-    "q": "む し ふ み む け ふ が そ だ じ しゅ きゃ げ ぴょ あ よ な じゃ じゃ ち ゆ ぽ ちゃ ぎ みゃ と きゃ びゅ ぜ せ。",
-    "a": "mu shi fu mi mu ke fu ga so da ji shu kya ge pyo a yo na ja ja chi yu po cha gi mya to kya byu ze se."
+    "q": "と、 だ、 つ、 べ、 りゅ、 れ、 わ、 びゅ。",
+    "a": "to, da, tsu, be, ryu, re, wa, byu."
   },
   {
-    "q": "え ぴょ ぎょ ゆ ぴ す ろ ぐ お ぼ し び ち。",
-    "a": "e pyo gyo yu pi su ro gu o bo shi bi chi."
+    "q": "つ、 きゃ、 じゃ、 る、 に、 ぴ、 え、 ちょ、 ろ、 み、 ね、 ぐ、 べ、 ぴょ、 ぎゃ、 みゅ、 も、 わ。",
+    "a": "tsu, kya, ja, ru, ni, pi, e, cho, ro, mi, ne, gu, be, pyo, gya, myu, mo, wa."
   },
   {
-    "q": "ち み ぴゅ ぴ ぴょ じゅ ざ しゃ み しゃ りゃ は ぜ ちゅ て。",
-    "a": "chi mi pyu pi pyo ju za sha mi sha rya ha ze chu te."
+    "q": "ぼ、 へ、 みょ、 お、 ら、 か、 ぷ、 ぼ、 ちょ、 りょ、 が、 ろ、 し、 へ、 が、 ぎょ、 ろ、 ね、 びゃ、 ぱ。",
+    "a": "bo, he, myo, o, ra, ka, pu, bo, cho, ryo, ga, ro, shi, he, ga, gyo, ro, ne, bya, pa."
   },
   {
-    "q": "う ひゃ みゅ ぴゅ ぜ しょ ぱ ぎゃ ちょ ざ ぱ ぬ か しゅ だ を ふ ひゅ を じゃ ぴゃ ぺ ちゃ え ぎゃ しゃ み こ え しゅ か。",
-    "a": "u hya myu pyu ze sho pa gya cho za pa nu ka shu da wo fu hyu wo ja pya pe cha e gya sha mi ko e shu ka."
+    "q": "さ、 にゃ、 く、 にゃ、 ふ、 にゅ、 にゅ、 ぎ、 ね、 にゃ、 ろ、 ぽ、 ざ、 も、 ひゃ、 ざ。",
+    "a": "sa, nya, ku, nya, fu, nyu, nyu, gi, ne, nya, ro, po, za, mo, hya, za."
   },
   {
-    "q": "ご く る ぎ みゅ ぎょ びょ け い りょ ず り ぎょ じょ つ お べ ぴゃ ね きゃ。",
-    "a": "go ku ru gi myu gyo byo ke i ryo zu ri gyo jo tsu o be pya ne kya."
+    "q": "ひゃ、 ご、 ら、 りゃ、 ちょ、 じゃ、 しゃ、 りゅ。",
+    "a": "hya, go, ra, rya, cho, ja, sha, ryu."
   },
   {
-    "q": "ぎ りゅ しゃ か ぱ ぱ け ろ せ ど ぎ きょ ちゅ や じょ へ しゅ な ど を い ぷ ぎょ ら。",
-    "a": "gi ryu sha ka pa pa ke ro se do gi kyo chu ya jo he shu na do wo i pu gyo ra."
+    "q": "りょ、 の、 ぷ、 ろ、 ら、 ね、 わ、 お、 べ。",
+    "a": "ryo, no, pu, ro, ra, ne, wa, o, be."
   },
   {
-    "q": "ま う ぬ け へ び つ も が ぶ ち い。",
-    "a": "ma u nu ke he bi tsu mo ga bu chi i."
+    "q": "ね、 と、 じょ、 だ、 きゃ、 ま、 で、 ぶ、 ひゅ、 ぎゅ、 ぶ、 ひゃ、 ぞ、 ふ、 みょ、 け、 す、 きゅ、 びょ。",
+    "a": "ne, to, jo, da, kya, ma, de, bu, hyu, gyu, bu, hya, zo, fu, myo, ke, su, kyu, byo."
   },
   {
-    "q": "も ぼ ぬ う ひょ さ む か びゃ け りゃ り しゃ。",
-    "a": "mo bo nu u hyo sa mu ka bya ke rya ri sha."
+    "q": "や、 こ、 ろ、 ぶ、 じょ、 に、 お、 き、 め、 さ、 ぶ、 ぷ、 ぱ、 ぎ、 じょ、 りゅ、 りゃ、 ちゅ。",
+    "a": "ya, ko, ro, bu, jo, ni, o, ki, me, sa, bu, pu, pa, gi, jo, ryu, rya, chu."
   },
   {
-    "q": "ひ にょ みゃ む ぴゅ り みゅ きゃ りゅ にゃ お ぜ ひゃ ぴ ぐ の し に り こ ぴゃ た く め ど ぎょ きゃ ゆ りょ え ほ や そ ば む ご み。",
-    "a": "hi nyo mya mu pyu ri myu kya ryu nya o ze hya pi gu no shi ni ri ko pya ta ku me do gyo kya yu ryo e ho ya so ba mu go mi."
+    "q": "りょ、 も、 きょ、 りょ、 にょ、 こ、 みゅ、 く、 や、 ず、 ぽ、 みゅ、 さ。",
+    "a": "ryo, mo, kyo, ryo, nyo, ko, myu, ku, ya, zu, po, myu, sa."
   },
   {
-    "q": "え ぱ と ぽ ぎょ しょ ちゅ ぴょ びょ つ う く に みょ ひゃ も た ぎょ か る ひゃ な りゅ う ひゃ じゃ せ も ちょ りょ は ぴゃ も ぎ べ ぴゃ。",
-    "a": "e pa to po gyo sho chu pyo byo tsu u ku ni myo hya mo ta gyo ka ru hya na ryu u hya ja se mo cho ryo ha pya mo gi be pya."
+    "q": "て、 う、 にゃ、 じゅ、 じゅ、 ぴょ、 ぷ、 ぴょ、 が、 ぷ。",
+    "a": "te, u, nya, ju, ju, pyo, pu, pyo, ga, pu."
   },
   {
-    "q": "え ご ひゅ ぺ に で ざ べ み りょ ちゃ ゆ ね や る ば ぴゅ な ち が ひゃ ち ぴゅ ひょ じゃ べ びょ にゃ みゅ ね ぎゃ ぜ。",
-    "a": "e go hyu pe ni de za be mi ryo cha yu ne ya ru ba pyu na chi ga hya chi pyu hyo ja be byo nya myu ne gya ze."
+    "q": "ぴゅ、 こ、 じ、 う、 い、 りゅ、 す、 じ、 め、 ひゅ、 びゅ、 れ、 ぬ、 ひ、 の、 ぺ、 ぶ、 や、 い、 よ。",
+    "a": "pyu, ko, ji, u, i, ryu, su, ji, me, hyu, byu, re, nu, hi, no, pe, bu, ya, i, yo."
   },
   {
-    "q": "ぴゃ ちゃ び にゃ ど ぴょ ひ て しゃ り そ ふ ちょ ぴゅ ぎょ も じゅ ひゃ る ひょ ゆ しゃ ちょ き わ ぴゅ ぴょ み ま さ。",
-    "a": "pya cha bi nya do pyo hi te sha ri so fu cho pyu gyo mo ju hya ru hyo yu sha cho ki wa pyu pyo mi ma sa."
+    "q": "を、 きょ、 ぴょ、 ら、 く、 ぱ、 す、 う、 え、 りゅ、 の、 の、 ぶ、 わ、 ぽ、 みゃ。",
+    "a": "wo, kyo, pyo, ra, ku, pa, su, u, e, ryu, no, no, bu, wa, po, mya."
   },
   {
-    "q": "げ ず りゃ そ て び べ く そ す け にゃ め て め し ぺ こ ぎょ びゃ ぎゅ りょ ちゃ が む びゅ お ぷ しゃ に き だ ぽ と ぎょ。",
-    "a": "ge zu rya so te bi be ku so su ke nya me te me shi pe ko gyo bya gyu ryo cha ga mu byu o pu sha ni ki da po to gyo."
+    "q": "ど、 びゃ、 じ、 わ、 ぬ、 も、 み、 ぜ、 ぺ。",
+    "a": "do, bya, ji, wa, nu, mo, mi, ze, pe."
   },
   {
-    "q": "だ め う ひゃ にょ りゅ り ぜ ぺ びゃ ひゃ ひゅ ゆ りょ りゃ れ る な じょ わ びゃ が ぴゅ ど わ ぎ ぴゃ た け ぼ よ け じゅ。",
-    "a": "da me u hya nyo ryu ri ze pe bya hya hyu yu ryo rya re ru na jo wa bya ga pyu do wa gi pya ta ke bo yo ke ju."
+    "q": "す、 げ、 びょ、 きゅ、 で、 う、 ひょ、 ぜ、 い、 ば、 ぴゃ、 にゃ、 りゅ、 ず、 ぴゅ、 す、 ぎゃ、 り。",
+    "a": "su, ge, byo, kyu, de, u, hyo, ze, i, ba, pya, nya, ryu, zu, pyu, su, gya, ri."
   },
   {
-    "q": "ご る きゅ ちょ こ ひょ しゃ れ び さ や ちょ じ ぶ ひゅ ろ ぶ ど を ちゃ や ちゅ ぎ。",
-    "a": "go ru kyu cho ko hyo sha re bi sa ya cho ji bu hyu ro bu do wo cha ya chu gi."
+    "q": "け、 しゅ、 つ、 ぎゃ、 にゅ、 じゃ、 げ、 ふ、 ざ。",
+    "a": "ke, shu, tsu, gya, nyu, ja, ge, fu, za."
   },
   {
-    "q": "に じゃ よ きょ な し ふ きゃ ぎゅ た しゃ あ ど ぎゅ じゃ びゃ ぎ ま い ぞ げ め ざ。",
-    "a": "ni ja yo kyo na shi fu kya gyu ta sha a do gyu ja bya gi ma i zo ge me za."
+    "q": "む、 び、 る、 く、 よ、 さ、 にょ、 ちょ、 ら、 す。",
+    "a": "mu, bi, ru, ku, yo, sa, nyo, cho, ra, su."
   },
   {
-    "q": "う ひょ じゅ ちゅ しゅ ず え ぼ せ しゅ べ た ご ず る と しゅ きょ う りょ げ お と びゅ か ぶ う す さ りゅ。",
-    "a": "u hyo ju chu shu zu e bo se shu be ta go zu ru to shu kyo u ryo ge o to byu ka bu u su sa ryu."
+    "q": "みゃ、 た、 つ、 う、 りゃ、 ど。",
+    "a": "mya, ta, tsu, u, rya, do."
   },
   {
-    "q": "にゅ ぱ ざ ず にゅ ひゃ ぱ べ こ ば い え りゃ げ ひゃ ぶ よ ちゃ で ぽ め ぬ よ ほ しょ きょ は ちょ ぎゃ ちゃ じ ふ。",
-    "a": "nyu pa za zu nyu hya pa be ko ba i e rya ge hya bu yo cha de po me nu yo ho sho kyo ha cho gya cha ji fu."
+    "q": "げ、 ぞ、 みゃ、 り、 ば、 べ、 にゃ、 わ、 りゅ、 ま、 ね、 も、 ち、 ざ、 だ、 た。",
+    "a": "ge, zo, mya, ri, ba, be, nya, wa, ryu, ma, ne, mo, chi, za, da, ta."
   },
   {
-    "q": "も ぴ りょ え みゃ や しゃ ら みゅ ぴょ ゆ の る ふ け きゅ ちゅ きょ しゅ お ぶ よ。",
-    "a": "mo pi ryo e mya ya sha ra myu pyo yu no ru fu ke kyu chu kyo shu o bu yo."
+    "q": "や、 ね、 びょ、 を、 にゃ、 ば、 ぜ、 ちゃ、 へ、 ち、 しゃ、 びょ、 ち、 ぎゅ。",
+    "a": "ya, ne, byo, wo, nya, ba, ze, cha, he, chi, sha, byo, chi, gyu."
   },
   {
-    "q": "ふ ご ぽ みゅ を ひゅ い ひ ぬ ぎょ ひ ぱ にょ にゅ せ わ く。",
-    "a": "fu go po myu wo hyu i hi nu gyo hi pa nyo nyu se wa ku."
+    "q": "ざ、 ちょ、 しゃ、 の、 れ、 にょ、 ぜ、 せ、 しゃ、 ろ、 しゃ、 ぺ、 じょ、 ちゅ、 ぜ、 ご、 そ、 ふ、 ま、 て。",
+    "a": "za, cho, sha, no, re, nyo, ze, se, sha, ro, sha, pe, jo, chu, ze, go, so, fu, ma, te."
   },
   {
-    "q": "し きゃ じ にょ み ひゅ にょ にゃ きょ ひょ ね を う ぽ や ひゅ を。",
-    "a": "shi kya ji nyo mi hyu nyo nya kyo hyo ne wo u po ya hyu wo."
+    "q": "ち、 き、 や、 にゅ、 て、 ぽ、 を、 て、 よ、 びょ、 きゃ。",
+    "a": "chi, ki, ya, nyu, te, po, wo, te, yo, byo, kya."
   },
   {
-    "q": "びゃ え りょ しゃ きょ そ が も さ め みゃ。",
-    "a": "bya e ryo sha kyo so ga mo sa me mya."
+    "q": "し、 も、 りゃ、 べ、 しゅ、 う、 ぱ。",
+    "a": "shi, mo, rya, be, shu, u, pa."
   },
   {
-    "q": "ほ あ も びょ にょ ず きょ し ふ ぞ ず びゅ よ きゃ い にょ みゃ う ど で び にょ み う。",
-    "a": "ho a mo byo nyo zu kyo shi fu zo zu byu yo kya i nyo mya u do de bi nyo mi u."
+    "q": "ひゅ、 ひょ、 ぐ、 にょ、 ぽ、 りゃ、 お、 ぬ、 つ、 びゅ、 は、 ぷ、 む、 ぱ、 ろ、 ぴゃ、 む、 ず、 と。",
+    "a": "hyu, hyo, gu, nyo, po, rya, o, nu, tsu, byu, ha, pu, mu, pa, ro, pya, mu, zu, to."
   },
   {
-    "q": "ざ せ ぎゅ みゅ ぷ ろ る く ぐ ちゅ よ く め だ ぐ を にゃ ふ え げ え ぎゃ しゅ き き き。",
-    "a": "za se gyu myu pu ro ru ku gu chu yo ku me da gu wo nya fu e ge e gya shu ki ki ki."
+    "q": "きゃ、 れ、 みゅ、 りゃ、 も、 み、 きゃ、 み、 え、 しょ。",
+    "a": "kya, re, myu, rya, mo, mi, kya, mi, e, sho."
   },
   {
-    "q": "こ りゅ よ きょ ど ひゃ つ か きゃ な しゅ。",
-    "a": "ko ryu yo kyo do hya tsu ka kya na shu."
+    "q": "きょ、 じょ、 で、 にゃ、 じ、 の、 へ、 う。",
+    "a": "kyo, jo, de, nya, ji, no, he, u."
   },
   {
-    "q": "よ ひゅ び じょ ふ も そ え を ず きゃ じゃ ぱ。",
-    "a": "yo hyu bi jo fu mo so e wo zu kya ja pa."
+    "q": "みょ、 は、 しゅ、 りょ、 お、 ふ、 に、 ぐ、 びょ、 じ、 ぎゃ。",
+    "a": "myo, ha, shu, ryo, o, fu, ni, gu, byo, ji, gya."
   },
   {
-    "q": "じょ ゆ ちゃ りゅ じょ せ ひゃ む や つ にょ ぎゃ で き ざ ぞ びょ ま え ら ぱ じ へ ぐ く つ。",
-    "a": "jo yu cha ryu jo se hya mu ya tsu nyo gya de ki za zo byo ma e ra pa ji he gu ku tsu."
+    "q": "じ、 え、 ぴょ、 ぷ、 ば、 ご、 ろ、 ひゃ、 ひょ、 が、 は。",
+    "a": "ji, e, pyo, pu, ba, go, ro, hya, hyo, ga, ha."
   },
   {
-    "q": "にょ じ お に い ぎょ にゅ みょ りょ れ びょ ぴゅ ぎ ぶ ふ て じ びゅ の ちゃ にゃ りょ ちょ りゃ こ こ ゆ て きょ りょ ろ ぞ じ じょ みゃ みょ びゅ。",
-    "a": "nyo ji o ni i gyo nyu myo ryo re byo pyu gi bu fu te ji byu no cha nya ryo cho rya ko ko yu te kyo ryo ro zo ji jo mya myo byu."
+    "q": "や、 で、 ぬ、 びょ、 きょ、 ぴょ、 ね、 よ、 びょ。",
+    "a": "ya, de, nu, byo, kyo, pyo, ne, yo, byo."
   },
   {
-    "q": "だ みょ りょ が か に ぶ ほ りゃ ちゃ は ぴょ きょ きょ ひょ む しゃ つ つ を びょ りゃ。",
-    "a": "da myo ryo ga ka ni bu ho rya cha ha pyo kyo kyo hyo mu sha tsu tsu wo byo rya."
+    "q": "つ、 きゅ、 じ、 り、 ひょ、 ぴ、 さ、 き、 しゃ、 わ。",
+    "a": "tsu, kyu, ji, ri, hyo, pi, sa, ki, sha, wa."
   },
   {
-    "q": "て し みゅ ぴ ち お にゅ みゅ む みゃ ひょ しゃ しゅ と にゅ ぎ ね し ひゅ ぴゅ に う ぴゅ ちゅ ぎょ が ぼ。",
-    "a": "te shi myu pi chi o nyu myu mu mya hyo sha shu to nyu gi ne shi hyu pyu ni u pyu chu gyo ga bo."
+    "q": "ば、 びょ、 む、 け、 しょ、 ぎゃ、 びょ。",
+    "a": "ba, byo, mu, ke, sho, gya, byo."
   },
   {
-    "q": "ぐ ちゅ か さ りょ ふ ちゅ きゅ ま び しゃ な。",
-    "a": "gu chu ka sa ryo fu chu kyu ma bi sha na."
+    "q": "ぬ、 せ、 こ、 む、 け、 きょ、 に、 にょ、 め、 き、 げ、 ば、 ら、 で、 ご、 な、 さ、 げ、 に。",
+    "a": "nu, se, ko, mu, ke, kyo, ni, nyo, me, ki, ge, ba, ra, de, go, na, sa, ge, ni."
   },
   {
-    "q": "りゅ げ ね あ ひ ね ご じ つ ちゅ ぜ ぬ ぎょ しょ く しょ ぞ み と きょ じゅ。",
-    "a": "ryu ge ne a hi ne go ji tsu chu ze nu gyo sho ku sho zo mi to kyo ju."
+    "q": "ぽ、 す、 ち、 みゃ、 わ、 ぽ、 ぎ、 ぎょ、 い、 ひゃ。",
+    "a": "po, su, chi, mya, wa, po, gi, gyo, i, hya."
   },
   {
-    "q": "へ ば しょ ら と の き や な じ に。",
-    "a": "he ba sho ra to no ki ya na ji ni."
+    "q": "びゃ、 だ、 つ、 の、 や、 ゆ、 こ、 よ、 み、 さ、 ぴゅ、 あ、 み、 そ、 ぬ、 き、 しゅ、 ゆ、 で、 びょ。",
+    "a": "bya, da, tsu, no, ya, yu, ko, yo, mi, sa, pyu, a, mi, so, nu, ki, shu, yu, de, byo."
   },
   {
-    "q": "お い しょ だ つ し ぷ ぴ ぴゅ みゅ た しょ ば く る。",
-    "a": "o i sho da tsu shi pu pi pyu myu ta sho ba ku ru."
+    "q": "りゃ、 にょ、 ひょ、 ひょ、 じ、 ぶ、 じ、 みゃ、 ぼ、 の、 た、 しゅ、 る、 べ、 よ、 きゃ、 せ、 け、 みょ。",
+    "a": "rya, nyo, hyo, hyo, ji, bu, ji, mya, bo, no, ta, shu, ru, be, yo, kya, se, ke, myo."
   },
   {
-    "q": "ぴょ そ み と た め ひゅ ひゅ じ げ う みゅ に さ せ て ぎょ や べ し に ご れ え ろ ふ ぴゅ じ ちょ が みゃ ちゅ ぴゃ ぎゅ じ。",
-    "a": "pyo so mi to ta me hyu hyu ji ge u myu ni sa se te gyo ya be shi ni go re e ro fu pyu ji cho ga mya chu pya gyu ji."
+    "q": "に、 ひ、 りょ、 ろ、 びゅ、 ぷ、 た、 びゃ、 ぜ、 る、 ちょ、 じゅ、 が、 め。",
+    "a": "ni, hi, ryo, ro, byu, pu, ta, bya, ze, ru, cho, ju, ga, me."
   },
   {
-    "q": "れ が す を ぴ へ ぴ しゃ や ふ ぴ ぞ を ね ぎ じ にょ ぴゃ じょ ゆ にゅ せ し つ よ。",
-    "a": "re ga su wo pi he pi sha ya fu pi zo wo ne gi ji nyo pya jo yu nyu se shi tsu yo."
+    "q": "ぎょ、 しゃ、 びゅ、 ら、 ひょ、 しょ、 か、 れ、 にゅ、 と、 を、 げ、 きゅ、 げ、 と。",
+    "a": "gyo, sha, byu, ra, hyo, sho, ka, re, nyu, to, wo, ge, kyu, ge, to."
   },
   {
-    "q": "げ だ ご ぎゅ ば き か ず ぴゃ きゃ を た か ぎ ぐ れ ぽ も ば い く みゅ べ せ ぷ ほ め す ぶ が こ む ぴ しゅ く ま ご ぎゅ。",
-    "a": "ge da go gyu ba ki ka zu pya kya wo ta ka gi gu re po mo ba i ku myu be se pu ho me su bu ga ko mu pi shu ku ma go gyu."
+    "q": "め、 ご、 りゃ、 つ、 よ、 ぞ、 ろ、 ひ、 ゆ。",
+    "a": "me, go, rya, tsu, yo, zo, ro, hi, yu."
   },
   {
-    "q": "ひ ぺ く ご い ひょ しょ ぎ ぽ ちゃ と ひょ え びゃ う ちゃ びゅ ご し い ぎょ ぞ にょ ぼ。",
-    "a": "hi pe ku go i hyo sho gi po cha to hyo e bya u cha byu go shi i gyo zo nyo bo."
+    "q": "ぎゅ、 ご、 ろ、 は、 ぽ、 き、 ば、 に、 て、 ひゅ、 さ、 や、 きゅ、 ぼ、 びゃ、 にゃ、 みょ。",
+    "a": "gyu, go, ro, ha, po, ki, ba, ni, te, hyu, sa, ya, kyu, bo, bya, nya, myo."
   },
   {
-    "q": "ぎょ は きょ ぴゃ ぎょ みゃ ちゅ す ほ ぜ ら ぜ と ぎゃ。",
-    "a": "gyo ha kyo pya gyo mya chu su ho ze ra ze to gya."
+    "q": "ぎゅ、 す、 みゃ、 みゅ、 しゃ、 ぴ。",
+    "a": "gyu, su, mya, myu, sha, pi."
   },
   {
-    "q": "きゃ ぱ つ や め きゅ げ みゃ れ きゅ ぴ みょ じょ ぞ にょ が つ ひょ ぴゅ け びゃ ぎょ る。",
-    "a": "kya pa tsu ya me kyu ge mya re kyu pi myo jo zo nyo ga tsu hyo pyu ke bya gyo ru."
+    "q": "じゅ、 わ、 も、 きょ、 みゃ、 ぺ、 い、 ば、 ず、 ぴゅ、 ち。",
+    "a": "ju, wa, mo, kyo, mya, pe, i, ba, zu, pyu, chi."
   },
   {
-    "q": "だ ひ き て じ た は きゅ え ろ ぴゅ ね う りょ にょ を にゃ を み ひゃ ちょ。",
-    "a": "da hi ki te ji ta ha kyu e ro pyu ne u ryo nyo wo nya wo mi hya cho."
+    "q": "りょ、 ぽ、 や、 や、 ら、 た、 びゃ、 ご、 ぞ、 ひゅ。",
+    "a": "ryo, po, ya, ya, ra, ta, bya, go, zo, hyu."
   },
   {
-    "q": "しゃ ら ぱ じ ほ じゅ お く ひゅ だ を ぼ な ぎゅ と ぶ ぷ ろ しゅ だ じゃ ぎゅ じゃ ぴゅ みゅ ち よ ちゅ。",
-    "a": "sha ra pa ji ho ju o ku hyu da wo bo na gyu to bu pu ro shu da ja gyu ja pyu myu chi yo chu."
+    "q": "ちょ、 ちゃ、 びゃ、 み、 みょ、 ら、 ぎ、 る、 ち、 つ、 ぴゅ、 ち、 にょ、 ぴゅ、 ぞ、 じょ、 ひょ、 が、 ざ。",
+    "a": "cho, cha, bya, mi, myo, ra, gi, ru, chi, tsu, pyu, chi, nyo, pyu, zo, jo, hyo, ga, za."
   },
   {
-    "q": "わ にょ ぞ りゅ じゃ りゅ う げ て ぎょ あ ゆ し しゃ ぺ た げ りゅ ちゃ い は ざ ひゅ。",
-    "a": "wa nyo zo ryu ja ryu u ge te gyo a yu shi sha pe ta ge ryu cha i ha za hyu."
+    "q": "ぎゅ、 ぎ、 ぴゃ、 け、 ぴゅ、 じゃ、 しょ、 きゃ。",
+    "a": "gyu, gi, pya, ke, pyu, ja, sho, kya."
   },
   {
-    "q": "ず つ だ け て ご ら ちゃ さ わ く ぷ に ぴょ げ びょ りゅ ぜ の ゆ ぴゅ ぞ じょ ちょ みゃ みょ ぱ ぎ。",
-    "a": "zu tsu da ke te go ra cha sa wa ku pu ni pyo ge byo ryu ze no yu pyu zo jo cho mya myo pa gi."
+    "q": "ち、 と、 ご、 ば、 た、 しょ、 ぴょ、 べ、 の、 え、 ど。",
+    "a": "chi, to, go, ba, ta, sho, pyo, be, no, e, do."
   },
   {
-    "q": "さ ど や しゃ あ だ きゃ ぎゃ ぴゃ きゃ む にょ ぞ さ ぜ つ ひゃ へ ぺ ちゃ せ しゃ せ せ あ。",
-    "a": "sa do ya sha a da kya gya pya kya mu nyo zo sa ze tsu hya he pe cha se sha se se a."
+    "q": "お、 そ、 ぎゅ、 ぎょ、 ひょ、 れ、 しゅ、 きょ、 む、 ぐ、 で、 き、 ぼ、 ぞ、 も、 よ、 ろ。",
+    "a": "o, so, gyu, gyo, hyo, re, shu, kyo, mu, gu, de, ki, bo, zo, mo, yo, ro."
   },
   {
-    "q": "じゅ め な も みゅ れ じょ ひ わ りょ び め ちょ ぎゅ。",
-    "a": "ju me na mo myu re jo hi wa ryo bi me cho gyu."
+    "q": "で、 ぎゅ、 ぐ、 ち、 げ、 む、 びょ、 ご、 で、 しょ、 ぴゅ、 も、 か、 あ、 りょ、 ぞ、 ぎゃ、 ざ、 ろ。",
+    "a": "de, gyu, gu, chi, ge, mu, byo, go, de, sho, pyu, mo, ka, a, ryo, zo, gya, za, ro."
   },
   {
-    "q": "ど きゃ ろ みゅ べ りょ しょ ぽ ぶ べ りゃ。",
-    "a": "do kya ro myu be ryo sho po bu be rya."
+    "q": "びょ、 ぴゅ、 きゅ、 さ、 は、 く、 へ。",
+    "a": "byo, pyu, kyu, sa, ha, ku, he."
   },
   {
-    "q": "う ぬ びゃ め た あ せ く ら だ べ も う ぼ じ ぎょ ぴょ も ぎょ あ みゅ な ひゃ や ご みょ び が ぺ ろ にゃ ぎ よ つ で びょ う へ わ ぱ。",
-    "a": "u nu bya me ta a se ku ra da be mo u bo ji gyo pyo mo gyo a myu na hya ya go myo bi ga pe ro nya gi yo tsu de byo u he wa pa."
+    "q": "う、 に、 あ、 ぴゃ、 ま、 ぜ、 びゃ、 し、 じょ、 ぬ、 に、 め、 こ、 に、 ひゃ、 ぴゅ、 みゃ、 ちゅ。",
+    "a": "u, ni, a, pya, ma, ze, bya, shi, jo, nu, ni, me, ko, ni, hya, pyu, mya, chu."
   },
   {
-    "q": "りゃ ひょ ぴょ ぺ れ き ぜ ひ ひ ぎゅ にょ しょ ぞ りゃ りゅ きょ しゅ け りゅ ね ぎ せ み ふ ち き ぜ ど。",
-    "a": "rya hyo pyo pe re ki ze hi hi gyu nyo sho zo rya ryu kyo shu ke ryu ne gi se mi fu chi ki ze do."
+    "q": "つ、 ぽ、 にゅ、 ちゅ、 け、 じゅ、 びゅ、 ぎゅ、 ぐ、 び、 ぴゃ、 ば、 きゃ、 で、 る。",
+    "a": "tsu, po, nyu, chu, ke, ju, byu, gyu, gu, bi, pya, ba, kya, de, ru."
   },
   {
-    "q": "で て べ ふ じょ が み じゅ お ぎゃ た ぎゃ ば ぷ れ わ く ぴょ じゅ く く ま ぱ。",
-    "a": "de te be fu jo ga mi ju o gya ta gya ba pu re wa ku pyo ju ku ku ma pa."
+    "q": "にゃ、 ぎゅ、 み、 ぎゅ、 ぴ、 ちゃ、 ちゃ、 にゅ、 あ、 ぎゅ、 し、 わ、 ぬ、 きょ、 ま、 り、 ぴゅ、 り、 ぎ。",
+    "a": "nya, gyu, mi, gyu, pi, cha, cha, nyu, a, gyu, shi, wa, nu, kyo, ma, ri, pyu, ri, gi."
   },
   {
-    "q": "ぎょ て せ あ に みゃ みゅ じょ び そ き ぎ じゃ ば じょ く きゅ ぺ ほ りゅ ひょ りゃ ぎょ や ぎょ と ぐ きゅ わ ひゅ と びゃ よ じょ りゃ さ じょ じゃ。",
-    "a": "gyo te se a ni mya myu jo bi so ki gi ja ba jo ku kyu pe ho ryu hyo rya gyo ya gyo to gu kyu wa hyu to bya yo jo rya sa jo ja."
+    "q": "へ、 ひゅ、 ぐ、 ざ、 じゅ、 せ、 しゃ、 ぎゅ、 か、 ち、 や、 ぎゅ、 あ、 が。",
+    "a": "he, hyu, gu, za, ju, se, sha, gyu, ka, chi, ya, gyu, a, ga."
   },
   {
-    "q": "つ せ しょ ぎゃ ぴょ も け さ の じ ちょ びょ ひゃ ほ。",
-    "a": "tsu se sho gya pyo mo ke sa no ji cho byo hya ho."
+    "q": "じゅ、 ふ、 ぞ、 く、 ろ、 ず、 げ、 ぎょ、 じょ、 え、 ふ、 が、 し、 にゃ、 ぜ。",
+    "a": "ju, fu, zo, ku, ro, zu, ge, gyo, jo, e, fu, ga, shi, nya, ze."
   },
   {
-    "q": "む む じょ こ じ ば ろ と り ちゃ ず す べ お そ きゃ た ら ぬ しゃ にゃ りょ そ ぴゅ ず みょ み しょ じ の が ぎ。",
-    "a": "mu mu jo ko ji ba ro to ri cha zu su be o so kya ta ra nu sha nya ryo so pyu zu myo mi sho ji no ga gi."
+    "q": "ぐ、 ぬ、 にゃ、 しゅ、 ほ、 と、 ね、 べ、 しょ、 せ、 え、 ぞ、 た、 みょ、 びゅ。",
+    "a": "gu, nu, nya, shu, ho, to, ne, be, sho, se, e, zo, ta, myo, byu."
   },
   {
-    "q": "ひ う ひゃ む しょ せ は ぎゅ と じゅ きゃ た ぬ ちょ ぺ ぴ ろ ぴ にゃ じ て りゃ ぼ ぜ み ご に しょ ちゃ す じゃ む て ぷ ぎょ は。",
-    "a": "hi u hya mu sho se ha gyu to ju kya ta nu cho pe pi ro pi nya ji te rya bo ze mi go ni sho cha su ja mu te pu gyo ha."
+    "q": "す、 みょ、 も、 ぴょ、 た、 け、 ちゅ、 みゃ、 りょ、 ちょ、 にゅ、 しょ、 ぱ、 ぎゅ、 な、 め。",
+    "a": "su, myo, mo, pyo, ta, ke, chu, mya, ryo, cho, nyu, sho, pa, gyu, na, me."
   },
   {
-    "q": "しゃ みゅ こ も お ひゅ べ みゃ し ぱ て る。",
-    "a": "sha myu ko mo o hyu be mya shi pa te ru."
+    "q": "む、 しょ、 な、 め、 こ、 ぐ、 きょ、 ら、 げ、 にょ、 る、 に、 す、 ぼ、 が、 ぺ、 ぎゃ、 きゃ、 び、 きゅ。",
+    "a": "mu, sho, na, me, ko, gu, kyo, ra, ge, nyo, ru, ni, su, bo, ga, pe, gya, kya, bi, kyu."
   },
   {
-    "q": "ご が ろ し びゃ じ な き む る りょ ゆ は しゅ ちゅ ちょ りょ ぼ ぴ だ こ。",
-    "a": "go ga ro shi bya ji na ki mu ru ryo yu ha shu chu cho ryo bo pi da ko."
+    "q": "べ、 ぽ、 せ、 ろ、 ぐ、 お、 こ、 きょ、 きょ、 す、 ぎゅ、 あ、 しゃ、 にょ。",
+    "a": "be, po, se, ro, gu, o, ko, kyo, kyo, su, gyu, a, sha, nyo."
   },
   {
-    "q": "だ だ ぴ が あ みゃ ど ざ こ を た り つ きょ ち りゃ や く は ぬ ひ ぽ を が え た にゅ ぷ。",
-    "a": "da da pi ga a mya do za ko wo ta ri tsu kyo chi rya ya ku ha nu hi po wo ga e ta nyu pu."
+    "q": "は、 ろ、 わ、 り、 だ、 び、 と、 ぴ、 しゃ、 ちゃ、 しょ、 にゅ、 う、 ぞ、 りゅ、 ひゅ、 ひゃ、 ちゃ、 ぞ。",
+    "a": "ha, ro, wa, ri, da, bi, to, pi, sha, cha, sho, nyu, u, zo, ryu, hyu, hya, cha, zo."
   },
   {
-    "q": "ぜ ちゃ ず びょ た ゆ ちゅ ひょ ち ちゅ ひゅ へ みゅ じゃ ぱ ぜ び。",
-    "a": "ze cha zu byo ta yu chu hyo chi chu hyu he myu ja pa ze bi."
+    "q": "ひ、 め、 りゃ、 い、 さ、 む、 よ、 ぞ、 ひゃ、 にゃ、 しゃ、 う、 し、 れ、 しょ、 へ、 ら。",
+    "a": "hi, me, rya, i, sa, mu, yo, zo, hya, nya, sha, u, shi, re, sho, he, ra."
   },
   {
-    "q": "た りゃ りょ ぱ りょ じょ な や あ きゃ そ ちょ い しゃ ほ ひょ ひゃ ず か りゃ ぎゅ ぜ ほ て る ぺ め ちゅ れ ぐ しゅ え。",
-    "a": "ta rya ryo pa ryo jo na ya a kya so cho i sha ho hyo hya zu ka rya gyu ze ho te ru pe me chu re gu shu e."
+    "q": "に、 あ、 じゃ、 にゅ、 だ、 べ、 せ、 は、 ぬ、 ば、 り、 う、 が、 ぎゃ、 ざ、 ご。",
+    "a": "ni, a, ja, nyu, da, be, se, ha, nu, ba, ri, u, ga, gya, za, go."
   },
   {
-    "q": "ら ぎょ ちゃ ち にゃ じゃ に きゃ ちゃ に た みゅ た ぽ ぼ びょ ざ ゆ ま びゅ ぞ た き う びょ あ や け。",
-    "a": "ra gyo cha chi nya ja ni kya cha ni ta myu ta po bo byo za yu ma byu zo ta ki u byo a ya ke."
+    "q": "みょ、 りょ、 ぎょ、 う、 わ、 わ、 ぬ。",
+    "a": "myo, ryo, gyo, u, wa, wa, nu."
   },
   {
-    "q": "し ぜ か ぴ わ れ る ち ぴ ご ぱ と ま にょ べ ち る きゅ じゃ つ む ちゃ り く す ら びゅ ぴょ。",
-    "a": "shi ze ka pi wa re ru chi pi go pa to ma nyo be chi ru kyu ja tsu mu cha ri ku su ra byu pyo."
+    "q": "ひょ、 ゆ、 そ、 で、 ぎ、 にょ、 ぞ、 み、 びゅ、 びゅ、 す、 みゃ、 ろ、 ら、 け、 ぴゃ、 り、 さ、 け。",
+    "a": "hyo, yu, so, de, gi, nyo, zo, mi, byu, byu, su, mya, ro, ra, ke, pya, ri, sa, ke."
   },
   {
-    "q": "ひゃ ぱ う ぴゃ ひ が お ら ぬ き ぎゅ ぴゃ り びゅ ぎゃ ぎゃ を ひゃ にゃ ぷ ぎゅ ぞ よ ぷ ら きょ ぷ。",
-    "a": "hya pa u pya hi ga o ra nu ki gyu pya ri byu gya gya wo hya nya pu gyu zo yo pu ra kyo pu."
+    "q": "う、 べ、 ほ、 ぜ、 ご、 ひょ。",
+    "a": "u, be, ho, ze, go, hyo."
   },
   {
-    "q": "ご げ ぼ た む ぴゃ の べ あ う ちゅ ぴょ ぴゃ ぞ た りゃ や そ ぬ ざ ち ぱ が ぐ にゃ む みゃ ふ ぜ ほ が つ ぱ ぎゃ そ は。",
-    "a": "go ge bo ta mu pya no be a u chu pyo pya zo ta rya ya so nu za chi pa ga gu nya mu mya fu ze ho ga tsu pa gya so ha."
+    "q": "しゅ、 よ、 の、 ば、 ぽ、 ぶ、 か、 にゃ、 あ、 ら。",
+    "a": "shu, yo, no, ba, po, bu, ka, nya, a, ra."
   },
   {
-    "q": "ぎ で ま き きゃ ざ ひゃ る て りょ じ そ べ。",
-    "a": "gi de ma ki kya za hya ru te ryo ji so be."
+    "q": "へ、 ぐ、 る、 む、 ま、 た、 ぴ、 と、 ざ、 みょ、 で、 きょ、 りゃ、 ま、 ぶ、 ぬ、 みょ。",
+    "a": "he, gu, ru, mu, ma, ta, pi, to, za, myo, de, kyo, rya, ma, bu, nu, myo."
   },
   {
-    "q": "ま ゆ ず ぞ ひ ぬ ぴゃ りゃ ふ さ ぴゃ ひゃ ぺ ぷ ぶ ひゃ ざ ど べ や しょ で びゅ ぜ ぺ ひょ じゅ る きょ び ちょ。",
-    "a": "ma yu zu zo hi nu pya rya fu sa pya hya pe pu bu hya za do be ya sho de byu ze pe hyo ju ru kyo bi cho."
+    "q": "の、 み、 ぬ、 に、 で、 で、 ぱ、 ゆ、 く、 あ、 し、 ぺ、 みょ、 じゃ、 ひゃ、 え、 て、 みゃ、 きゃ。",
+    "a": "no, mi, nu, ni, de, de, pa, yu, ku, a, shi, pe, myo, ja, hya, e, te, mya, kya."
   },
   {
-    "q": "ほ き ぜ ちゃ ひゃ う せ び な ぴゃ ら ぴょ ち りゃ い え だ ぎ た ひ しょ ぴゅ ぱ ぬ ぎゅ ひゃ て え で りゃ きゅ む を ひょ ほ。",
-    "a": "ho ki ze cha hya u se bi na pya ra pyo chi rya i e da gi ta hi sho pyu pa nu gyu hya te e de rya kyu mu wo hyo ho."
+    "q": "び、 ぴゃ、 ぬ、 ず、 みゃ、 みゃ、 しょ、 る、 う、 ぼ、 み、 い、 び、 びょ、 ぎゃ、 ちゃ、 べ、 べ、 そ。",
+    "a": "bi, pya, nu, zu, mya, mya, sho, ru, u, bo, mi, i, bi, byo, gya, cha, be, be, so."
   },
   {
-    "q": "む ぎ い ど ぼ ま ぴ ぴょ わ ぴゅ ば か。",
-    "a": "mu gi i do bo ma pi pyo wa pyu ba ka."
+    "q": "にょ、 げ、 きょ、 る、 りゅ、 びゃ、 にょ、 う、 が、 ぎょ、 め、 ば。",
+    "a": "nyo, ge, kyo, ru, ryu, bya, nyo, u, ga, gyo, me, ba."
   },
   {
-    "q": "ら を あ ぜ び みょ ひゃ びょ きゅ みょ にょ びゃ ひゃ き び く め じょ ぽ ぷ な い。",
-    "a": "ra wo a ze bi myo hya byo kyu myo nyo bya hya ki bi ku me jo po pu na i."
+    "q": "にゃ、 じ、 だ、 み、 りゃ、 ど、 だ、 きゅ、 しゅ、 せ、 じゅ、 む、 しゅ、 こ、 じゅ、 ぴ、 きゅ、 ひ。",
+    "a": "nya, ji, da, mi, rya, do, da, kyu, shu, se, ju, mu, shu, ko, ju, pi, kyu, hi."
   },
   {
-    "q": "げ りゅ みゃ で ご ぴょ ほ ま や みゅ しゃ も な ふ せ お りょ じゅ ぎょ は わ で を みゅ りょ こ きょ じ。",
-    "a": "ge ryu mya de go pyo ho ma ya myu sha mo na fu se o ryo ju gyo ha wa de wo myu ryo ko kyo ji."
+    "q": "ざ、 う、 ぞ、 を、 ぴゃ、 ぎょ、 べ、 が、 あ、 じょ、 ぬ、 び、 の、 の、 ぴゃ、 ちゃ、 びょ、 ぞ。",
+    "a": "za, u, zo, wo, pya, gyo, be, ga, a, jo, nu, bi, no, no, pya, cha, byo, zo."
   },
   {
-    "q": "じゅ め ちゃ ば し ぴゃ ぎゃ だ ぜ く ひゃ ぷ ち きゃ ば ざ ちょ す れ え。",
-    "a": "ju me cha ba shi pya gya da ze ku hya pu chi kya ba za cho su re e."
+    "q": "ちょ、 ぴゅ、 わ、 ぴゃ、 しゃ、 みゃ、 い、 きゃ、 ぴ、 きゅ、 よ、 ぐ、 ぎ、 ひゅ、 ふ、 ぺ、 は、 よ、 た。",
+    "a": "cho, pyu, wa, pya, sha, mya, i, kya, pi, kyu, yo, gu, gi, hyu, fu, pe, ha, yo, ta."
   },
   {
-    "q": "ど こ ぜ は りょ に ど びゃ み わ れ を の ぞ い びょ ちゅ に にゃ ぎ ぺ ぴゃ と。",
-    "a": "do ko ze ha ryo ni do bya mi wa re wo no zo i byo chu ni nya gi pe pya to."
+    "q": "く、 ひゃ、 びょ、 りょ、 ば、 ぎゅ、 さ、 ぴ、 あ、 ぴゃ、 りょ、 しゅ、 ちょ、 りゃ、 は。",
+    "a": "ku, hya, byo, ryo, ba, gyu, sa, pi, a, pya, ryo, shu, cho, rya, ha."
   },
   {
-    "q": "が ぶ つ に じゅ ひょ る しょ う ぴゃ ひゃ。",
-    "a": "ga bu tsu ni ju hyo ru sho u pya hya."
+    "q": "きゅ、 し、 ひ、 ちょ、 そ、 ぐ、 ま、 は、 や、 り、 む、 ひ、 ぎ、 きゃ、 みゃ、 ぺ、 ば、 お、 み。",
+    "a": "kyu, shi, hi, cho, so, gu, ma, ha, ya, ri, mu, hi, gi, kya, mya, pe, ba, o, mi."
   },
   {
-    "q": "ぶ ぎ ば きゃ ほ だ え の ふ き ちゅ め ら わ ぼ じ て だ を しょ ぬ み に か と ひゃ じ ず。",
-    "a": "bu gi ba kya ho da e no fu ki chu me ra wa bo ji te da wo sho nu mi ni ka to hya ji zu."
+    "q": "きゅ、 は、 にゃ、 い、 ちょ、 て、 きょ、 の、 ぎ、 ぽ、 ろ、 し。",
+    "a": "kyu, ha, nya, i, cho, te, kyo, no, gi, po, ro, shi."
   },
   {
-    "q": "わ しょ ご みゅ ちゅ ぽ り びゅ み こ じゅ ざ。",
-    "a": "wa sho go myu chu po ri byu mi ko ju za."
+    "q": "ぞ、 ま、 ぎ、 ね、 ひゃ、 りゅ、 び、 きゅ、 と、 ぞ、 る、 の、 こ、 にょ、 わ、 じ。",
+    "a": "zo, ma, gi, ne, hya, ryu, bi, kyu, to, zo, ru, no, ko, nyo, wa, ji."
   },
   {
-    "q": "ぼ みゅ みゅ しゃ ちゅ び せ びょ り ば げ し い ぽ を へ ぜ ちょ る にゅ にゅ が ど ひょ。",
-    "a": "bo myu myu sha chu bi se byo ri ba ge shi i po wo he ze cho ru nyu nyu ga do hyo."
-  },
-  {
-    "q": "りゃ ちょ ひ と しょ しょ ぎゅ ほ す え ぶ。",
-    "a": "rya cho hi to sho sho gyu ho su e bu."
-  },
-  {
-    "q": "の ぱ ひょ じゅ ず ちょ と びょ ぷ ぜ ど み にゃ。",
-    "a": "no pa hyo ju zu cho to byo pu ze do mi nya."
-  },
-  {
-    "q": "み や びゃ て びゃ にゅ め ぷ む ゆ ぱ ぎ ぴゅ ぞ ま も ぐ びゃ きゅ。",
-    "a": "mi ya bya te bya nyu me pu mu yu pa gi pyu zo ma mo gu bya kyu."
-  },
-  {
-    "q": "ね りょ す ね ね ら ま す にゃ え り そ ちょ ら み み ぷ ぺ し し よ せ じ か きょ よ みゃ ご べ。",
-    "a": "ne ryo su ne ne ra ma su nya e ri so cho ra mi mi pu pe shi shi yo se ji ka kyo yo mya go be."
-  },
-  {
-    "q": "ぶ て にゃ きゃ みゃ きゅ きゅ しゅ う あ じゅ で は ぼ りょ ぺ しょ の み ち きゅ ぴょ じ さ へ ぶ きゅ ぎ じょ ちゃ す て あ ぴ ぷ ちょ ぶ を ご。",
-    "a": "bu te nya kya mya kyu kyu shu u a ju de ha bo ryo pe sho no mi chi kyu pyo ji sa he bu kyu gi jo cha su te a pi pu cho bu wo go."
-  },
-  {
-    "q": "きゅ へ きゃ り ま ぎゅ ちゃ ぴょ びょ ひょ ぐ へ び ぴゃ に ぞ い ぐ ぶ れ ら にゃ ちゃ び にゃ り も ぺ りゅ きょ え にゅ み ぴょ し ほ。",
-    "a": "kyu he kya ri ma gyu cha pyo byo hyo gu he bi pya ni zo i gu bu re ra nya cha bi nya ri mo pe ryu kyo e nyu mi pyo shi ho."
-  },
-  {
-    "q": "ざ ざ せ ぽ りゃ しゃ きゃ い で にゅ に め ちょ。",
-    "a": "za za se po rya sha kya i de nyu ni me cho."
-  },
-  {
-    "q": "は げ にょ ろ ひょ せ にゃ びょ りょ で ち ぞ ひ す にゅ ま。",
-    "a": "ha ge nyo ro hyo se nya byo ryo de chi zo hi su nyu ma."
-  },
-  {
-    "q": "し ね ぴゃ な は び た りょ り りょ ち ゆ い みょ で ぎゃ ぷ ぴゅ しょ べ ば す ざ。",
-    "a": "shi ne pya na ha bi ta ryo ri ryo chi yu i myo de gya pu pyu sho be ba su za."
-  },
-  {
-    "q": "ゆ しょ ぷ びょ ぴゃ べ と にゅ ぱ に ご ぎゅ び きょ か ぞ ぷ け こ ず ちょ にょ ひゃ ず ふ す びゃ。",
-    "a": "yu sho pu byo pya be to nyu pa ni go gyu bi kyo ka zo pu ke ko zu cho nyo hya zu fu su bya."
-  },
-  {
-    "q": "こ じ ず にゅ き ほ りょ にゃ む しゃ り せ う。",
-    "a": "ko ji zu nyu ki ho ryo nya mu sha ri se u."
-  },
-  {
-    "q": "じゃ び ぎょ ね ぱ つ て にゃ ば め す しゃ ね。",
-    "a": "ja bi gyo ne pa tsu te nya ba me su sha ne."
-  },
-  {
-    "q": "じ と さ へ げ りゅ みゅ み れ す な ぬ や で ぴ じ る こ れ し ぎょ で ちゃ ぱ ぎょ ば。",
-    "a": "ji to sa he ge ryu myu mi re su na nu ya de pi ji ru ko re shi gyo de cha pa gyo ba."
-  },
-  {
-    "q": "の ちょ ぶ が ま ぱ に ちゅ みゃ を ぐ びゃ よ ぎゅ す つ ぐ ぼ け え や せ ぜ び ぴゃ も ぐ ま びゅ が そ む ぎょ を や い た な わ。",
-    "a": "no cho bu ga ma pa ni chu mya wo gu bya yo gyu su tsu gu bo ke e ya se ze bi pya mo gu ma byu ga so mu gyo wo ya i ta na wa."
-  },
-  {
-    "q": "ろ ゆ げ ぷ りゅ た ちゃ ず ふ ど ぞ そ も ひょ ね じゃ と きゅ にょ ぱ りょ にゃ け ど ち じゃ べ にょ う ほ べ ま る も。",
-    "a": "ro yu ge pu ryu ta cha zu fu do zo so mo hyo ne ja to kyu nyo pa ryo nya ke do chi ja be nyo u ho be ma ru mo."
-  },
-  {
-    "q": "わ びゃ びゅ き む ち ぺ み べ え ぷ ぎゅ ほ を る を に ぐ ちょ へ ひゃ ちゅ せ め の ひ か び ぴゃ を じ ば にゅ い。",
-    "a": "wa bya byu ki mu chi pe mi be e pu gyu ho wo ru wo ni gu cho he hya chu se me no hi ka bi pya wo ji ba nyu i."
-  },
-  {
-    "q": "や びゅ き ぼ で か ぴゃ りゃ か ちょ つ ちゅ ぜ を。",
-    "a": "ya byu ki bo de ka pya rya ka cho tsu chu ze wo."
-  },
-  {
-    "q": "ぶ に ちゅ じょ きゅ ちゃ ぴょ きゅ と う ぞ か しゃ りゃ ちゃ ば み さ あ。",
-    "a": "bu ni chu jo kyu cha pyo kyu to u zo ka sha rya cha ba mi sa a."
-  },
-  {
-    "q": "ぬ り りょ きゃ し ひょ きゅ ま あ み そ さ びょ だ か を にゅ ぷ た ひゅ は。",
-    "a": "nu ri ryo kya shi hyo kyu ma a mi so sa byo da ka wo nyu pu ta hyu ha."
-  },
-  {
-    "q": "みゅ きょ か た せ ぜ な ま きゅ しゅ ね ぴょ ほ れ ぎ ど じょ ぜ ゆ しゅ みょ さ け に う で ぶ にゅ ひゃ ぎ く ゆ め ぺ ぎ ぽ。",
-    "a": "myu kyo ka ta se ze na ma kyu shu ne pyo ho re gi do jo ze yu shu myo sa ke ni u de bu nyu hya gi ku yu me pe gi po."
-  },
-  {
-    "q": "り みょ ぶ みゃ ず じゅ ぴゃ ひょ ぼ な け。",
-    "a": "ri myo bu mya zu ju pya hyo bo na ke."
-  },
-  {
-    "q": "びゅ びゃ りゅ ぴゃ を わ ちゃ あ ま ぴゅ て せ ぴ て ちょ あ で ぽ へ か み に にょ お な ぐ ぎゃ お に ひゅ び ぞ じょ で。",
-    "a": "byu bya ryu pya wo wa cha a ma pyu te se pi te cho a de po he ka mi ni nyo o na gu gya o ni hyu bi zo jo de."
-  },
-  {
-    "q": "ぼ す た き も ぎょ あ せ な ぎゃ も ぽ む ぎょ を み ひ げ りょ だ ひゃ が しゅ ね ちゅ わ は ぺ にゅ じゃ あ ぎゅ お す げ に む。",
-    "a": "bo su ta ki mo gyo a se na gya mo po mu gyo wo mi hi ge ryo da hya ga shu ne chu wa ha pe nyu ja a gyu o su ge ni mu."
-  },
-  {
-    "q": "く ば ど ふ ど ら ぶ みょ ぎ ぽ ぬ ぴゃ て。",
-    "a": "ku ba do fu do ra bu myo gi po nu pya te."
-  },
-  {
-    "q": "じゅ みゃ の ほ お ろ つ ぎょ へ じ や し け ひょ ず の れ じょ げ みゃ ろ じょ。",
-    "a": "ju mya no ho o ro tsu gyo he ji ya shi ke hyo zu no re jo ge mya ro jo."
-  },
-  {
-    "q": "びょ の ぎゃ ぞ ち よ ろ ぶ の ち りゅ ひ ぺ ぐ べ ぱ る ぜ。",
-    "a": "byo no gya zo chi yo ro bu no chi ryu hi pe gu be pa ru ze."
-  },
-  {
-    "q": "ぐ ご にゅ じゃ ほ ぎ きょ じゅ ご さ め げ みゅ あ りょ じょ きょ よ ぶ ぺ み の ふ ぎ べ じょ べ の ば じゅ く じゅ みゃ わ。",
-    "a": "gu go nyu ja ho gi kyo ju go sa me ge myu a ryo jo kyo yo bu pe mi no fu gi be jo be no ba ju ku ju mya wa."
-  },
-  {
-    "q": "しゃ げ え ぎょ ぎゃ る りょ へ お びゅ ぎょ。",
-    "a": "sha ge e gyo gya ru ryo he o byu gyo."
-  },
-  {
-    "q": "へ む ひゃ ぴ だ ぶ ぜ ぴゅ じ ぐ ざ ふ ちょ ぽ り へ きゃ と ち せ ふ ね。",
-    "a": "he mu hya pi da bu ze pyu ji gu za fu cho po ri he kya to chi se fu ne."
-  },
-  {
-    "q": "は ぜ ゆ こ ぼ ぜ ひゅ そ ぺ ふ きょ ず きゅ げ よ ちゅ ふ ちゃ よ つ きゅ ぞ の だ も ち ぎゅ。",
-    "a": "ha ze yu ko bo ze hyu so pe fu kyo zu kyu ge yo chu fu cha yo tsu kyu zo no da mo chi gyu."
-  },
-  {
-    "q": "りゃ あ し え ぼ れ ちゃ ら い ひ しゃ ぞ の じ ち ぺ ひゃ。",
-    "a": "rya a shi e bo re cha ra i hi sha zo no ji chi pe hya."
-  },
-  {
-    "q": "く う べ ま ま も じょ び し わ ら は ね ふ か にゅ しょ びゃ め みゅ ざ は ぴゃ ど じょ ろ きょ ひょ ぴ ぎょ ぎゃ じゃ さ わ さ あ じゅ。",
-    "a": "ku u be ma ma mo jo bi shi wa ra ha ne fu ka nyu sho bya me myu za ha pya do jo ro kyo hyo pi gyo gya ja sa wa sa a ju."
-  },
-  {
-    "q": "ぎ ひゃ にょ ぜ か りゅ びょ ら び る だ ね ぺ め ば の し ぴゃ ゆ ぴゅ む にゅ ぴゅ ぐ にゅ じょ り。",
-    "a": "gi hya nyo ze ka ryu byo ra bi ru da ne pe me ba no shi pya yu pyu mu nyu pyu gu nyu jo ri."
-  },
-  {
-    "q": "ろ ぺ と さ ぷ や ね よ ぼ ぴょ と きょ し あ。",
-    "a": "ro pe to sa pu ya ne yo bo pyo to kyo shi a."
-  },
-  {
-    "q": "ひょ にょ りゅ にゅ ぎ ぷ ひゃ りょ ほ う ぶ ちょ も ら ぬ み ぎゃ き だ ひょ ぬ りょ りゅ だ ぎ みゅ。",
-    "a": "hyo nyo ryu nyu gi pu hya ryo ho u bu cho mo ra nu mi gya ki da hyo nu ryo ryu da gi myu."
-  },
-  {
-    "q": "ぞ え だ にゃ ぎゃ ど ちゅ ぶ ぐ ちゅ れ め ち ふ じゅ わ ぴょ と ぶ は お。",
-    "a": "zo e da nya gya do chu bu gu chu re me chi fu ju wa pyo to bu ha o."
-  },
-  {
-    "q": "み ほ を あ ぞ ね べ ほ ど りゃ る で で ひゅ ぎゅ きゅ ぎゃ ぎょ た ぼ ひゃ りゅ みょ る ひょ りゃ せ びゃ ぞ。",
-    "a": "mi ho wo a zo ne be ho do rya ru de de hyu gyu kyu gya gyo ta bo hya ryu myo ru hyo rya se bya zo."
-  },
-  {
-    "q": "びゅ びゅ な きょ ぶ ち ぽ と う にゃ に な そ せ ず す か ぶ。",
-    "a": "byu byu na kyo bu chi po to u nya ni na so se zu su ka bu."
-  },
-  {
-    "q": "ぬ ぴ り しゃ わ ぴょ にゃ ほ お び しゃ ら つ。",
-    "a": "nu pi ri sha wa pyo nya ho o bi sha ra tsu."
-  },
-  {
-    "q": "し ね みゃ ぎょ ね みょ よ よ ひょ じ にゃ ふ び な ひょ さ こ。",
-    "a": "shi ne mya gyo ne myo yo yo hyo ji nya fu bi na hyo sa ko."
-  },
-  {
-    "q": "ろ ぶ ち む き ぞ ぜ きゅ え の が じゅ も じゃ ぼ ま る ぬ や え も にゅ ぴ ご じ。",
-    "a": "ro bu chi mu ki zo ze kyu e no ga ju mo ja bo ma ru nu ya e mo nyu pi go ji."
-  },
-  {
-    "q": "ふ みゃ う ぴゃ た りょ え や る ひょ ら にゅ か ぎょ を ぴょ ぴ す せ だ だ にゃ た ぎ ぎゃ い りゃ にょ じゅ。",
-    "a": "fu mya u pya ta ryo e ya ru hyo ra nyu ka gyo wo pyo pi su se da da nya ta gi gya i rya nyo ju."
-  },
-  {
-    "q": "ぶ ぞ ぶ ぞ て しゅ ひゃ じょ と べ つ ざ みょ ひ ぎ。",
-    "a": "bu zo bu zo te shu hya jo to be tsu za myo hi gi."
-  },
-  {
-    "q": "ぴょ め りゃ す こ じ にょ を ひょ の じょ ば ず こ ひょ お ま びょ。",
-    "a": "pyo me rya su ko ji nyo wo hyo no jo ba zu ko hyo o ma byo."
-  },
-  {
-    "q": "ぺ り だ ぽ る と ち ぎゃ り にゅ しゅ て ほ ち みゃ き と ら は あ ひ お た きゃ ぎ ぼ じょ ゆ を か み お や せ の ぐ じ む ぬ め。",
-    "a": "pe ri da po ru to chi gya ri nyu shu te ho chi mya ki to ra ha a hi o ta kya gi bo jo yu wo ka mi o ya se no gu ji mu nu me."
-  },
-  {
-    "q": "る す わ し りゅ も び みゃ じゅ にゅ さ つ りょ きゅ ほ びゅ ど ひ ち ぺ り す び しゃ ご ざ ろ ぞ る な りゃ も ち そ。",
-    "a": "ru su wa shi ryu mo bi mya ju nyu sa tsu ryo kyu ho byu do hi chi pe ri su bi sha go za ro zo ru na rya mo chi so."
-  },
-  {
-    "q": "が ぽ ま く も ぷ ら ち ら びゃ ちょ ぬ ね じ や きゅ りょ る きゃ ぎ しょ わ ば り ろ も ね ぷ え びょ ろ せ ま の りゅ みゃ ぎょ にょ た。",
-    "a": "ga po ma ku mo pu ra chi ra bya cho nu ne ji ya kyu ryo ru kya gi sho wa ba ri ro mo ne pu e byo ro se ma no ryu mya gyo nyo ta."
-  },
-  {
-    "q": "ぱ き ちゅ しゅ ほ ど あ にゅ びょ びゅ う て ひ ぽ か べ ちゃ みょ は だ そ りゃ。",
-    "a": "pa ki chu shu ho do a nyu byo byu u te hi po ka be cha myo ha da so rya."
-  },
-  {
-    "q": "しゃ ぴょ しょ ちゅ ま ぴゃ ひ びょ さ びょ ざ お は ちゃ に へ ぴょ そ て だ よ を ま ご や お ぴゃ ひ じゃ。",
-    "a": "sha pyo sho chu ma pya hi byo sa byo za o ha cha ni he pyo so te da yo wo ma go ya o pya hi ja."
-  },
-  {
-    "q": "ちゃ ぴゅ びゃ ま だ ちゅ りゅ びゃ ま ゆ びょ きょ の きゃ の ひゅ じょ う きょ ちょ ぱ ぬ。",
-    "a": "cha pyu bya ma da chu ryu bya ma yu byo kyo no kya no hyu jo u kyo cho pa nu."
-  },
-  {
-    "q": "ふ びゃ い こ で ち きゅ る ひゃ にゃ の な ちゅ だ み の で ぱ ぜ ひゅ ぎゅ ぎょ じょ つ みょ れ ちゃ き ぐ ぱ び か ざ ぼ ろ ぎ う びょ。",
-    "a": "fu bya i ko de chi kyu ru hya nya no na chu da mi no de pa ze hyu gyu gyo jo tsu myo re cha ki gu pa bi ka za bo ro gi u byo."
-  },
-  {
-    "q": "う じ じゃ じゅ お の ぽ ご ぎゅ しゃ だ ゆ じゅ しょ は びゅ ぎ ま ぴ ろ みゃ。",
-    "a": "u ji ja ju o no po go gyu sha da yu ju sho ha byu gi ma pi ro mya."
-  },
-  {
-    "q": "け い ら し け わ ほ ぷ て ぷ ふ ば びょ ぎ か きゅ ぜ びょ と しゃ りゅ ぽ べ か ちゅ ゆ け ふ ぜ じょ ふ びゅ りゅ。",
-    "a": "ke i ra shi ke wa ho pu te pu fu ba byo gi ka kyu ze byo to sha ryu po be ka chu yu ke fu ze jo fu byu ryu."
-  },
-  {
-    "q": "ちゅ じょ へ ろ き ろ ほ お と ふ お つ え しょ ひゅ つ ね ぎゃ ぶ え きょ へ びゃ き。",
-    "a": "chu jo he ro ki ro ho o to fu o tsu e sho hyu tsu ne gya bu e kyo he bya ki."
-  },
-  {
-    "q": "ざ びゃ りょ じょ しょ く い な ち で ざ ご ろ ちょ ろ ぱ ちゃ つ て ぱ だ ば。",
-    "a": "za bya ryo jo sho ku i na chi de za go ro cho ro pa cha tsu te pa da ba."
-  },
-  {
-    "q": "じょ ふ だ げ ちゃ ひ ぜ は ぴょ びょ く さ の が きょ ぎゃ ふ ぶ お ひょ にょ ら ぴ こ ぱ か にょ びゅ ば ぽ。",
-    "a": "jo fu da ge cha hi ze ha pyo byo ku sa no ga kyo gya fu bu o hyo nyo ra pi ko pa ka nyo byu ba po."
-  },
-  {
-    "q": "へ ひょ りょ しゅ ぽ ぎゃ じ も せ せ ぽ ゆ じ きょ せ べ びゃ ぴょ む さ も ず せ お ぴゅ せ。",
-    "a": "he hyo ryo shu po gya ji mo se se po yu ji kyo se be bya pyo mu sa mo zu se o pyu se."
-  },
-  {
-    "q": "じょ ぎ み め びゅ ぺ ご や な つ ほ ぐ ちゅ が よ ね きゃ ぴ びゅ。",
-    "a": "jo gi mi me byu pe go ya na tsu ho gu chu ga yo ne kya pi byu."
-  },
-  {
-    "q": "き ちょ ち ぴゅ りゅ せ りゃ ゆ と け で え さ ほ びゅ う ぴょ ぽ あ ひ きょ わ た ゆ ち ぴょ ぎょ じ ぱ しゃ で う ぴ みゅ ちょ に す。",
-    "a": "ki cho chi pyu ryu se rya yu to ke de e sa ho byu u pyo po a hi kyo wa ta yu chi pyo gyo ji pa sha de u pi myu cho ni su."
-  },
-  {
-    "q": "に ぽ そ みょ ちゃ ご つ で ぜ わ ぼ ぜ ご しょ ゆ ぎ つ よ あ ろ みゃ ぞ ぎゅ げ う く か だ ぎゅ て う じゅ ざ にゃ よ み て。",
-    "a": "ni po so myo cha go tsu de ze wa bo ze go sho yu gi tsu yo a ro mya zo gyu ge u ku ka da gyu te u ju za nya yo mi te."
-  },
-  {
-    "q": "ろ ざ きゅ びゃ も べ じ の ぷ な が け き にょ く い め びゃ だ ち ぜ べ ぜ び みょ の ひゅ りょ ぴょ し りゅ き が ぎゅ が りゅ。",
-    "a": "ro za kyu bya mo be ji no pu na ga ke ki nyo ku i me bya da chi ze be ze bi myo no hyu ryo pyo shi ryu ki ga gyu ga ryu."
-  },
-  {
-    "q": "き あ お ま びょ ぽ ろ ご ち きょ ぱ へ か にょ しゅ ね わ お みゅ り び びょ げ びょ ぎゅ え ひょ あ びゅ ぜ にゅ い ひょ る ぎ び にゃ む。",
-    "a": "ki a o ma byo po ro go chi kyo pa he ka nyo shu ne wa o myu ri bi byo ge byo gyu e hyo a byu ze nyu i hyo ru gi bi nya mu."
-  },
-  {
-    "q": "は ぴゃ きょ も ぎゅ ひょ ちょ ぷ み れ ほ びゃ にゅ びゃ みゃ る ぐ ほ は ぎゅ り ぜ は な ぎょ。",
-    "a": "ha pya kyo mo gyu hyo cho pu mi re ho bya nyu bya mya ru gu ho ha gyu ri ze ha na gyo."
-  },
-  {
-    "q": "にょ と う さ ろ にゃ ぎゃ ちゅ じゃ ちょ を さ にゃ た ぬ か ひゅ べ た ひょ を ほ みゅ にゃ ひょ ち ひゅ ず ね みょ ぽ。",
-    "a": "nyo to u sa ro nya gya chu ja cho wo sa nya ta nu ka hyu be ta hyo wo ho myu nya hyo chi hyu zu ne myo po."
-  },
-  {
-    "q": "お お きゃ ち じょ せ ぱ で し りゃ あ しゃ す ふ びゃ ぽ で ね みゅ じょ ね だ ぱ りゅ ろ ぜ。",
-    "a": "o o kya chi jo se pa de shi rya a sha su fu bya po de ne myu jo ne da pa ryu ro ze."
-  },
-  {
-    "q": "ぴゃ ちゅ ちゅ ば お ちょ しゃ の ぶ さ つ な や へ ぼ ぴゅ じゅ。",
-    "a": "pya chu chu ba o cho sha no bu sa tsu na ya he bo pyu ju."
-  },
-  {
-    "q": "びゅ ひゃ れ で しゅ ぼ の て ぬ しゃ みゃ びょ む か ぼ ま。",
-    "a": "byu hya re de shu bo no te nu sha mya byo mu ka bo ma."
-  },
-  {
-    "q": "きゃ ぎ びゃ が る りゅ きゃ にょ や きょ き りゅ る ちゃ わ め ひ ぷ ひ め じゃ い そ ど く りょ しょ や ど が ぷ た ざ にゃ きゃ ば。",
-    "a": "kya gi bya ga ru ryu kya nyo ya kyo ki ryu ru cha wa me hi pu hi me ja i so do ku ryo sho ya do ga pu ta za nya kya ba."
-  },
-  {
-    "q": "ちゃ ぎょ ぷ ぶ にょ も ぼ ざ や と け じょ て つ に う ら に ぜ う が ひゃ そ。",
-    "a": "cha gyo pu bu nyo mo bo za ya to ke jo te tsu ni u ra ni ze u ga hya so."
-  },
-  {
-    "q": "こ ふ ぜ ろ や ぜ びゅ み く わ ぴょ。",
-    "a": "ko fu ze ro ya ze byu mi ku wa pyo."
-  },
-  {
-    "q": "の く め ざ に みゃ つ し た ぐ と ひ つ が し か ど た ね きゅ が ひゃ ぴゃ じゃ さ。",
-    "a": "no ku me za ni mya tsu shi ta gu to hi tsu ga shi ka do ta ne kyu ga hya pya ja sa."
-  },
-  {
-    "q": "ね しゅ じゃ み きゃ ね と う む ご め。",
-    "a": "ne shu ja mi kya ne to u mu go me."
-  },
-  {
-    "q": "ぷ ぽ ぎゃ びゅ ちゅ しゃ ぎゅ りゅ みょ ひ じゃ ざ ひ だ ひ よ ぐ よ ぞ。",
-    "a": "pu po gya byu chu sha gyu ryu myo hi ja za hi da hi yo gu yo zo."
-  },
-  {
-    "q": "ぼ と て ほ り か り だ の す し ぐ い びょ ぼ りゃ ふ な。",
-    "a": "bo to te ho ri ka ri da no su shi gu i byo bo rya fu na."
-  },
-  {
-    "q": "しょ ぎゅ お を ひゃ ぴゅ みゃ う ちゃ も きょ じゅ。",
-    "a": "sho gyu o wo hya pyu mya u cha mo kyo ju."
-  },
-  {
-    "q": "が ば か ろ ふ ぐ ぞ ひ ね じゃ ら う にゅ か つ ば ぞ にょ ま にゅ じ。",
-    "a": "ga ba ka ro fu gu zo hi ne ja ra u nyu ka tsu ba zo nyo ma nyu ji."
-  },
-  {
-    "q": "な りゅ を ば と べ ど ぎゃ ぴゃ て お。",
-    "a": "na ryu wo ba to be do gya pya te o."
-  },
-  {
-    "q": "ご ぱ びゃ げ ほ ぴょ ゆ ひょ りょ が せ し ぼ ぎゅ と ご じょ か の ぞ か だ ひ し に ゆ み ほ に ぎょ あ ひょ ど て ぽ ぴゃ きょ みょ。",
-    "a": "go pa bya ge ho pyo yu hyo ryo ga se shi bo gyu to go jo ka no zo ka da hi shi ni yu mi ho ni gyo a hyo do te po pya kyo myo."
-  },
-  {
-    "q": "な ひゅ ば つ にゃ きょ ゆ みゅ りゃ りゅ そ り え む ふ ぴゅ きゃ。",
-    "a": "na hyu ba tsu nya kyo yu myu rya ryu so ri e mu fu pyu kya."
-  },
-  {
-    "q": "ご びゅ ほ ちゅ ぼ わ りょ げ にょ にゅ す びょ け ず ぎょ ひゅ ちゃ ぎ だ。",
-    "a": "go byu ho chu bo wa ryo ge nyo nyu su byo ke zu gyo hyu cha gi da."
-  },
-  {
-    "q": "きゃ ぷ お みゃ が ゆ ね と わ じ れ や。",
-    "a": "kya pu o mya ga yu ne to wa ji re ya."
-  },
-  {
-    "q": "び ぱ お で みゅ な か で ざ みゅ ち む そ た を ぷ ぼ め ゆ へ よ ぎゃ ま ひゃ りゅ ば ぴゃ ひゃ ぴゃ ちゅ みょ きょ みゅ しゅ ぴ ぼ な。",
-    "a": "bi pa o de myu na ka de za myu chi mu so ta wo pu bo me yu he yo gya ma hya ryu ba pya hya pya chu myo kyo myu shu pi bo na."
-  },
-  {
-    "q": "す の ぬ りゅ あ を り ざ お そ け つ あ せ お う びゅ び きょ じょ ひゅ れ。",
-    "a": "su no nu ryu a wo ri za o so ke tsu a se o u byu bi kyo jo hyu re."
-  },
-  {
-    "q": "た ゆ ぎゅ み しゃ て ぶ ぴゃ ざ る く ら く ぞ る う す きゅ び ち す い ふ ぐ ひゃ ゆ ひゅ じょ け ぺ ぴ か い ぺ や べ。",
-    "a": "ta yu gyu mi sha te bu pya za ru ku ra ku zo ru u su kyu bi chi su i fu gu hya yu hyu jo ke pe pi ka i pe ya be."
-  },
-  {
-    "q": "ね れ ひ ぺ こ す じゃ さ ちゅ ぱ りゅ む ろ や じょ す きゅ で ぷ は。",
-    "a": "ne re hi pe ko su ja sa chu pa ryu mu ro ya jo su kyu de pu ha."
-  },
-  {
-    "q": "ちゅ ひ え ほ め ほ ちゅ い と ちょ にゅ びゃ て か わ さ きゅ ぎ じゃ ざ りゃ ふ ら ざ ぼ え か う じ ぱ よ わ ず みゃ。",
-    "a": "chu hi e ho me ho chu i to cho nyu bya te ka wa sa kyu gi ja za rya fu ra za bo e ka u ji pa yo wa zu mya."
-  },
-  {
-    "q": "ひ ぞ ぱ しゃ め ち ら しゅ か お ゆ け ざ ぺ め りょ しょ ひゃ ぜ が ぎ れ ね ひ。",
-    "a": "hi zo pa sha me chi ra shu ka o yu ke za pe me ryo sho hya ze ga gi re ne hi."
-  },
-  {
-    "q": "ぽ ぶ て ひ ぜ る ば ざ ら の ぎ ば わ ちゅ お じゅ じょ ぶ つ お み ぴゅ べ りゅ びゃ で ご ぴゅ りょ ぼ ま ぬ ら う べ え び か の。",
-    "a": "po bu te hi ze ru ba za ra no gi ba wa chu o ju jo bu tsu o mi pyu be ryu bya de go pyu ryo bo ma nu ra u be e bi ka no."
-  },
-  {
-    "q": "は で ぺ で え ぬ ぱ ぎょ きょ ちょ に ぎ ぐ ろ じ ご にゃ は べ か つ ほ よ ひょ な ら。",
-    "a": "ha de pe de e nu pa gyo kyo cho ni gi gu ro ji go nya ha be ka tsu ho yo hyo na ra."
-  },
-  {
-    "q": "じゃ め しゅ ぴょ ろ りゃ ぴゃ ゆ ぎゅ う や ね にょ ば う む ひょ す ぞ べ き ちゅ みょ にょ え ざ れ げ ぱ みゅ り ぴゃ ぜ な ぺ ぽ ま。",
-    "a": "ja me shu pyo ro rya pya yu gyu u ya ne nyo ba u mu hyo su zo be ki chu myo nyo e za re ge pa myu ri pya ze na pe po ma."
-  },
-  {
-    "q": "だ きゅ せ つ ひゅ ぎ ね つ ぎ ひゅ に りゅ じゅ ぼ た け じゅ め ぴゅ ぎゅ も へ ぴゅ ぷ ひょ げ びょ ろ へ び ら ち。",
-    "a": "da kyu se tsu hyu gi ne tsu gi hyu ni ryu ju bo ta ke ju me pyu gyu mo he pyu pu hyo ge byo ro he bi ra chi."
-  },
-  {
-    "q": "ぐ で じゃ りょ ま にゅ が み ひゅ あ ぎゃ は ぷ ぎょ。",
-    "a": "gu de ja ryo ma nyu ga mi hyu a gya ha pu gyo."
-  },
-  {
-    "q": "ひゃ せ ぱ ぎゃ べ て お ぎょ りょ み も ぬ じゃ ふ が め みゃ ぶ ぺ る びょ き ぴゅ た ら じゅ。",
-    "a": "hya se pa gya be te o gyo ryo mi mo nu ja fu ga me mya bu pe ru byo ki pyu ta ra ju."
-  },
-  {
-    "q": "みょ りゅ む す みょ こ よ きょ う て い ぺ みゃ ぺ びゅ か。",
-    "a": "myo ryu mu su myo ko yo kyo u te i pe mya pe byu ka."
-  },
-  {
-    "q": "びゃ お と ほ ら ち お こ え そ にゃ じゃ ば べ ま あ こ た りゅ びゅ な。",
-    "a": "bya o to ho ra chi o ko e so nya ja ba be ma a ko ta ryu byu na."
-  },
-  {
-    "q": "げ ぼ きょ ひゃ みゃ ちょ あ じ ぺ びょ を お ぴゃ ら ば え げ ぜ や じ お せ ぺ こ ぎゃ じゅ へ ほ みゃ く みゃ みゃ ぽ ろ ぴゃ。",
-    "a": "ge bo kyo hya mya cho a ji pe byo wo o pya ra ba e ge ze ya ji o se pe ko gya ju he ho mya ku mya mya po ro pya."
-  },
-  {
-    "q": "え にゃ に せ みゃ ぱ ぎゃ きゃ みょ ぽ こ ちょ みゃ きょ つ にょ た せ に きゅ て つ み。",
-    "a": "e nya ni se mya pa gya kya myo po ko cho mya kyo tsu nyo ta se ni kyu te tsu mi."
-  },
-  {
-    "q": "ほ ほ ぽ ぷ た ば ひょ べ に しゅ む ぞ びゅ しゃ ゆ そ き ね ぴゅ ら み お ぎょ や ざ こ へ ぎゃ が きゅ しょ は じゅ ず。",
-    "a": "ho ho po pu ta ba hyo be ni shu mu zo byu sha yu so ki ne pyu ra mi o gyo ya za ko he gya ga kyu sho ha ju zu."
-  },
-  {
-    "q": "ぴょ りょ が う びょ ぱ じゅ りょ ちゃ で お ぼ み しゃ ぎょ ぎゃ さ る げ にゃ ぴょ ふ つ よ ぎょ ど。",
-    "a": "pyo ryo ga u byo pa ju ryo cha de o bo mi sha gyo gya sa ru ge nya pyo fu tsu yo gyo do."
-  },
-  {
-    "q": "う う じ しょ びゅ ぐ ち ひ き ど ぶ の ぶ ぶ ぴ にゃ きゃ しゅ ちょ ぱ は ぴゅ ぶ ざ お きょ ぎゃ し。",
-    "a": "u u ji sho byu gu chi hi ki do bu no bu bu pi nya kya shu cho pa ha pyu bu za o kyo gya shi."
+    "q": "りゃ、 ど、 きょ、 て、 そ、 しゃ、 じょ、 みゅ、 ぽ、 む、 わ、 じ、 れ、 く。",
+    "a": "rya, do, kyo, te, so, sha, jo, myu, po, mu, wa, ji, re, ku."
   }
 ]

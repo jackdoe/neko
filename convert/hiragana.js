@@ -1,10 +1,6 @@
 let hiragana = {}
-let inverse = {}
+
 const add = function (r, h) {
-  if (inverse[h]) {
-    console.log(r, h)
-  }
-  inverse[h] = r
   hiragana[r] = h
 }
 
@@ -133,13 +129,13 @@ let pick = function (n) {
   }
 
   return {
-    q: question.join(' ') + '。',
-    a: answer.join(' ') + '.'
+    q: question.join('、 ') + '。',
+    a: answer.join(', ') + '.'
   }
 }
 
-for (let i = 0; i < 300; i++) {
-  sentences.push(pick(getRandomArbitrary(10, 40)))
+for (let i = 0; i < 200; i++) {
+  sentences.push(pick(getRandomArbitrary(5, 20)))
 }
 
 console.log(JSON.stringify(sentences, null, 2))
