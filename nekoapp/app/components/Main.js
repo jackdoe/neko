@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, TouchableOpacity, Text } from 'react-native'
+import { View, TouchableOpacity, Text, Linking } from 'react-native'
 import Local from './Local'
 import Remote from './Remote'
 const { ts } = require('./textSizes')
@@ -83,7 +83,7 @@ export default class Main extends Component {
             }}
           >
             <Text style={{ paddingRight: 5 }}>
-              help?
+              {this.state.help ? 'hide-help ✖' : 'help?'}
             </Text>
           </TouchableOpacity>
         </View>
@@ -116,7 +116,9 @@ export default class Main extends Component {
     let help = [
       'type as many words as you can translate',
       'order does not  matter',
-      'score is number-of-translated-words/total-words'
+      'score is number-of-translated-words/total-words',
+      'change the difficulty or language by clicking on >advanced< and >ja< for example',
+      'on iOS you can click on the text to hear text-to-speech'
     ]
     if (this.state.multi) {
       help.push(
@@ -129,6 +131,12 @@ export default class Main extends Component {
         'games are up to 5 players, when a game gets full a new one is created'
       )
       help.push('objective is to translate the sentence as fast as possible')
+    } else {
+      help.push(
+        'if you have given up you can click >Show< and see the translation of the current sentence'
+      )
+      help.push('click >Next< to go to the next random sentence')
+      help.push('click >join-a-game< to join a multi player game')
     }
     let text = help.map((e, i) => {
       return (
@@ -146,6 +154,19 @@ export default class Main extends Component {
           padding: 40
         }}
       >
+        <TouchableOpacity
+          activeOpacity={0.5}
+          onPress={() => {
+            Linking.openURL('https://github.com/jackdoe/neko')
+          }}
+        >
+          <View>
+            <Text textDecorationLine="underline" style={{ color: 'navy' }}>
+              want to contribute? go to https://github.com/jackdoe/neko and make a pull request :)
+            </Text>
+          </View>
+        </TouchableOpacity>
+        <View style={{ height: 10 }} />
         <TouchableOpacity
           activeOpacity={0.5}
           onPress={() => {
@@ -172,9 +193,18 @@ export default class Main extends Component {
           language={this.state.language}
         />
 
+    if (this.state.help) {
+      return (
+        <View style={{ flex: 1 }}>
+          <View style={{ flex: 9, backgroundColor: '#fff' }}>
+            {this.renderHelp()}
+          </View>
+          {this.renderControls()}
+        </View>
+      )
+    }
     return (
       <View style={{ flex: 1 }}>
-
         <View style={{ flex: 9, backgroundColor: '#fff' }}>
           {this.renderHelp()}
           {inner}
