@@ -83,7 +83,7 @@ export default class Main extends Component {
             }}
           >
             <Text style={{ paddingRight: 5 }}>
-              {this.state.help ? 'hide-help ✖' : 'help?'}
+              {this.state.help ? 'hide-help✖' : 'help?'}
             </Text>
           </TouchableOpacity>
         </View>
@@ -206,7 +206,6 @@ export default class Main extends Component {
     return (
       <View style={{ flex: 1 }}>
         <View style={{ flex: 9, backgroundColor: '#fff' }}>
-          {this.renderHelp()}
           {inner}
         </View>
         {this.renderControls()}
