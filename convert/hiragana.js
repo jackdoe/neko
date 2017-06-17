@@ -1,6 +1,10 @@
 let hiragana = {}
-
+let inverse = {}
 const add = function (r, h) {
+  if (inverse[h]) {
+    console.log(r, h)
+  }
+  inverse[h] = r
   hiragana[r] = h
 }
 
@@ -74,10 +78,6 @@ add('pi', 'ぴ')
 add('pu', 'ぷ')
 add('pe', 'ぺ')
 add('po', 'ぽ')
-add('hu', 'ふ')
-add('tu', 'つ')
-add('si', 'し')
-add('ti', 'ち')
 add('kya', 'きゃ')
 add('kyu', 'きゅ')
 add('kyo', 'きょ')
@@ -115,6 +115,9 @@ add('pyo', 'ぴょ')
 Array.prototype.random = function () {
   return this[Math.floor(Math.random() * this.length)]
 }
+function getRandomArbitrary (min, max) {
+  return Math.random() * (max - min) + min
+}
 
 let sentences = []
 let keys = Object.keys(hiragana)
@@ -135,8 +138,8 @@ let pick = function (n) {
   }
 }
 
-for (let i = 0; i < 500; i++) {
-  sentences.push(pick(20))
+for (let i = 0; i < 300; i++) {
+  sentences.push(pick(getRandomArbitrary(10, 40)))
 }
 
 console.log(JSON.stringify(sentences, null, 2))
