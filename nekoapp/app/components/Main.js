@@ -180,7 +180,19 @@ export default class Main extends Component {
       </View>
     )
   }
+
   render () {
+    if (this.state.help) {
+      return (
+        <View style={{ flex: 1 }}>
+          <View style={{ flex: 9, backgroundColor: '#fff' }}>
+            {this.renderHelp()}
+          </View>
+          {this.renderControls()}
+        </View>
+      )
+    }
+
     let inner = this.state.multi
       ? <Remote
           ref="inner"
@@ -193,16 +205,6 @@ export default class Main extends Component {
           language={this.state.language}
         />
 
-    if (this.state.help) {
-      return (
-        <View style={{ flex: 1 }}>
-          <View style={{ flex: 9, backgroundColor: '#fff' }}>
-            {this.renderHelp()}
-          </View>
-          {this.renderControls()}
-        </View>
-      )
-    }
     return (
       <View style={{ flex: 1 }}>
         <View style={{ flex: 9, backgroundColor: '#fff' }}>
