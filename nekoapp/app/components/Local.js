@@ -64,87 +64,89 @@ export default class Local extends Component {
   render () {
     let sentence = this.state.sentence
     return (
-      <View>
+      <View style={{ flex: 1 }}>
         <ScrollView
           showsHorizontalScrollIndicator={false}
           showsVerticalScrollIndicator={false}
         >
-          <View style={{ alignItems: 'center' }}>
-            <Speak text={sentence.q} language={this.props.language} />
-          </View>
-          <View style={{ height: 40 }} />
-          <TextInput
-            autoCorrect={false}
-            underlineColorAndroid="transparent"
-            autoCapitalize="none"
-            placeholder="translate as many words as you can.."
-            style={{
-              height: 40,
-              borderColor: 'gray',
-              borderWidth: 0.5,
-              paddingLeft: 10,
-              paddingRight: 10
-            }}
-            onChangeText={text => {
-              let ev = this.evaluate(sentence, text)
-              if (ev.score > 0.99) {
-                this.pickNewSentence(this.state.language, this.state.level)
-              } else {
-                this.setState({
-                  text: text,
-                  score: ev.score,
-                  correct: ev.correct
-                })
-              }
-            }}
-            value={this.state.text}
-          />
-          <View style={{ height: 10 }} />
-          <Text style={ts.h8}>{this.state.correct.join(', ')}</Text>
-          <View style={{ height: 10 }} />
-          <View
-            style={{
-              flex: 1,
-              flexDirection: 'row',
-              justifyContent: 'space-between',
-              alignItems: 'center'
-            }}
-          >
-            <TouchableOpacity
-              activeOpacity={0.5}
-              onPress={() => {
-                this.setState({ showAnswer: !this.state.showAnswer })
+          <View>
+            <View style={{ alignItems: 'center' }}>
+              <Speak text={sentence.q} language={this.props.language} />
+            </View>
+            <View style={{ height: 40 }} />
+            <TextInput
+              autoCorrect={false}
+              underlineColorAndroid="transparent"
+              autoCapitalize="none"
+              placeholder="translate as many words as you can.."
+              style={{
+                height: 40,
+                borderColor: 'gray',
+                borderWidth: 0.5,
+                paddingLeft: 10,
+                paddingRight: 10
+              }}
+              onChangeText={text => {
+                let ev = this.evaluate(sentence, text)
+                if (ev.score > 0.99) {
+                  this.pickNewSentence(this.state.language, this.state.level)
+                } else {
+                  this.setState({
+                    text: text,
+                    score: ev.score,
+                    correct: ev.correct
+                  })
+                }
+              }}
+              value={this.state.text}
+            />
+            <View style={{ height: 10 }} />
+            <Text style={ts.h8}>{this.state.correct.join(', ')}</Text>
+            <View style={{ height: 10 }} />
+            <View
+              style={{
+                flex: 1,
+                flexDirection: 'row',
+                justifyContent: 'space-between',
+                alignItems: 'center'
               }}
             >
-              <View>
+              <TouchableOpacity
+                activeOpacity={0.5}
+                onPress={() => {
+                  this.setState({ showAnswer: !this.state.showAnswer })
+                }}
+              >
+                <View>
+                  <Text style={ts.h8}>
+                    {this.state.showAnswer ? 'Hide' : 'Show'}
+                  </Text>
+                </View>
+              </TouchableOpacity>
+              <View style={{ flex: 1, alignItems: 'center' }}>
                 <Text style={ts.h8}>
-                  {this.state.showAnswer ? 'Hide' : 'Show'}
+                  score: {this.state.score}
                 </Text>
               </View>
-            </TouchableOpacity>
-            <View style={{ flex: 1, alignItems: 'center' }}>
-              <Text style={ts.h8}>
-                score: {this.state.score}
-              </Text>
+              <TouchableOpacity
+                activeOpacity={0.5}
+                onPress={() =>
+                  this.pickNewSentence(this.state.language, this.state.level)}
+              >
+                <View>
+                  <Text style={ts.h8}>Next</Text>
+                </View>
+              </TouchableOpacity>
             </View>
-            <TouchableOpacity
-              activeOpacity={0.5}
-              onPress={() =>
-                this.pickNewSentence(this.state.language, this.state.level)}
-            >
-              <View>
-                <Text style={ts.h8}>Next</Text>
-              </View>
-            </TouchableOpacity>
+            <View
+              style={{
+                height: 20
+              }}
+            />
+            <Text style={ts.h8}>
+              {this.state.showAnswer ? sentence.a : ''}
+            </Text>
           </View>
-          <View
-            style={{
-              height: 20
-            }}
-          />
-          <Text style={ts.h8}>
-            {this.state.showAnswer ? sentence.a : ''}
-          </Text>
         </ScrollView>
       </View>
     )
