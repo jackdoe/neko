@@ -21,15 +21,6 @@ export default class Local extends Component {
       language: this.props.language,
       level: this.props.level
     }
-
-    this.changeLanguage = lang => {
-      this.setState({ language: lang })
-      this.pickNewSentence(lang, this.state.level)
-    }
-    this.changeLevel = level => {
-      this.setState({ level: level })
-      this.pickNewSentence(this.state.language, level)
-    }
   }
 
   pickNewSentence (language, level) {
@@ -74,17 +65,15 @@ export default class Local extends Component {
     let sentence = this.state.sentence
     return (
       <View style={{ flex: 1 }}>
-        <ScrollView>
-          <View
-            style={{
-              justifyContent: 'center',
-              padding: 40
-            }}
-          >
+        <ScrollView
+          showsHorizontalScrollIndicator={false}
+          showsVerticalScrollIndicator={false}
+        >
+          <View>
             <View style={{ alignItems: 'center' }}>
               <Speak text={sentence.q} language={this.props.language} />
             </View>
-            <View style={{ backgroundColor: '#fff', height: 40 }} />
+            <View style={{ height: 40 }} />
             <TextInput
               autoCorrect={false}
               underlineColorAndroid="transparent"
@@ -111,9 +100,9 @@ export default class Local extends Component {
               }}
               value={this.state.text}
             />
-            <View style={{ backgroundColor: '#fff', height: 10 }} />
+            <View style={{ height: 10 }} />
             <Text style={ts.h8}>{this.state.correct.join(', ')}</Text>
-            <View style={{ backgroundColor: '#fff', height: 10 }} />
+            <View style={{ height: 10 }} />
             <View
               style={{
                 flex: 1,
@@ -129,7 +118,7 @@ export default class Local extends Component {
                 }}
               >
                 <View>
-                  <Text style={ts.h6}>
+                  <Text style={ts.h8}>
                     {this.state.showAnswer ? 'Hide' : 'Show'}
                   </Text>
                 </View>
@@ -146,14 +135,13 @@ export default class Local extends Component {
                   this.pickNewSentence(this.state.language, this.state.level)}
               >
                 <View>
-                  <Text style={ts.h6}>Next</Text>
+                  <Text style={ts.h8}>Next</Text>
                 </View>
               </TouchableOpacity>
             </View>
             <View
               style={{
-                backgroundColor: '#fff',
-                height: 40
+                height: 20
               }}
             />
             <Text style={ts.h8}>

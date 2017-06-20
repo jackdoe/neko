@@ -23,24 +23,6 @@ export default class Remote extends Component {
       language: this.props.language,
       level: this.props.level
     }
-
-    this.changeLanguage = lang => {
-      this.setState({ language: lang })
-      this.changeSetting(lang, this.state.level)
-    }
-    this.changeLevel = level => {
-      this.setState({ level: level })
-      this.changeSetting(this.state.language, level)
-    }
-    this.changeSetting = (language, level) => {
-      try {
-        this.ws.send(
-          JSON.stringify({
-            setting: { language: language, level: level }
-          })
-        )
-      } catch (e) {}
-    }
   }
 
   reconnect () {
@@ -53,7 +35,15 @@ export default class Remote extends Component {
     this.ws.onopen = () => {
       this.lastReceived = new Date().getTime()
       clearInterval(this.pinger)
-      this.changeSetting(this.state.language, this.state.level)
+
+      try {
+        this.ws.send(
+          JSON.stringify({
+            setting: { language: this.state.language, level: this.state.level }
+          })
+        )
+      } catch (e) {}
+
       this.pinger = setInterval(() => {
         try {
           this.ws.send(JSON.stringify({ ping: true }))
@@ -133,11 +123,11 @@ export default class Remote extends Component {
           >
             <View>
               <Text style={ts.h4}>Connection Error</Text>
-              <View style={{ height: 20, backgroundColor: '#fff' }} />
+              <View style={{ height: 20 }} />
               <Text style={ts.h6}>
                 {this.state.error}
               </Text>
-              <View style={{ height: 20, backgroundColor: '#fff' }} />
+              <View style={{ height: 20 }} />
               <Text style={ts.h6}>
                 click here to reconnect
               </Text>
@@ -155,14 +145,16 @@ export default class Remote extends Component {
       let words = Object.keys(e.matchingWords)
       words.sort()
       return (
-        <View key={e.id} style={{ backgroundColor: this.colors[e.id] }}>
-          <Text style={[ts.h8, { padding: 2 }]}>
-            {e.id === this.state.message.you ? this.meSymbol() : ''}
-            {e.currentScore.toFixed(1)}
-            {' '}
-            {words.join(', ')}
-          </Text>
-          <View style={{ backgroundColor: '#fff', height: 5 }} />
+        <View key={e.id}>
+          <View style={{ backgroundColor: this.colors[e.id] }}>
+            <Text style={[ts.h8, { padding: 2 }]}>
+              {e.id === this.state.message.you ? this.meSymbol() : ''}
+              {e.currentScore.toFixed(1)}
+              {' '}
+              {words.join(', ')}
+            </Text>
+          </View>
+          <View style={{ height: 5 }} />
         </View>
       )
     })
@@ -174,10 +166,7 @@ export default class Remote extends Component {
       return (
         <View
           style={{
-            flex: 1,
-            padding: 40,
-            justifyContent: 'center',
-            alignItems: 'center'
+            flex: 1
           }}
         >
           {this.renderError()}
@@ -191,10 +180,7 @@ export default class Remote extends Component {
       return (
         <View
           style={{
-            flex: 1,
-            padding: 40,
-            justifyContent: 'center',
-            alignItems: 'center'
+            flex: 1
           }}
         >
           <Text style={ts.h6} onPress={() => this.reconnect()}>
@@ -208,23 +194,21 @@ export default class Remote extends Component {
 
     return (
       <View style={{ flex: 1 }}>
-        <ScrollView>
-          <View
-            style={{
-              justifyContent: 'center',
-              padding: 40
-            }}
-          >
+        <ScrollView
+          showsHorizontalScrollIndicator={false}
+          showsVerticalScrollIndicator={false}
+        >
+          <View>
             <View style={{ alignItems: 'center' }}>
               <Text style={ts.h8}>
                 {this.state.timeLeft > 0
                   ? (this.state.timeLeft / 1000).toFixed(0) + ' seconds left'
-                  : ''}
+                  : '...'}
               </Text>
-              <View style={{ backgroundColor: '#fff', height: 40 }} />
+              <View style={{ height: 20 }} />
               <Speak text={sentence.question} language={this.state.language} />
             </View>
-            <View style={{ backgroundColor: '#fff', height: 40 }} />
+            <View style={{ height: 40 }} />
             <TextInput
               underlineColorAndroid="transparent"
               autoCorrect={false}
@@ -247,7 +231,7 @@ export default class Remote extends Component {
               }}
               value={this.state.text}
             />
-            <View style={{ backgroundColor: '#fff', height: 10 }} />
+            <View style={{ height: 10 }} />
             {this.renderUsers()}
           </View>
         </ScrollView>

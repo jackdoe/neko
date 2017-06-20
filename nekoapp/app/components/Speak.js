@@ -31,7 +31,7 @@ export default class Speak extends Component {
   render () {
     return (
       <Text
-        style={ts.h2}
+        style={ts.h6}
         onPress={e =>
           this.speak(this.props.text, iso639_to_rfc3306(this.props.language))}
       >
