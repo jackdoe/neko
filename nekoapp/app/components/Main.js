@@ -221,13 +221,12 @@ export default class Main extends React.Component {
     return (
       <View
         style={{
-          alignItems: 'center',
-          justifyContent: 'center',
           padding: 20,
+          flex: 1,
           paddingTop: 40
         }}
       >
-        <View>
+        <View style={{ justifyContent: 'center', alignItems: 'center' }}>
           <TouchableOpacity
             activeOpacity={0.5}
             onPress={() => {
@@ -240,11 +239,8 @@ export default class Main extends React.Component {
                 : '< ' + this.state._prev}
             </Text>
           </TouchableOpacity>
-
         </View>
-        <View>
-          {inner}
-        </View>
+        {inner}
       </View>
     )
   }

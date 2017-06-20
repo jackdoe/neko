@@ -198,42 +198,40 @@ export default class Remote extends Component {
           showsHorizontalScrollIndicator={false}
           showsVerticalScrollIndicator={false}
         >
-          <View>
-            <View style={{ alignItems: 'center' }}>
-              <Text style={ts.h8}>
-                {this.state.timeLeft > 0
-                  ? (this.state.timeLeft / 1000).toFixed(0) + ' seconds left'
-                  : '...'}
-              </Text>
-              <View style={{ height: 20 }} />
-              <Speak text={sentence.question} language={this.state.language} />
-            </View>
-            <View style={{ height: 40 }} />
-            <TextInput
-              underlineColorAndroid="transparent"
-              autoCorrect={false}
-              autoCapitalize="none"
-              placeholder="translate as many words as you can.."
-              style={{
-                height: 40,
-                borderColor: 'gray',
-                borderWidth: 0.5,
-                paddingLeft: 10,
-                paddingRight: 10
-              }}
-              onChangeText={text => {
-                this.setState({
-                  text: text
-                })
-                try {
-                  this.ws.send(JSON.stringify({ value: text }))
-                } catch (e) {}
-              }}
-              value={this.state.text}
-            />
-            <View style={{ height: 10 }} />
-            {this.renderUsers()}
+          <View style={{ alignItems: 'center' }}>
+            <Text style={ts.h8}>
+              {this.state.timeLeft > 0
+                ? (this.state.timeLeft / 1000).toFixed(0) + ' seconds left'
+                : '...'}
+            </Text>
+            <View style={{ height: 20 }} />
+            <Speak text={sentence.question} language={this.state.language} />
           </View>
+          <View style={{ height: 40 }} />
+          <TextInput
+            underlineColorAndroid="transparent"
+            autoCorrect={false}
+            autoCapitalize="none"
+            placeholder="translate as many words as you can.."
+            style={{
+              height: 40,
+              borderColor: 'gray',
+              borderWidth: 0.5,
+              paddingLeft: 10,
+              paddingRight: 10
+            }}
+            onChangeText={text => {
+              this.setState({
+                text: text
+              })
+              try {
+                this.ws.send(JSON.stringify({ value: text }))
+              } catch (e) {}
+            }}
+            value={this.state.text}
+          />
+          <View style={{ height: 10 }} />
+          {this.renderUsers()}
         </ScrollView>
       </View>
     )
