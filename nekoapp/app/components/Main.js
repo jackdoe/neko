@@ -233,10 +233,10 @@ export default class Main extends React.Component {
               this._navigate('Home')
             }}
           >
-            <Text style={{ marginBottom: 10 }}>
+            <Text style={[{ marginBottom: 10 }, ts.h8]}>
               {this.state._current.screen === 'Home'
                 ? 'ねこ　猫　cat'
-                : '< ' + this.state._prev}
+                : '<  ' + this.state._prev}
             </Text>
           </TouchableOpacity>
         </View>

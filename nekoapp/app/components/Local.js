@@ -111,32 +111,36 @@ export default class Local extends Component {
                 alignItems: 'center'
               }}
             >
-              <TouchableOpacity
-                activeOpacity={0.5}
-                onPress={() => {
-                  this.setState({ showAnswer: !this.state.showAnswer })
-                }}
-              >
-                <View>
-                  <Text style={ts.h8}>
-                    {this.state.showAnswer ? 'Hide' : 'Show'}
-                  </Text>
-                </View>
-              </TouchableOpacity>
+              <View style={{ flex: 1 }}>
+                <TouchableOpacity
+                  activeOpacity={0.5}
+                  onPress={() => {
+                    this.setState({ showAnswer: !this.state.showAnswer })
+                  }}
+                >
+                  <View>
+                    <Text style={ts.h6}>
+                      {this.state.showAnswer ? 'Hide' : 'Show'}
+                    </Text>
+                  </View>
+                </TouchableOpacity>
+              </View>
               <View style={{ flex: 1, alignItems: 'center' }}>
-                <Text style={ts.h8}>
+                <Text style={ts.h6}>
                   score: {this.state.score}
                 </Text>
               </View>
-              <TouchableOpacity
-                activeOpacity={0.5}
-                onPress={() =>
-                  this.pickNewSentence(this.state.language, this.state.level)}
-              >
-                <View>
-                  <Text style={ts.h8}>Next</Text>
-                </View>
-              </TouchableOpacity>
+              <View style={{ flex: 1, alignItems: 'flex-end' }}>
+                <TouchableOpacity
+                  activeOpacity={0.5}
+                  onPress={() =>
+                    this.pickNewSentence(this.state.language, this.state.level)}
+                >
+                  <View>
+                    <Text style={ts.h6}>Next</Text>
+                  </View>
+                </TouchableOpacity>
+              </View>
             </View>
             <View
               style={{
