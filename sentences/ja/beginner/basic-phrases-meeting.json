@@ -1,0 +1,30 @@
+[
+  {
+    "q": "えいごをはなせますか",
+    "a": "do you speak english"
+  },
+  {
+    "q": "ここにえいごおはなせるひとはいますか",
+    "a": "does anyone here speak english?"
+  },
+  {
+    "q": "わたしは にほんごがすこししか はなせません",
+    "a": "i only speak a little japanese"
+  },
+  {
+    "q": "おなまえはなんですか",
+    "a": "what is your name"
+  },
+  {
+    "q": "わたしのなまえはかおりです",
+    "a": "my name is Kaori"
+  },
+  {
+    "q": "おげんきですか",
+    "a": "how are you?"
+  },
+  {
+    "q": "げんきです",
+    "a": "i am fine"
+  }
+]

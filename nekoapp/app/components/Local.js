@@ -34,7 +34,7 @@ export default class Local extends Component {
   }
 
   tokenize (s) {
-    return s.toLowerCase().split(/[\s"'_.,-]+/).filter(e => {
+    return s.toLowerCase().split(/[\s"'_.,-\\?]+/).filter(e => {
       return e.length > 0
     })
   }
