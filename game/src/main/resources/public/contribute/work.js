@@ -28,7 +28,7 @@ var add = function () {
   answer.value = ''
 }
 
-var append = function (text) {
+var append = function (event) {
   if (sentences.length === 0) add()
 
   let last = sentences[sentences.length - 1]
@@ -40,3 +40,17 @@ var append = function (text) {
 question.addEventListener('input', append)
 answer.addEventListener('input', append)
 button.addEventListener('click', add)
+
+var isCtrl = false
+document.onkeyup = function (e) {
+  if (e.keyCode == 17) isCtrl = false
+}
+
+document.onkeydown = function (e) {
+  if (e.keyCode == 17) isCtrl = true
+  if (e.keyCode == 83 && isCtrl == true) {
+    add()
+    question.focus()
+    return false
+  }
+}
