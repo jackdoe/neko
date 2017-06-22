@@ -5,6 +5,7 @@ import {
   ScrollView,
   TextInput,
   TouchableOpacity,
+  Platform,
   AppState
 } from 'react-native'
 import Speak from './Speak'
@@ -28,11 +29,13 @@ export default class Local extends Component {
   }
 
   componentDidMount () {
-    AppState.addEventListener('change', this._handleAppStateChange)
+    if (Platform.OS !== 'browse')
+      AppState.addEventListener('change', this._handleAppStateChange)
   }
 
   componentWillUnmount () {
-    AppState.removeEventListener('change', this._handleAppStateChange)
+    if (Platform.OS !== 'browse')
+      AppState.removeEventListener('change', this._handleAppStateChange)
     this.save()
   }
   _handleAppStateChange = nextAppState => {

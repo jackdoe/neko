@@ -1,4 +1,4 @@
-import { AsyncStorage } from 'react-native'
+import { AsyncStorage, Platform } from 'react-native'
 
 var reinforce = require('reinforcenode')
 
@@ -17,11 +17,13 @@ export default class Network {
     }
     let spec = { alpha: 0.01 }
     this.agent = new reinforce.DQNAgent(env, spec)
-    AsyncStorage.getItem(name).then(data => {
-      if (!data) return
-      let state = JSON.parse(data)
-      this.agent.fromJSON(state.net)
-    })
+    if (Platform.OS !== 'browser') {
+      AsyncStorage.getItem(name).then(data => {
+        if (!data) return
+        let state = JSON.parse(data)
+        this.agent.fromJSON(state.net)
+      })
+    }
   }
 
   learn (reward) {
@@ -32,17 +34,16 @@ export default class Network {
     return this.inputs[this.agent.act(this.inputs)]
   }
 
-  dump () {
-    return this.agent.toJSON()
-  }
   save () {
-    AsyncStorage.setItem(
-      this.name,
-      JSON.stringify({
-        name: this.name,
-        inputs: this.inputs,
-        net: this.agent.toJSON()
-      })
-    )
+    if (Platform.OS !== 'browser') {
+      AsyncStorage.setItem(
+        this.name,
+        JSON.stringify({
+          name: this.name,
+          inputs: this.inputs,
+          net: this.agent.toJSON()
+        })
+      )
+    }
   }
 }
