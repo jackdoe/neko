@@ -29,12 +29,12 @@ export default class Local extends Component {
   }
 
   componentDidMount () {
-    if (Platform.OS !== 'browse')
+    if (Platform.OS !== 'browser')
       AppState.addEventListener('change', this._handleAppStateChange)
   }
 
   componentWillUnmount () {
-    if (Platform.OS !== 'browse')
+    if (Platform.OS !== 'browser')
       AppState.removeEventListener('change', this._handleAppStateChange)
     this.save()
   }
