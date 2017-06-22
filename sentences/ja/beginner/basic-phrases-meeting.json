@@ -26,5 +26,13 @@
   {
     "q": "げんきです",
     "a": "i am fine"
-  }
+  },
+  {
+    "q": "もっとゆっくりはなしてください",
+    "a": "can you speak more slowly"
+  },
+  {
+    "q": "よくわかります",
+    "a": "i understand well"
+  }  
 ]
