@@ -2,7 +2,7 @@
 
 !["screenshot"](https://raw.githubusercontent.com/jackdoe/neko/master/screenshot.png "screenshot")
 
-## contribute
+## credits
 
 * Logo Icons made by Freepik from www.flaticon.com is licensed by CC 3.0 BY
 
