@@ -19,7 +19,6 @@ export default class Network {
     this.agent = new reinforce.DQNAgent(env, spec)
     AsyncStorage.getItem(name).then(data => {
       if (!data) return
-      console.log('loaded', this.name)
       let state = JSON.parse(data)
       this.agent.fromJSON(state.net)
     })
