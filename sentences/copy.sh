@@ -4,9 +4,7 @@ mkdir -p $base/../game/src/main/resources/sentences
 mkdir -p $base/../nekoapp/app/data/sentences
 
 for lang in `ls -1 $base/ | grep '^..$'`; do
-    rsync -r $base/$lang $base/../game/src/main/resources/sentences/
-
-    for level in `ls -1 $base/$lang`; do
-        cat $base/$lang/$level/*.json | json -g > $base/../nekoapp/app/data/sentences/${lang}_${level}.json
-    done
+    node $base/merge.js $base/$lang > /tmp/$$.tmp
+    cp /tmp/$$.tmp $base/../game/src/main/resources/sentences/${lang}.json
+    cp /tmp/$$.tmp $base/../nekoapp/app/data/sentences/${lang}.json
 done

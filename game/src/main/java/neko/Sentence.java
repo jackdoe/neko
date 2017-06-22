@@ -8,7 +8,6 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.net.URLDecoder;
-import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -19,14 +18,13 @@ import java.util.Set;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 import neko.GameSetting.Language;
-import neko.GameSetting.Level;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class Sentence {
   public static String splitPattern = "[ \"'_\\.,\\-?]+";
   private static Logger logger = LoggerFactory.getLogger(Sentence.class);
-
+  public int difficulty;
   public String question;
   public transient String answer; // hmm should people see the answer in multi player setting?
   public transient String[] tokenized;
@@ -36,7 +34,9 @@ public class Sentence {
     return s.toLowerCase().split(splitPattern);
   }
 
-  public Sentence(@JsonProperty("q") String q, @JsonProperty("a") String a) {
+  public Sentence(
+      @JsonProperty("q") String q, @JsonProperty("a") String a, @JsonProperty("d") int d) {
+    this.difficulty = d;
     this.question = q;
     this.answer = a;
     this.tokenized = tokenize(a);
@@ -94,43 +94,30 @@ public class Sentence {
   }
 
   static List<Sentence> parse(GameSetting setting) throws Exception {
-    String root =
-        "sentences"
-            + File.separatorChar
-            + setting.lang.toString()
-            + File.separatorChar
-            + setting.level.toString()
-            + File.separatorChar;
+    String file = "sentences" + File.separatorChar + setting.lang.toString() + ".json";
 
-    List<Sentence> out = new ArrayList<>();
+    List<Sentence> out =
+        mapper.readValue(
+            Sentence.class.getClassLoader().getResourceAsStream(file),
+            new TypeReference<List<Sentence>>() {});
 
-    for (String resource : getResourceListing(Sentence.class, root)) {
-      logger.info("loading " + resource);
-      List<Sentence> current =
-          mapper.readValue(
-              Sentence.class.getClassLoader().getResourceAsStream(resource),
-              new TypeReference<List<Sentence>>() {});
-      out.addAll(current);
-    }
+    logger.info(String.format("loaded %d from %s", out.size(), file));
 
     if (out.size() == 0) {
-      throw new Exception(
-          String.format("failed to load data for %s/%s", setting.level, setting.lang));
+      throw new Exception(String.format("failed to load data for %s", setting.lang));
     }
     return out;
   }
 
-  static void process(Level level, Language language) throws Exception {
-    GameSetting setting = new GameSetting(level, language);
+  static void process(Language language) throws Exception {
+    GameSetting setting = new GameSetting(language);
     sentences.put(setting, parse(setting));
   }
 
   static void load() {
     try {
       for (Language lang : Language.values()) {
-        for (Level level : Level.values()) {
-          process(level, lang);
-        }
+        process(lang);
       }
     } catch (Exception e) {
       e.printStackTrace();

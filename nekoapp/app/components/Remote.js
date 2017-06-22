@@ -19,9 +19,7 @@ export default class Remote extends Component {
     this.state = {
       text: '',
       error: '',
-      timeLeft: 0,
-      language: this.props.language,
-      level: this.props.level
+      timeLeft: 0
     }
   }
 
@@ -39,7 +37,7 @@ export default class Remote extends Component {
       try {
         this.ws.send(
           JSON.stringify({
-            setting: { language: this.state.language, level: this.state.level }
+            setting: { language: this.props.language }
           })
         )
       } catch (e) {}

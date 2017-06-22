@@ -1,50 +1,62 @@
 [
   {
     "q": "あ、 い、 う、 え、 お",
-    "a": "a, i, u, e, o"
+    "a": "a, i, u, e, o",
+    "d": 0
   },
   {
     "q": "か、 き、 く、 け、 こ、",
-    "a": "ka, ki, ku, ke, ko"
+    "a": "ka, ki, ku, ke, ko",
+    "d": 0
   },
   {
     "q": "さ、 し、 す、 せ、 そ",
-    "a": "sa, shi, su, se, so"
+    "a": "sa, shi, su, se, so",
+    "d": 0
   },
   {
     "q": "た、ち、つ、て、と",
-    "a": "ta, chi, tsu, te, to"
+    "a": "ta, chi, tsu, te, to",
+    "d": 0
   },
   {
     "q": "な、に、ぬ、ね、の",
-    "a": "na, ni, nu, ne, no"
+    "a": "na, ni, nu, ne, no",
+    "d": 0
   },
   {
     "q": "は、ひ、ふ、へ、ほ",
-    "a": "ha, hi, fu, he, ho"
+    "a": "ha, hi, fu, he, ho",
+    "d": 0
   },
   {
     "q": "ま、み、む、め、も",
-    "a": "ma, mi, mu, me, mo"
+    "a": "ma, mi, mu, me, mo",
+    "d": 0
   },
   {
     "q": "や、ゆ、よ",
-    "a": "ya, yu, yo"
+    "a": "ya, yu, yo",
+    "d": 0
   },
   {
     "q": "ら、り、る、れ、ろ",
-    "a": "ra, ri, ru, re, ro"
+    "a": "ra, ri, ru, re, ro",
+    "d": 0
   },
   {
     "q": "わ、を",
-    "a": "wa, wo"
+    "a": "wa, wo",
+    "d": 0
   },
   {
     "q": "ん",
-    "a": "n"
+    "a": "n",
+    "d": 0
   },
   {
     "q": "す、 き、あ、 お、 すし、 すき",
-    "a": "su, ki, a, o, sushi, like"
+    "a": "su, ki, a, o, sushi, like",
+    "d": 0
   }
 ]

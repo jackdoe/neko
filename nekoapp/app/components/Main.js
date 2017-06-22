@@ -34,6 +34,7 @@ class HelpScreen extends React.Component {
     }
 
     let basic = [
+      'the app uses reinforcement learning to try to keep your success ratio at arounbd 70%',
       'type as many words as you can translate',
       'order does not  matter',
       'score is number-of-translated-words/total-words',
@@ -88,9 +89,7 @@ class HelpScreen extends React.Component {
 class HomeScreen extends React.Component {
   constructor (props) {
     super(props)
-    console.log(this.props.level, this.props.language)
     this.state = {
-      level: this.props.level || 'beginner',
       language: this.props.language || 'ja'
     }
   }
@@ -104,23 +103,20 @@ class HomeScreen extends React.Component {
       ja: 'Japanese',
       nl: 'Dutch'
     }
-    for (let item of available) {
-      let { language, level, len } = item
+    for (let language of available) {
       i++
-      let title = lcMap[language] + ' / ' + level
+      let title = lcMap[language]
       items.push(
         <TouchableOpacity
           key={i}
           activeOpacity={0.5}
           onPress={() => {
-            this.setState({ language: language, level: level })
-            persist({ language: language, level: level })
+            this.setState({ language: language })
+            persist({ language: language })
           }}
         >
           <Text style={[ts.h6, { padding: 5 }]}>
-            {this.state.language === language && this.state.level === level
-              ? '>' + title + '<'
-              : title}
+            {this.state.language === language ? '>' + title + '<' : title}
           </Text>
         </TouchableOpacity>
       )
@@ -141,8 +137,7 @@ class HomeScreen extends React.Component {
           activeOpacity={0.5}
           onPress={() => {
             navigate('Local', {
-              language: this.state.language,
-              level: this.state.level
+              language: this.state.language
             })
           }}
         >
@@ -154,8 +149,7 @@ class HomeScreen extends React.Component {
           activeOpacity={0.5}
           onPress={() => {
             navigate('Remote', {
-              language: this.state.language,
-              level: this.state.level
+              language: this.state.language
             })
           }}
         >
@@ -167,8 +161,7 @@ class HomeScreen extends React.Component {
           activeOpacity={0.5}
           onPress={() => {
             navigate('Help', {
-              language: this.state.language,
-              level: this.state.level
+              language: this.state.language
             })
           }}
         >

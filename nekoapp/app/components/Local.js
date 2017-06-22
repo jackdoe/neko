@@ -4,33 +4,68 @@ import {
   View,
   ScrollView,
   TextInput,
-  TouchableOpacity
+  TouchableOpacity,
+  AppState
 } from 'react-native'
 import Speak from './Speak'
+import Network from '../data/net'
 const data = require('../data')
 const { ts } = require('./textSizes')
 
+let networks = {}
 export default class Local extends Component {
   constructor (props) {
     super(props)
-    this.state = {
-      sentence: data.pick(this.props.language, this.props.level),
-      text: '',
-      score: 0,
-      correct: [],
-      language: this.props.language,
-      level: this.props.level
-    }
+    let { language } = this.props
+
+    this.net =
+      networks[language] ||
+      (networks[language] = new Network({
+        name: language,
+        inputs: data.difficultiesOfLanguage(language)
+      }))
+    this.state = this._pickNewSentence(language)
   }
 
-  pickNewSentence (language, level) {
-    this.setState({
-      sentence: data.pick(language, level),
+  componentDidMount () {
+    AppState.addEventListener('change', this._handleAppStateChange)
+  }
+
+  componentWillUnmount () {
+    AppState.removeEventListener('change', this._handleAppStateChange)
+    this.save()
+  }
+  _handleAppStateChange = nextAppState => {
+    if (nextAppState === 'background') {
+      this.save()
+    }
+  }
+  save () {
+    for (let k in networks) {
+      networks[k].save()
+    }
+  }
+  _pickNewSentence (language) {
+    return {
+      sentence: data.pick(language, this.net.act()),
       text: '',
       score: 0,
       correct: [],
       showAnswer: false
-    })
+    }
+  }
+
+  pickNewSentence (language) {
+    // try to achive 70%
+    let score = this.evaluate(this.state.sentence, this.state.text).score
+    let reward = Math.random() * 0.1
+    if (score < 0.7) {
+      reward += 0.1 + score
+    }
+
+    this.net.learn(reward)
+
+    this.setState(this._pickNewSentence(language))
   }
 
   tokenize (s) {
@@ -89,7 +124,7 @@ export default class Local extends Component {
               onChangeText={text => {
                 let ev = this.evaluate(sentence, text)
                 if (ev.score > 0.99) {
-                  this.pickNewSentence(this.state.language, this.state.level)
+                  this.pickNewSentence(this.props.language)
                 } else {
                   this.setState({
                     text: text,
@@ -133,8 +168,7 @@ export default class Local extends Component {
               <View style={{ flex: 1, alignItems: 'flex-end' }}>
                 <TouchableOpacity
                   activeOpacity={0.5}
-                  onPress={() =>
-                    this.pickNewSentence(this.state.language, this.state.level)}
+                  onPress={() => this.pickNewSentence(this.props.language)}
                 >
                   <View>
                     <Text style={ts.h6}>Next</Text>
@@ -142,14 +176,14 @@ export default class Local extends Component {
                 </TouchableOpacity>
               </View>
             </View>
-            <View
-              style={{
-                height: 20
-              }}
-            />
             <Text style={ts.h8}>
+              {this.state.showAnswer ? 'difficulty: ' + sentence.d : ''}
+            </Text>
+
+            <Text style={[ts.h8, { paddingTop: 20 }]}>
               {this.state.showAnswer ? sentence.a : ''}
             </Text>
+
           </View>
         </ScrollView>
       </View>

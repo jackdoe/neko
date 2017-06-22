@@ -2,6 +2,7 @@ var question = document.getElementById('question')
 var answer = document.getElementById('answer')
 var button = document.getElementById('add')
 var output = document.getElementById('json')
+var difficulty = document.getElementById('difficulty')
 
 var sentences = []
 wanakana.bind(question)
@@ -34,11 +35,13 @@ var append = function (event) {
   let last = sentences[sentences.length - 1]
   last.q = question.value
   last.a = answer.value
+  last.d = parseInt(difficulty.options[difficulty.selectedIndex].value)
   dump()
 }
 
 question.addEventListener('input', append)
 answer.addEventListener('input', append)
+difficulty.addEventListener('input', append)
 button.addEventListener('click', add)
 
 var isCtrl = false
