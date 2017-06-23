@@ -4,27 +4,20 @@ import {
   View,
   ScrollView,
   TextInput,
+  ActivityIndicator,
   TouchableOpacity,
   Platform,
   AppState
 } from 'react-native'
 import Speak from './Speak'
-import Network from '../data/net'
 const data = require('../data')
 const { ts } = require('./textSizes')
 
-let networks = {}
 export default class Local extends Component {
   constructor (props) {
     super(props)
     let { language } = this.props
-
-    this.net =
-      networks[language] ||
-      (networks[language] = new Network({
-        name: language,
-        inputs: data.difficultiesOfLanguage(language)
-      }))
+    this.nSuccessfull = 0
     this.state = this._pickNewSentence(language)
   }
 
@@ -36,69 +29,105 @@ export default class Local extends Component {
   componentWillUnmount () {
     if (Platform.OS !== 'browser')
       AppState.removeEventListener('change', this._handleAppStateChange)
-    this.save()
+    data.save()
   }
   _handleAppStateChange = nextAppState => {
     if (nextAppState === 'background') {
-      this.save()
+      data.save()
     }
   }
-  save () {
-    for (let k in networks) {
-      networks[k].save()
-    }
-  }
+
   _pickNewSentence (language) {
     return {
-      sentence: data.pick(language, this.net.act()),
-      text: '',
+      sentence: data.pick(language),
       score: 0,
       correct: [],
-      showAnswer: false
+      showAnswer: false,
+      text: ''
     }
   }
 
-  pickNewSentence (language) {
-    // try to achive 70%
-    let score = this.evaluate(this.state.sentence, this.state.text).score
-    let reward = Math.random() * 0.1
-    if (score < 0.7) {
-      reward += 0.1 + score
+  pickNewSentence (language, ev) {
+    if (!ev) {
+      ev = this.evaluate(this.state.sentence, this.state.text)
     }
+    data.learn(this.props.language, ev.correct, ev.missing)
 
-    this.net.learn(reward)
+    // XXX: every 10 points re-classify and re-sort everything
+    if (this.nSuccessfull > 10) {
+      this.setState({ spinner: true })
+      setTimeout(() => {
+        data.sortAndClassify(this.props.language)
+        this.setState({ spinner: false })
+        this.nSuccessfull = 0
+      }, 0)
+    }
 
     this.setState(this._pickNewSentence(language))
-  }
-
-  tokenize (s) {
-    return s.toLowerCase().split(/[\s"'_.,-\\?]+/).filter(e => {
-      return e.length > 0
-    })
+    this.nSuccessfull += this.state.score
   }
 
   evaluate (sentence, text) {
     let answer = {}
     let total = 0
     let correct = []
-    for (let s of this.tokenize(sentence.a)) {
+    for (let s of data.tokenize(sentence.a)) {
       answer[s] = (answer[s] || 0) + 1
       total++
     }
 
     let score = 0
-    for (let s of this.tokenize(text)) {
+    for (let s of data.tokenize(text)) {
       let freq = answer[s]
 
-      if (freq > 0) {
+      if (freq) {
         correct.push(s)
-        answer[s]--
+
+        if (--answer[s] === 0) {
+          delete answer[s]
+        }
         score++
       }
     }
-    return { score: (score / total).toFixed(2), correct: correct }
+
+    return {
+      score: (score / total).toFixed(2),
+      correct: correct,
+      missing: Object.keys(answer)
+    }
   }
 
+  _handleTextChange = text => {
+    let ev = this.evaluate(this.state.sentence, text)
+
+    if (ev.score > 0.99) {
+      this.pickNewSentence(this.props.language, ev)
+    } else {
+      this.setState({
+        score: ev.score,
+        correct: ev.correct,
+        text: text,
+        missing: ev.missing
+      })
+    }
+  }
+
+  spinner () {
+    if (this.state.spinner) {
+      return (
+        <View
+          style={{
+            justifyContent: 'center',
+            alignItems: 'center',
+            padding: 10
+          }}
+        >
+          <ActivityIndicator />
+          <Text style={ts.h10}>re-sorting the sentences based on new data</Text>
+        </View>
+      )
+    }
+  }
   render () {
     let sentence = this.state.sentence
     return (
@@ -107,6 +136,7 @@ export default class Local extends Component {
           showsHorizontalScrollIndicator={false}
           showsVerticalScrollIndicator={false}
         >
+          {this.spinner()}
           <View>
             <View style={{ alignItems: 'center' }}>
               <Speak text={sentence.q} language={this.props.language} />
@@ -124,18 +154,7 @@ export default class Local extends Component {
                 paddingLeft: 10,
                 paddingRight: 10
               }}
-              onChangeText={text => {
-                let ev = this.evaluate(sentence, text)
-                if (ev.score > 0.99) {
-                  this.pickNewSentence(this.props.language)
-                } else {
-                  this.setState({
-                    text: text,
-                    score: ev.score,
-                    correct: ev.correct
-                  })
-                }
-              }}
+              onChangeText={this._handleTextChange}
               value={this.state.text}
             />
             <View style={{ height: 10 }} />
@@ -164,7 +183,7 @@ export default class Local extends Component {
                 </TouchableOpacity>
               </View>
               <View style={{ flex: 1, alignItems: 'center' }}>
-                <Text style={ts.h6}>
+                <Text style={ts.h8}>
                   score: {this.state.score}
                 </Text>
               </View>
@@ -180,7 +199,14 @@ export default class Local extends Component {
               </View>
             </View>
             <Text style={ts.h8}>
-              {this.state.showAnswer ? 'difficulty: ' + sentence.d : ''}
+              {this.state.showAnswer
+                ? 'difficulty: ' +
+                    sentence.d +
+                    ', positive: ' +
+                    sentence.score_positive.toFixed(2) +
+                    ', negative: ' +
+                    sentence.score_negative.toFixed(2)
+                : ''}
             </Text>
 
             <Text style={[ts.h8, { paddingTop: 20 }]}>
