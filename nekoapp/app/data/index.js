@@ -75,22 +75,20 @@ var timed = function (title, cb) {
 }
 
 var reclassify = function (sentences, classifier) {
-  timed('reclassify', function () {
-    for (let s of sentences) {
-      s.classification = classifier.classify(s.a)
-      s.score_positive = 0
-      s.score_negative = 0
-      if (s.classification.length > 0) {
-        for (let v of s.classification) {
-          if (v.label === POSITIVE) {
-            s.score_positive = v.value
-          } else {
-            s.score_negative = v.value
-          }
+  for (let s of sentences) {
+    s.classification = classifier.classify(s.a)
+    s.score_positive = 0
+    s.score_negative = 0
+    if (s.classification.length > 0) {
+      for (let v of s.classification) {
+        if (v.label === POSITIVE) {
+          s.score_positive = v.value
+        } else {
+          s.score_negative = v.value
         }
       }
     }
-  })
+  }
 }
 
 var learn = function (lang, correct, missing) {

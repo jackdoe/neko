@@ -52,7 +52,7 @@ export default class Local extends Component {
       ev = this.evaluate(this.state.sentence, this.state.text)
     }
     data.learn(this.props.language, ev.correct, ev.missing)
-
+    this.nSuccessfull += ev.score
     // XXX: every 10 points re-classify and re-sort everything
     if (this.nSuccessfull > 10) {
       this.setState({ spinner: true })
