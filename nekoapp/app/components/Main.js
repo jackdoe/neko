@@ -3,13 +3,8 @@ import { View, TouchableOpacity, ScrollView, Text, Linking } from 'react-native'
 import Local from './Local'
 import Remote from './Remote'
 const { ts } = require('./textSizes')
-
-class EmptyScreen extends React.Component {
-  render () {
-    return <View />
-  }
-}
 const data = require('../data')
+
 class HelpScreen extends React.Component {
   render () {
     let toItems = function (title, items) {
@@ -49,7 +44,7 @@ class HelpScreen extends React.Component {
     let single = [
       'if you have given up you can click >Show< and see the translation of the current sentence',
       'click >Next< to go to the next random sentence',
-      'click >join-a-game< to join a multi player game'
+      'when you click re-sort(learn) it will re-sort all the sentences using the newest state of the naive bayes classifier'
     ]
 
     return (
