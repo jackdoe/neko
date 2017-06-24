@@ -48,19 +48,17 @@ public class Sentence {
   private static ObjectMapper mapper = new ObjectMapper();
 
   static List<Sentence> parse(GameSetting setting) throws Exception {
-        String file = "sentences" + File.separatorChar + setting.lang.toString() + ".json";
-
+    String file = "sentences" + File.separatorChar + setting.lang.toString() + ".json";
 
     try {
       List<Sentence> out =
           mapper.readValue(
               Sentence.class.getClassLoader().getResourceAsStream(file),
-              new TypeReference<List<Sentence>>() {
-              });
+              new TypeReference<List<Sentence>>() {});
 
       logger.info(String.format("loaded %d from %s", out.size(), file));
       return out;
-    } catch(Exception e) {
+    } catch (Exception e) {
       logger.error("attempt to load " + file);
       return new ArrayList<>();
     }
@@ -81,7 +79,10 @@ public class Sentence {
       throw new RuntimeException(e);
     }
   }
-  public static final Sentence NOT_SUPPORTED = new Sentence("not supported yet", "not supported yet", 10)
+
+  public static final Sentence NOT_SUPPORTED =
+      new Sentence("not supported yet", "not supported yet", 10);
+
   public static Sentence pick(GameSetting gameSetting) {
     List<Sentence> perSetting = sentences.get(gameSetting);
     if (perSetting == null) {
