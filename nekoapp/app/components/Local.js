@@ -17,7 +17,6 @@ export default class Local extends Component {
   constructor (props) {
     super(props)
     let { language } = this.props
-    this.nSuccessfull = 0
     this.state = this._pickNewSentence(language)
   }
 
@@ -47,22 +46,20 @@ export default class Local extends Component {
     }
   }
 
+  resort () {
+    this.setState({ spinner: true })
+    setTimeout(() => {
+      data.sortAndClassify(this.props.language)
+      this.setState({ spinner: false })
+      data.save()
+    }, 0)
+  }
+
   pickNewSentence (language, ev) {
     if (!ev) {
       ev = this.evaluate(this.state.sentence, this.state.text)
     }
     data.learn(this.props.language, ev.correct, ev.missing)
-    this.nSuccessfull += ev.score
-    // XXX: every 10 points re-classify and re-sort everything
-    if (this.nSuccessfull > 10) {
-      this.setState({ spinner: true })
-      setTimeout(() => {
-        data.sortAndClassify(this.props.language)
-        this.setState({ spinner: false })
-        this.nSuccessfull = 0
-      }, 0)
-    }
-
     this.setState(this._pickNewSentence(language))
     this.nSuccessfull += this.state.score
   }
@@ -186,6 +183,14 @@ export default class Local extends Component {
                 <Text style={ts.h8}>
                   score: {this.state.score}
                 </Text>
+                <TouchableOpacity
+                  activeOpacity={0.5}
+                  onPress={() => this.resort()}
+                >
+                  <View>
+                    <Text style={ts.h6}>re-sort (learn)</Text>
+                  </View>
+                </TouchableOpacity>
               </View>
               <View style={{ flex: 1, alignItems: 'flex-end' }}>
                 <TouchableOpacity
@@ -193,19 +198,21 @@ export default class Local extends Component {
                   onPress={() => this.pickNewSentence(this.props.language)}
                 >
                   <View>
-                    <Text style={ts.h6}>Next</Text>
+                    <Text style={[ts.h6, { paddingLeft: 10 }]}>Next</Text>
                   </View>
                 </TouchableOpacity>
               </View>
             </View>
-            <Text style={ts.h8}>
+            <Text style={[ts.h10, { paddingTop: 20 }]}>
               {this.state.showAnswer
                 ? 'difficulty: ' +
                     sentence.d +
                     ', positive: ' +
                     sentence.score_positive.toFixed(2) +
                     ', negative: ' +
-                    sentence.score_negative.toFixed(2)
+                    sentence.score_negative.toFixed(2) +
+                    ', sort score: ' +
+                    sentence.score.toFixed(2)
                 : ''}
             </Text>
 

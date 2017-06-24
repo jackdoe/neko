@@ -13,6 +13,7 @@ var CURSOR = {}
 var m_w = +new Date()
 var m_z = 987654321
 var mask = 0xffffffff
+var SEEN = {}
 
 function random () {
   m_z = (36969 * (m_z & 65535) + (m_z >> 16)) & mask
@@ -32,7 +33,11 @@ class StoredClassifier {
       return AsyncStorage.getItem(this.name).then(data => {
         if (!data) return
         let state = JSON.parse(data)
-        this.classifier.restore(state.classifier)
+        try {
+          this.classifier.restore(state.classifier)
+        } catch (e) {
+          this.classifier = new BayesClassifier()
+        }
         return true
       })
     }
@@ -88,6 +93,13 @@ var reclassify = function (sentences, classifier) {
         }
       }
     }
+    s.score =
+      Math.abs(
+        s.score_positive < 0.5 ? s.score_positive : 0.5 - s.score_positive
+      ) +
+      (0.01 - 0.01 * s.d) +
+      random() * 0.01 -
+      0.3 * (s.score_negative / 2)
   }
 }
 
@@ -100,29 +112,29 @@ var learn = function (lang, correct, missing) {
 var resort = function (lang) {
   CURSOR[lang] = 0
   SENTENCES[lang].sort((a, b) => {
-    let aScore =
-      Math.abs(0.7 - a.score_positive) +
-      (0.1 - 0.1 * a.d) +
-      random() * 0.01 -
-      a.score_negative / 2
-
-    let bScore =
-      Math.abs(0.7 - b.score_positive) +
-      (0.1 - 0.1 * b.d) +
-      random() * 0.01 -
-      b.score_negative / 2
-    return bScore - aScore
+    return b.score - a.score
   })
 }
 
 var sortAndClassify = function (lang) {
   let classifier = CLASSIFIERS[lang]
-  reclassify(SENTENCES[lang], classifier)
-  resort(lang)
+  timed('reclassify', () => {
+    reclassify(SENTENCES[lang], classifier)
+  })
+  timed('resort', () => {
+    resort(lang)
+  })
 }
 
 var pick = function (lang) {
   let s = SENTENCES[lang]
+  for (let i = 0; i < 100; i++) {
+    let sentence = s[CURSOR[lang]++ % s.length]
+    if (!SEEN[sentence.q]) {
+      SEEN[sentence.q] = true
+      return sentence
+    }
+  }
   return s[CURSOR[lang]++ % s.length]
 }
 
@@ -150,8 +162,7 @@ var init = function () {
     let sentences = SENTENCES[lang]
     let classifier = (CLASSIFIERS[lang] = new StoredClassifier({ name: lang }))
     classifier.load().then(() => {
-      reclassify(sentences, classifier)
-      resort(lang)
+      sortAndClassify(lang)
     })
   }
 }
