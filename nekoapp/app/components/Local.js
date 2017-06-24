@@ -119,7 +119,7 @@ export default class Local extends Component {
             padding: 10
           }}
         >
-          <ActivityIndicator />
+          {Platform.OS !== 'browser' ? <ActivityIndicator /> : <View />}
           <Text style={ts.h10}>re-sorting the sentences based on new data</Text>
         </View>
       )
