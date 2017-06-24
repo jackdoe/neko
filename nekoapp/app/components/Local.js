@@ -215,11 +215,9 @@ export default class Local extends Component {
                     sentence.score.toFixed(2)
                 : ''}
             </Text>
-
             <Text style={[ts.h8, { paddingTop: 20 }]}>
               {this.state.showAnswer ? sentence.a : ''}
             </Text>
-
           </View>
         </ScrollView>
       </View>

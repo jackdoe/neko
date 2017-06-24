@@ -4,19 +4,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
-import java.io.IOException;
-import java.net.URISyntaxException;
-import java.net.URL;
-import java.net.URLDecoder;
-import java.util.Enumeration;
+import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
-import java.util.Set;
-import java.util.jar.JarEntry;
-import java.util.jar.JarFile;
 import neko.GameSetting.Language;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -55,58 +47,23 @@ public class Sentence {
   private static Random random = new Random();
   private static ObjectMapper mapper = new ObjectMapper();
 
-  // .. wtf java http://www.uofr.net/~greg/java/get-resource-listing.html
-  private static String[] getResourceListing(Class clazz, String path)
-      throws URISyntaxException, IOException {
-    URL dirURL = clazz.getClassLoader().getResource(path);
-    if (dirURL != null && dirURL.getProtocol().equals("file")) {
-      /* A file path: easy enough */
-      return new File(dirURL.toURI()).list();
-    }
-
-    if (dirURL == null) {
-      /*
-       * In case of a jar file, we can't actually find a directory.
-       * Have to assume the same jar as clazz.
-       */
-      String me = clazz.getName().replace(".", "/") + ".class";
-      dirURL = clazz.getClassLoader().getResource(me);
-    }
-    if (dirURL.getProtocol().equals("jar")) {
-      /* A JAR path */
-      String jarPath =
-          dirURL
-              .getPath()
-              .substring(5, dirURL.getPath().indexOf("!")); //strip out only the JAR file
-      JarFile jar = new JarFile(URLDecoder.decode(jarPath, "UTF-8"));
-      Enumeration<JarEntry> entries = jar.entries();
-      Set<String> result = new HashSet<String>();
-      while (entries.hasMoreElements()) {
-        String name = entries.nextElement().getName();
-        if (name.startsWith(path) && !path.equals(name)) {
-          result.add(name);
-        }
-      }
-      return result.toArray(new String[result.size()]);
-    }
-
-    throw new UnsupportedOperationException("Cannot list files for URL " + dirURL);
-  }
-
   static List<Sentence> parse(GameSetting setting) throws Exception {
-    String file = "sentences" + File.separatorChar + setting.lang.toString() + ".json";
+        String file = "sentences" + File.separatorChar + setting.lang.toString() + ".json";
 
-    List<Sentence> out =
-        mapper.readValue(
-            Sentence.class.getClassLoader().getResourceAsStream(file),
-            new TypeReference<List<Sentence>>() {});
 
-    logger.info(String.format("loaded %d from %s", out.size(), file));
+    try {
+      List<Sentence> out =
+          mapper.readValue(
+              Sentence.class.getClassLoader().getResourceAsStream(file),
+              new TypeReference<List<Sentence>>() {
+              });
 
-    if (out.size() == 0) {
-      throw new Exception(String.format("failed to load data for %s", setting.lang));
+      logger.info(String.format("loaded %d from %s", out.size(), file));
+      return out;
+    } catch(Exception e) {
+      logger.error("attempt to load " + file);
+      return new ArrayList<>();
     }
-    return out;
   }
 
   static void process(Language language) throws Exception {
@@ -124,9 +81,12 @@ public class Sentence {
       throw new RuntimeException(e);
     }
   }
-
+  public static final Sentence NOT_SUPPORTED = new Sentence("not supported yet", "not supported yet", 10)
   public static Sentence pick(GameSetting gameSetting) {
     List<Sentence> perSetting = sentences.get(gameSetting);
+    if (perSetting == null) {
+      return NOT_SUPPORTED;
+    }
     return perSetting.get(random.nextInt(perSetting.size()));
   }
 }
