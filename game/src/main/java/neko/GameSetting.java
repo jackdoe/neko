@@ -7,7 +7,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GameSetting {
   public enum Language {
     ja,
-    nl
+    nl,
+    de,
+    fr,
+    fi,
+    es,
+    it,
   }
 
   public Language lang;
