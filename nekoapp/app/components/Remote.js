@@ -164,7 +164,9 @@ export default class Remote extends Component {
       return (
         <View
           style={{
-            flex: 1
+            flex: 1,
+            justifyContent: 'center',
+            alignItems: 'center'
           }}
         >
           {this.renderError()}
@@ -178,7 +180,9 @@ export default class Remote extends Component {
       return (
         <View
           style={{
-            flex: 1
+            flex: 1,
+            justifyContent: 'center',
+            alignItems: 'center'
           }}
         >
           <Text style={ts.h6} onPress={() => this.reconnect()}>
