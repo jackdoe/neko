@@ -7,7 +7,12 @@ var Speech = Platform.OS === 'ios' ? require('react-native-speech') : undefined
 const mappedLanguageCodes = {
   ja: 'ja-JP',
   en: 'en-US',
-  nl: 'nl-NL'
+  nl: 'nl-NL',
+  de: 'de-DE',
+  it: 'it-IT',
+  fi: 'fi-FI',
+  fr: 'fr-FR',
+  es: 'es-ES'
 }
 var iso639_to_rfc3306 = function (lang) {
   return mappedLanguageCodes[lang] || 'en-US'

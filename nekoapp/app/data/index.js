@@ -3,8 +3,15 @@ import { AsyncStorage, Platform } from 'react-native'
 var BayesClassifier = require('bayes-classifier')
 
 const SENTENCES = {
-  ja: require('./sentences/ja.json')
+  ja: require('./sentences/ja.json'),
+  nl: require('./sentences/nl.json'),
+  de: require('./sentences/de.json'),
+  fi: require('./sentences/fi.json'),
+  it: require('./sentences/it.json'),
+  es: require('./sentences/es.json'),
+  fr: require('./sentences/fr.json')
 }
+
 const POSITIVE = 'p'
 const NEGATIVE = 'n'
 var CLASSIFIERS = {}
@@ -67,7 +74,7 @@ class StoredClassifier {
 }
 
 var tokenize = function (s) {
-  return s.toLowerCase().split(/[\s"'_.,-\\?]+/).filter(e => {
+  return s.toLowerCase().split(/[\s"'_.,\-\\?]+/).filter(e => {
     return e.length > 0
   })
 }
@@ -118,12 +125,8 @@ var resort = function (lang) {
 
 var sortAndClassify = function (lang) {
   let classifier = CLASSIFIERS[lang]
-  timed('reclassify', () => {
-    reclassify(SENTENCES[lang], classifier)
-  })
-  timed('resort', () => {
-    resort(lang)
-  })
+  reclassify(SENTENCES[lang], classifier)
+  resort(lang)
 }
 
 var pick = function (lang) {
@@ -138,10 +141,8 @@ var pick = function (lang) {
   return s[CURSOR[lang]++ % s.length]
 }
 
-var save = function () {
-  for (let k in CLASSIFIERS) {
-    CLASSIFIERS[k].save()
-  }
+var save = function (lang) {
+  CLASSIFIERS[lang].save()
 }
 
 var available = function () {
@@ -155,22 +156,17 @@ var available = function () {
   return out
 }
 
-// XXX: PREPROCESS
-var init = function () {
-  for (let lang in SENTENCES) {
-    CURSOR[lang] = 0
-    let sentences = SENTENCES[lang]
-    let classifier = (CLASSIFIERS[lang] = new StoredClassifier({ name: lang }))
-    classifier.load().then(() => {
-      sortAndClassify(lang)
-    })
-  }
+var load = function (lang) {
+  CURSOR[lang] = 0
+  let classifier = (CLASSIFIERS[lang] = new StoredClassifier({ name: lang }))
+  return classifier.load().then(() => {
+    sortAndClassify(lang)
+  })
 }
-
-init()
 
 module.exports = {
   pick,
+  load,
   learn,
   save,
   sortAndClassify,

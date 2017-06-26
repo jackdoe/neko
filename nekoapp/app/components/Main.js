@@ -1,7 +1,17 @@
 import React, { Component } from 'react'
-import { View, TouchableOpacity, ScrollView, Text, Linking } from 'react-native'
+import {
+  View,
+  TouchableOpacity,
+  ScrollView,
+  Text,
+  Linking,
+  AsyncStorage,
+  Platform
+} from 'react-native'
 import Local from './Local'
 import Remote from './Remote'
+import KeyboardAware from './KeyboardAware'
+
 const { ts } = require('./textSizes')
 const data = require('../data')
 
@@ -87,6 +97,9 @@ class HomeScreen extends React.Component {
     this.state = {
       language: this.props.language || 'ja'
     }
+    AsyncStorage.getItem('selected_language').then(data => {
+      if (data) this.setState({ language: data })
+    })
   }
 
   render () {
@@ -96,7 +109,12 @@ class HomeScreen extends React.Component {
     let i = 0
     const lcMap = {
       ja: 'Japanese',
-      nl: 'Dutch'
+      nl: 'Dutch',
+      fi: 'Finnish',
+      de: 'German',
+      es: 'Spanish',
+      it: 'Italian',
+      fr: 'French'
     }
     for (let language of available) {
       i++
@@ -107,6 +125,7 @@ class HomeScreen extends React.Component {
           activeOpacity={0.5}
           onPress={() => {
             this.setState({ language: language })
+            AsyncStorage.setItem('selected_language', language)
             persist({ language: language })
           }}
         >
@@ -206,6 +225,10 @@ export default class Main extends React.Component {
         {...props}
       />
     )
+
+    if (Platform.OS !== 'browser') {
+      inner = <KeyboardAware>{inner}</KeyboardAware>
+    }
     return (
       <View
         style={{

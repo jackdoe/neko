@@ -16,8 +16,13 @@ const { ts } = require('./textSizes')
 export default class Local extends Component {
   constructor (props) {
     super(props)
-    let { language } = this.props
-    this.state = this._pickNewSentence(language)
+    this.state = {
+      initializing: true
+    }
+    data.load(this.props.language).then(() => {
+      let s = this._pickNewSentence(this.props.language)
+      this.setState({ initializing: false, ...s })
+    })
   }
 
   componentDidMount () {
@@ -28,11 +33,11 @@ export default class Local extends Component {
   componentWillUnmount () {
     if (Platform.OS !== 'browser')
       AppState.removeEventListener('change', this._handleAppStateChange)
-    data.save()
+    data.save(this.props.language)
   }
   _handleAppStateChange = nextAppState => {
     if (nextAppState === 'background') {
-      data.save()
+      data.save(this.props.language)
     }
   }
 
@@ -51,7 +56,7 @@ export default class Local extends Component {
     setTimeout(() => {
       data.sortAndClassify(this.props.language)
       this.setState({ spinner: false })
-      data.save()
+      data.save(this.props.language)
     }, 0)
   }
 
@@ -125,7 +130,22 @@ export default class Local extends Component {
       )
     }
   }
+
   render () {
+    if (this.state.initializing) {
+      return (
+        <View
+          style={{
+            justifyContent: 'center',
+            alignItems: 'center',
+            padding: 10
+          }}
+        >
+          {Platform.OS !== 'browser' ? <ActivityIndicator /> : <View />}
+          <Text style={ts.h10}>loading sentences..</Text>
+        </View>
+      )
+    }
     let sentence = this.state.sentence
     return (
       <View style={{ flex: 1 }}>
@@ -205,9 +225,7 @@ export default class Local extends Component {
             </View>
             <Text style={[ts.h10, { paddingTop: 20 }]}>
               {this.state.showAnswer
-                ? 'difficulty: ' +
-                    sentence.d +
-                    ', positive: ' +
+                ? 'positive: ' +
                     sentence.score_positive.toFixed(2) +
                     ', negative: ' +
                     sentence.score_negative.toFixed(2) +
