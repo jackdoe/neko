@@ -234,7 +234,8 @@ export default class Main extends React.Component {
         style={{
           padding: 20,
           flex: 1,
-          paddingTop: 40
+          paddingTop: 40,
+          backgroundColor: '#fff'
         }}
       >
         <View style={{ justifyContent: 'center', alignItems: 'center' }}>
