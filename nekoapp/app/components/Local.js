@@ -164,6 +164,7 @@ export default class Local extends Component {
               underlineColorAndroid="transparent"
               autoCapitalize="none"
               placeholder="translate as many words as you can.."
+              autoFocus
               style={{
                 height: 40,
                 borderColor: 'gray',

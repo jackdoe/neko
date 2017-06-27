@@ -214,6 +214,7 @@ export default class Remote extends Component {
             <TextInput
               underlineColorAndroid="transparent"
               autoCorrect={false}
+              autoFocus
               autoCapitalize="none"
               placeholder="translate as many words as you can.."
               style={{
