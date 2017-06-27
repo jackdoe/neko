@@ -97,8 +97,8 @@ android {
         applicationId "com.neko"
         minSdkVersion 16
         targetSdkVersion 22
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.1"
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
@@ -126,6 +126,10 @@ android {
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
             signingConfig signingConfigs.release
+            manifestPlaceholders = [excludeSystemAlertWindowPermission: "true"]            
+        }
+        debug {
+            manifestPlaceholders = [excludeSystemAlertWindowPermission: "false"]
         }
     }
     // applicationVariants are e.g. debug, release
