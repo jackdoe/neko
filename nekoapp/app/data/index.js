@@ -128,7 +128,7 @@ var resort = function (lang) {
 
 var sortAndClassify = function (lang) {
   let classifier = CLASSIFIERS[lang]
-  timed('reclasify', () => reclassify(SENTENCES[lang], classifier))
+  reclassify(SENTENCES[lang], classifier)
   resort(lang)
 }
 
