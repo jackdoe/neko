@@ -39,7 +39,7 @@ class HelpScreen extends React.Component {
     }
 
     let basic = [
-      'the app uses reinforcement learning to try to keep your success ratio at arounbd 70%',
+      'the app uses naive bayes classifier to learn and try to keep your success ratio at arounbd 50%',
       'type as many words as you can translate',
       'order does not  matter',
       'score is number-of-translated-words/total-words',
