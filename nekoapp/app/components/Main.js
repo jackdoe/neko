@@ -56,6 +56,12 @@ class HelpScreen extends React.Component {
       'click >Next< to go to the next random sentence',
       'when you click re-sort(learn) it will re-sort all the sentences using the newest state of the naive bayes classifier'
     ]
+    let credit = [
+      'the cat in the logo icons is made by Freepik from www.flaticon.com is licensed by CC 3.0 BY',
+      'about 3000 japanese kanji extracted from http://tangorin.com/common_kanji',
+      '5000 japanese sentences taken from http://www.edrdg.org/wiki/index.php/Tanaka_Corpus',
+      '5000 sentences per language (nl,de,es,fi,it) taken from http://www.statmt.org/europarl/'
+    ]
 
     return (
       <View
@@ -85,6 +91,7 @@ class HelpScreen extends React.Component {
           {toItems('Basic Info', basic)}
           {toItems('Single Player', single)}
           {toItems('Multi Player', multi)}
+          {toItems('Credit', credit)}
         </ScrollView>
       </View>
     )

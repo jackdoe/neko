@@ -1,0 +1,907 @@
+[
+  {
+    "q": "朗。\nロウ 、 ほがらか 、 あきらか",
+    "a": "melodious; clear; bright; serene; cheerful",
+    "d": 6
+  },
+  {
+    "q": "論。\nロン",
+    "a": "argument; discourse",
+    "d": 6
+  },
+  {
+    "q": "臨。\nリン 、 のぞむ",
+    "a": "look to; face; meet; confront; attend; call on",
+    "d": 6
+  },
+  {
+    "q": "欲。\nヨク 、 ほっする 、 ほしい",
+    "a": "longing; covetousness; greed; passion; desire; craving",
+    "d": 6
+  },
+  {
+    "q": "翌。\nヨク",
+    "a": "the following; next",
+    "d": 6
+  },
+  {
+    "q": "乱。\nラン 、 ロン 、 みだれる 、 みだる 、 みだす 、 みだ 、 おさめる 、 わたる",
+    "a": "riot; war; disorder; disturb",
+    "d": 6
+  },
+  {
+    "q": "卵。\nラン 、 たまご",
+    "a": "egg; ovum; spawn; roe",
+    "d": 6
+  },
+  {
+    "q": "覧。\nラン 、 みる",
+    "a": "perusal; see",
+    "d": 6
+  },
+  {
+    "q": "裏。\nリ 、 うら",
+    "a": "back; amidst; in; reverse; inside; palm; sole; rear; lining; wrong side",
+    "d": 6
+  },
+  {
+    "q": "律。\nリツ 、 リチ 、 レツ",
+    "a": "rhythm; law; regulation; gauge; control",
+    "d": 6
+  },
+  {
+    "q": "幼。\nヨウ 、 おさない",
+    "a": "infancy; childhood",
+    "d": 6
+  },
+  {
+    "q": "郵。\nユウ",
+    "a": "mail; stagecoach stop",
+    "d": 6
+  },
+  {
+    "q": "優。\nユウ 、 ウ 、 やさしい 、 すぐれる 、 まさる",
+    "a": "tenderness; excel; surpass; actor; superiority; gentleness",
+    "d": 6
+  },
+  {
+    "q": "訳。\nヤク 、 わけ",
+    "a": "translate; reason; circumstance; case",
+    "d": 6
+  },
+  {
+    "q": "盟。\nメイ",
+    "a": "alliance; oath",
+    "d": 6
+  },
+  {
+    "q": "模。\nモ 、 ボ",
+    "a": "imitation; copy; mock",
+    "d": 6
+  },
+  {
+    "q": "密。\nミツ 、 ひそか",
+    "a": "secrecy; density (pop); minuteness; carefulness",
+    "d": 6
+  },
+  {
+    "q": "枚。\nマイ 、 バイ",
+    "a": "sheet of...; counter for flat thin objects or sheets",
+    "d": 6
+  },
+  {
+    "q": "幕。\nマク 、 バク 、 とばり",
+    "a": "curtain; bunting; act of play",
+    "d": 6
+  },
+  {
+    "q": "補。\nホ 、 おぎなう",
+    "a": "supplement; supply; make good; offset; compensate; assistant; learner",
+    "d": 6
+  },
+  {
+    "q": "暮。\nボ 、 くれる 、 くらす",
+    "a": "livelihood; make a living; spend time",
+    "d": 6
+  },
+  {
+    "q": "宝。\nホウ 、 たから",
+    "a": "treasure; wealth; valuables",
+    "d": 6
+  },
+  {
+    "q": "訪。\nホウ 、 おとずれる 、 たずねる 、 とう",
+    "a": "call on; visit; look up; offer sympathy",
+    "d": 6
+  },
+  {
+    "q": "亡。\nボウ 、 モウ 、 ない 、 なき- 、 ほろびる 、 ほろぶ 、 ほろぼす",
+    "a": "deceased; the late; dying; perish",
+    "d": 6
+  },
+  {
+    "q": "忘。\nボウ 、 わすれる",
+    "a": "forget",
+    "d": 6
+  },
+  {
+    "q": "棒。\nボウ",
+    "a": "rod; stick; cane; pole; club; line",
+    "d": 6
+  },
+  {
+    "q": "並。\nヘイ 、 ホウ 、 なみ 、 ならべる 、 ならぶ 、 ならびに",
+    "a": "row; and; besides; as well as; line up; rank with; rival; equal",
+    "d": 6
+  },
+  {
+    "q": "閉。\nヘイ 、 とじる 、 とざす 、 しめる 、 しまる 、 たてる",
+    "a": "closed; shut",
+    "d": 6
+  },
+  {
+    "q": "陛。\nヘイ",
+    "a": "highness; steps (of throne)",
+    "d": 6
+  },
+  {
+    "q": "片。\nヘン 、 かた- 、 かた",
+    "a": "one-sided; leaf; sheet; right-side kata radical (no. 91)",
+    "d": 6
+  },
+  {
+    "q": "腹。\nフク 、 はら",
+    "a": "abdomen; belly; stomach",
+    "d": 6
+  },
+  {
+    "q": "奮。\nフン 、 ふるう",
+    "a": "stirred up; be invigorated; flourish",
+    "d": 6
+  },
+  {
+    "q": "班。\nハン",
+    "a": "squad; corps; unit; group",
+    "d": 6
+  },
+  {
+    "q": "晩。\nバン",
+    "a": "nightfall; night",
+    "d": 6
+  },
+  {
+    "q": "否。\nヒ 、 いな 、 いや",
+    "a": "negate; no; noes; refuse; decline; deny",
+    "d": 6
+  },
+  {
+    "q": "批。\nヒ",
+    "a": "criticism; strike",
+    "d": 6
+  },
+  {
+    "q": "秘。\nヒ 、 ひめる 、 ひそか 、 かくす",
+    "a": "secret; conceal",
+    "d": 6
+  },
+  {
+    "q": "難。\nナン 、 かたい 、 -がたい 、 むずかしい 、 むづかしい 、 むつかしい 、 -にくい",
+    "a": "difficult; impossible; trouble; accident; defect",
+    "d": 6
+  },
+  {
+    "q": "乳。\nニュウ 、 ちち 、 ち",
+    "a": "milk; breasts",
+    "d": 6
+  },
+  {
+    "q": "認。\nニン 、 みとめる 、 したためる",
+    "a": "acknowledge; witness; discern; recognize; appreciate; believe",
+    "d": 6
+  },
+  {
+    "q": "納。\nノウ 、 ナッ 、 ナ 、 ナン 、 トウ 、 おさめる 、 -おさめる 、 おさまる",
+    "a": "settlement; obtain; reap; pay; supply; store",
+    "d": 6
+  },
+  {
+    "q": "脳。\nノウ 、 ドウ 、 のうずる",
+    "a": "brain; memory",
+    "d": 6
+  },
+  {
+    "q": "派。\nハ",
+    "a": "faction; group; party; clique; sect; school",
+    "d": 6
+  },
+  {
+    "q": "俳。\nハイ",
+    "a": "haiku; actor",
+    "d": 6
+  },
+  {
+    "q": "拝。\nハイ 、 おがむ 、 おろがむ",
+    "a": "worship; adore; pray to",
+    "d": 6
+  },
+  {
+    "q": "背。\nハイ 、 せ 、 せい 、 そむく 、 そむける",
+    "a": "stature; height; back; behind; disobey; defy; go back on; rebel",
+    "d": 6
+  },
+  {
+    "q": "肺。\nハイ",
+    "a": "lungs",
+    "d": 6
+  },
+  {
+    "q": "届。\nカイ 、 とどける 、 -とどけ 、 とどく",
+    "a": "deliver; reach; arrive; report; notify; forward",
+    "d": 6
+  },
+  {
+    "q": "党。\nトウ 、 なかま 、 むら",
+    "a": "party; faction; clique",
+    "d": 6
+  },
+  {
+    "q": "糖。\nトウ",
+    "a": "sugar",
+    "d": 6
+  },
+  {
+    "q": "討。\nトウ 、 うつ",
+    "a": "chastise; attack; defeat; destroy; conquer",
+    "d": 6
+  },
+  {
+    "q": "庁。\nチョウ 、 テイ 、 やくしょ",
+    "a": "government office",
+    "d": 6
+  },
+  {
+    "q": "潮。\nチョウ 、 しお 、 うしお",
+    "a": "tide; salt water; opportunity",
+    "d": 6
+  },
+  {
+    "q": "頂。\nチョウ 、 いただく 、 いただき",
+    "a": "place on the head; receive; top of head; top; summit; peak",
+    "d": 6
+  },
+  {
+    "q": "賃。\nチン",
+    "a": "fare; fee; hire; rent; wages; charge",
+    "d": 6
+  },
+  {
+    "q": "痛。\nツウ 、 いたい 、 いたむ 、 いたましい 、 いためる",
+    "a": "pain; hurt; damage; bruise",
+    "d": 6
+  },
+  {
+    "q": "展。\nテン",
+    "a": "unfold; expand",
+    "d": 6
+  },
+  {
+    "q": "著。\nチョ 、 チャク 、 あらわす 、 いちじるしい",
+    "a": "renowned; publish; write; remarkable; phenomenal; put on; don; wear; arrival; finish (race); counter for suits of clothing; literary work",
+    "d": 6
+  },
+  {
+    "q": "段。\nダン 、 タン",
+    "a": "grade; steps; stairs",
+    "d": 6
+  },
+  {
+    "q": "値。\nチ 、 ね 、 あたい",
+    "a": "price; cost; value",
+    "d": 6
+  },
+  {
+    "q": "宙。\nチュウ",
+    "a": "mid-air; air; space; sky; memorization; interval of time",
+    "d": 6
+  },
+  {
+    "q": "忠。\nチュウ",
+    "a": "loyalty; fidelity; faithfulness",
+    "d": 6
+  },
+  {
+    "q": "暖。\nダン 、 ノン 、 あたたか 、 あたたかい 、 あたたまる 、 あたためる",
+    "a": "warmth",
+    "d": 6
+  },
+  {
+    "q": "宅。\nタク",
+    "a": "home; house; residence; our house; my husband",
+    "d": 6
+  },
+  {
+    "q": "担。\nタン 、 かつぐ 、 になう",
+    "a": "shouldering; carry; raise; bear",
+    "d": 6
+  },
+  {
+    "q": "探。\nタン 、 さぐる 、 さがす",
+    "a": "grope; search; look for",
+    "d": 6
+  },
+  {
+    "q": "誕。\nタン",
+    "a": "nativity; be born; declension; lie; be arbitrary",
+    "d": 6
+  },
+  {
+    "q": "層。\nソウ",
+    "a": "stratum; social class; layer; story; floor",
+    "d": 6
+  },
+  {
+    "q": "操。\nソウ 、 サン 、 みさお 、 あやつる",
+    "a": "maneuver; manipulate; operate; steer; chastity; virginity; fidelity",
+    "d": 6
+  },
+  {
+    "q": "窓。\nソウ 、 ス 、 まど 、 てんまど 、 けむだし",
+    "a": "window; pane",
+    "d": 6
+  },
+  {
+    "q": "装。\nソウ 、 ショウ 、 よそおう 、 よそおい",
+    "a": "attire; dress; pretend; disguise; profess",
+    "d": 6
+  },
+  {
+    "q": "臓。\nゾウ 、 はらわた",
+    "a": "entrails; viscera; bowels",
+    "d": 6
+  },
+  {
+    "q": "蔵。\nゾウ 、 ソウ 、 くら 、 おさめる 、 かくれる",
+    "a": "storehouse; hide; own; have; possess",
+    "d": 6
+  },
+  {
+    "q": "存。\nソン 、 ゾン",
+    "a": "suppose; be aware of; believe; feel",
+    "d": 6
+  },
+  {
+    "q": "尊。\nソン 、 たっとい 、 とうとい 、 たっとぶ 、 とうとぶ",
+    "a": "revered; valuable; precious; noble; exalted",
+    "d": 6
+  },
+  {
+    "q": "創。\nソウ 、 ショウ 、 つくる 、 はじめる 、 きず 、 けずしける",
+    "a": "genesis; wound; injury; hurt; start; originate",
+    "d": 6
+  },
+  {
+    "q": "奏。\nソウ 、 かなでる",
+    "a": "play music; speak to a ruler; complete",
+    "d": 6
+  },
+  {
+    "q": "宣。\nセン 、 のたまう 、 のたまわく",
+    "a": "proclaim; say; announce",
+    "d": 6
+  },
+  {
+    "q": "専。\nセン 、 もっぱら",
+    "a": "specialty; exclusive; mainly; solely",
+    "d": 6
+  },
+  {
+    "q": "泉。\nセン 、 いずみ",
+    "a": "spring; fountain",
+    "d": 6
+  },
+  {
+    "q": "洗。\nセン 、 あらう",
+    "a": "wash; inquire into; probe",
+    "d": 6
+  },
+  {
+    "q": "染。\nセン 、 そめる 、 -ぞめ 、 -ぞめ 、 そまる 、 しみる 、 -じみる 、 しみ 、 -しめる",
+    "a": "dye; color; paint; stain; print",
+    "d": 6
+  },
+  {
+    "q": "善。\nゼン 、 よい 、 いい 、 よく 、 よしとする",
+    "a": "virtuous; good; goodness",
+    "d": 6
+  },
+  {
+    "q": "盛。\nセイ 、 ジョウ 、 もる 、 さかる 、 さかん",
+    "a": "boom; prosper; copulate",
+    "d": 6
+  },
+  {
+    "q": "聖。\nセイ 、 ショウ 、 ひじり",
+    "a": "holy; saint; sage; master; priest",
+    "d": 6
+  },
+  {
+    "q": "誠。\nセイ 、 まこと",
+    "a": "sincerity; admonish; warn; prohibit; truth; fidelity",
+    "d": 6
+  },
+  {
+    "q": "寸。\nスン",
+    "a": "measurement; foot/10",
+    "d": 6
+  },
+  {
+    "q": "垂。\nスイ 、 たれる 、 たらす 、 たれ 、 -たれ 、 なんなんとす",
+    "a": "droop; suspend; hang; slouch",
+    "d": 6
+  },
+  {
+    "q": "推。\nスイ 、 おす",
+    "a": "conjecture; infer; guess; suppose; support",
+    "d": 6
+  },
+  {
+    "q": "蒸。\nジョウ 、 セイ 、 むす 、 むれる 、 むらす",
+    "a": "steam; heat; sultry; foment; get musty",
+    "d": 6
+  },
+  {
+    "q": "針。\nシン 、 はり",
+    "a": "needle; pin; staple; stinger",
+    "d": 6
+  },
+  {
+    "q": "仁。\nジン 、 ニ 、 ニン",
+    "a": "humanity; virtue; benevolence; charity; man; kernel",
+    "d": 6
+  },
+  {
+    "q": "城。\nジョウ 、 しろ",
+    "a": "castle",
+    "d": 6
+  },
+  {
+    "q": "純。\nジュン",
+    "a": "genuine; purity; innocence; net (profit)",
+    "d": 6
+  },
+  {
+    "q": "処。\nショ 、 ところ 、 -こ 、 おる",
+    "a": "dispose; manage; deal with; sentence; condemn; act; behave; place",
+    "d": 6
+  },
+  {
+    "q": "署。\nショ",
+    "a": "signature; govt office; police station",
+    "d": 6
+  },
+  {
+    "q": "諸。\nショ 、 もろ",
+    "a": "various; many; several; together",
+    "d": 6
+  },
+  {
+    "q": "除。\nジョ 、 ジ 、 のぞく 、 -よけ",
+    "a": "exclude; division (x/3); remove; abolish; cancel; except",
+    "d": 6
+  },
+  {
+    "q": "傷。\nショウ 、 きず 、 いたむ 、 いためる",
+    "a": "wound; hurt; injure; impair; pain; injury; cut; gash; scar; weak point",
+    "d": 6
+  },
+  {
+    "q": "将。\nショウ 、 ソウ 、 まさに 、 はた 、 まさ 、 ひきいる 、 もって",
+    "a": "leader; commander; general; admiral; or; and again; soon; from now on; just about",
+    "d": 6
+  },
+  {
+    "q": "障。\nショウ 、 さわる",
+    "a": "hinder; hurt; harm",
+    "d": 6
+  },
+  {
+    "q": "縮。\nシュク 、 ちぢむ 、 ちぢまる 、 ちぢめる 、 ちぢれる 、 ちぢらす",
+    "a": "shrink; contract; shrivel; wrinkle; reduce",
+    "d": 6
+  },
+  {
+    "q": "熟。\nジュク 、 うれる",
+    "a": "mellow; ripen; mature; acquire skill",
+    "d": 6
+  },
+  {
+    "q": "衆。\nシュウ 、 シュ 、 おおい",
+    "a": "masses; great numbers; multitude; populace",
+    "d": 6
+  },
+  {
+    "q": "従。\nジュウ 、 ショウ 、 ジュ 、 したがう 、 したがえる 、 より",
+    "a": "accompany; obey; submit to; comply; follow; secondary; incidental; subordinate",
+    "d": 6
+  },
+  {
+    "q": "縦。\nジュウ 、 たて",
+    "a": "vertical; length; height; self-indulgent; wayward",
+    "d": 6
+  },
+  {
+    "q": "樹。\nジュ 、 き",
+    "a": "timber trees; wood",
+    "d": 6
+  },
+  {
+    "q": "収。\nシュウ 、 おさめる 、 おさまる",
+    "a": "income; obtain; reap; pay; supply; store",
+    "d": 6
+  },
+  {
+    "q": "宗。\nシュウ 、 ソウ 、 むね",
+    "a": "religion; sect; denomination; main point; origin; essence",
+    "d": 6
+  },
+  {
+    "q": "就。\nシュウ 、 ジュ 、 つく 、 つける",
+    "a": "concerning; settle; take position; depart; study; per",
+    "d": 6
+  },
+  {
+    "q": "射。\nシャ 、 いる 、 さす",
+    "a": "shoot; shine into; onto; archery",
+    "d": 6
+  },
+  {
+    "q": "捨。\nシャ 、 すてる",
+    "a": "discard; throw away; abandon; resign; reject; sacrifice",
+    "d": 6
+  },
+  {
+    "q": "尺。\nシャク",
+    "a": "shaku; Japanese foot; measure; scale; rule",
+    "d": 6
+  },
+  {
+    "q": "若。\nジャク 、 ニャク 、 ニャ 、 わかい 、 わか- 、 もしくわ 、 もし 、 もしくは",
+    "a": "young; if; perhaps; possibly; low number; immature",
+    "d": 6
+  },
+  {
+    "q": "視。\nシ 、 みる",
+    "a": "inspection; regard as; see; look at",
+    "d": 6
+  },
+  {
+    "q": "詞。\nシ",
+    "a": "part of speech; words; poetry",
+    "d": 6
+  },
+  {
+    "q": "誌。\nシ",
+    "a": "document; records",
+    "d": 6
+  },
+  {
+    "q": "磁。\nジ",
+    "a": "magnet; porcelain",
+    "d": 6
+  },
+  {
+    "q": "私。\nシ 、 わたくし 、 わたし",
+    "a": "private; I; me",
+    "d": 6
+  },
+  {
+    "q": "至。\nシ 、 いたる",
+    "a": "climax; arrive; proceed; reach; attain; result in",
+    "d": 6
+  },
+  {
+    "q": "姿。\nシ 、 すがた",
+    "a": "figure; form; shape",
+    "d": 6
+  },
+  {
+    "q": "蚕。\nサン 、 テン 、 かいこ 、 こ",
+    "a": "silkworm",
+    "d": 6
+  },
+  {
+    "q": "冊。\nサツ 、 サク 、 ふみ",
+    "a": "tome; counter for books; volume",
+    "d": 6
+  },
+  {
+    "q": "裁。\nサイ 、 たつ 、 さばく",
+    "a": "tailor; judge; decision; cut out (pattern)",
+    "d": 6
+  },
+  {
+    "q": "策。\nサク",
+    "a": "scheme; plan; policy; step; means",
+    "d": 6
+  },
+  {
+    "q": "砂。\nサ 、 シャ 、 すな",
+    "a": "sand",
+    "d": 6
+  },
+  {
+    "q": "座。\nザ 、 すわる",
+    "a": "squat; seat; cushion; gathering; sit",
+    "d": 6
+  },
+  {
+    "q": "済。\nサイ 、 セイ 、 すむ 、 -ずみ 、 -ずみ 、 すまない 、 すます 、 -すます 、 すくう 、 なす 、 わたし 、 わたる",
+    "a": "finish; come to an end; excusable; need not",
+    "d": 6
+  },
+  {
+    "q": "鋼。\nコウ 、 はがね",
+    "a": "steel",
+    "d": 6
+  },
+  {
+    "q": "降。\nコウ 、 ゴ 、 おりる 、 おろす 、 ふる 、 ふり 、 くだる 、 くだす",
+    "a": "descend; precipitate; fall; surrender",
+    "d": 6
+  },
+  {
+    "q": "刻。\nコク 、 きざむ 、 きざみ",
+    "a": "engrave; cut fine; chop; hash; mince; time; carving",
+    "d": 6
+  },
+  {
+    "q": "穀。\nコク",
+    "a": "cereals; grain",
+    "d": 6
+  },
+  {
+    "q": "骨。\nコツ 、 ほね",
+    "a": "skeleton; bone; remains; frame",
+    "d": 6
+  },
+  {
+    "q": "困。\nコン 、 こまる",
+    "a": "quandary; become distressed; annoyed",
+    "d": 6
+  },
+  {
+    "q": "皇。\nコウ 、 オウ",
+    "a": "emperor",
+    "d": 6
+  },
+  {
+    "q": "紅。\nコウ 、 ク 、 べに 、 くれない 、 あかい",
+    "a": "crimson; deep red",
+    "d": 6
+  },
+  {
+    "q": "后。\nコウ 、 ゴ 、 きさき",
+    "a": "empress; queen; after; behind; back; later",
+    "d": 6
+  },
+  {
+    "q": "孝。\nコウ 、 キョウ",
+    "a": "filial piety; child's respect",
+    "d": 6
+  },
+  {
+    "q": "誤。\nゴ 、 あやまる 、 -あやまる",
+    "a": "mistake; err; do wrong; mislead",
+    "d": 6
+  },
+  {
+    "q": "呼。\nコ 、 よぶ",
+    "a": "call; call out to; invite",
+    "d": 6
+  },
+  {
+    "q": "己。\nコ 、 キ 、 おのれ 、 つちのと 、 な",
+    "a": "self; snake; serpent",
+    "d": 6
+  },
+  {
+    "q": "系。\nケイ",
+    "a": "lineage; system",
+    "d": 6
+  },
+  {
+    "q": "警。\nケイ 、 いましめる",
+    "a": "admonish; commandment",
+    "d": 6
+  },
+  {
+    "q": "劇。\nゲキ",
+    "a": "drama; play",
+    "d": 6
+  },
+  {
+    "q": "激。\nゲキ 、 はげしい",
+    "a": "violent; get excited; enraged; chafe; incite",
+    "d": 6
+  },
+  {
+    "q": "穴。\nケツ 、 あな",
+    "a": "hole; aperture; slit; cave; den",
+    "d": 6
+  },
+  {
+    "q": "憲。\nケン",
+    "a": "constitution; law",
+    "d": 6
+  },
+  {
+    "q": "権。\nケン 、 ゴン 、 おもり 、 かり 、 はかる",
+    "a": "authority; power; rights",
+    "d": 6
+  },
+  {
+    "q": "絹。\nケン 、 きぬ",
+    "a": "silk",
+    "d": 6
+  },
+  {
+    "q": "厳。\nゲン 、 ゴン 、 おごそか 、 きびしい 、 いかめしい 、 いつくし",
+    "a": "stern; strictness; severity; rigidity",
+    "d": 6
+  },
+  {
+    "q": "源。\nゲン 、 みなもと",
+    "a": "source; origin",
+    "d": 6
+  },
+  {
+    "q": "敬。\nケイ 、 キョウ 、 うやまう",
+    "a": "awe; respect; honor; revere",
+    "d": 6
+  },
+  {
+    "q": "筋。\nキン 、 すじ",
+    "a": "muscle; sinew; tendon; fiber; plot; plan; descent",
+    "d": 6
+  },
+  {
+    "q": "胸。\nキョウ 、 むね 、 むな-",
+    "a": "bosom; breast; chest; heart; feelings",
+    "d": 6
+  },
+  {
+    "q": "郷。\nキョウ 、 ゴウ 、 さと",
+    "a": "home town; village; native place; district",
+    "d": 6
+  },
+  {
+    "q": "勤。\nキン 、 ゴン 、 つとめる 、 -づとめ 、 つとまる 、 いそしむ",
+    "a": "diligence; become employed; serve",
+    "d": 6
+  },
+  {
+    "q": "供。\nキョウ 、 ク 、 クウ 、 グ 、 そなえる 、 とも 、 -ども",
+    "a": "submit; offer; present; serve (meal); accompany",
+    "d": 6
+  },
+  {
+    "q": "貴。\nキ 、 たっとい 、 とうとい 、 たっとぶ 、 とうとぶ",
+    "a": "precious; value; prize; esteem; honor",
+    "d": 6
+  },
+  {
+    "q": "疑。\nギ 、 うたがう",
+    "a": "doubt; distrust; be suspicious; question",
+    "d": 6
+  },
+  {
+    "q": "吸。\nキュウ 、 すう",
+    "a": "suck; imbibe; inhale; sip",
+    "d": 6
+  },
+  {
+    "q": "揮。\nキ 、 ふるう",
+    "a": "brandish; wave; wag; swing; shake",
+    "d": 6
+  },
+  {
+    "q": "机。\nキ 、 つくえ",
+    "a": "desk; table",
+    "d": 6
+  },
+  {
+    "q": "危。\nキ 、 あぶない 、 あやうい 、 あやぶむ",
+    "a": "dangerous; fear; uneasy",
+    "d": 6
+  },
+  {
+    "q": "簡。\nカン",
+    "a": "simplicity; brevity",
+    "d": 6
+  },
+  {
+    "q": "株。\nシュ 、 かぶ",
+    "a": "stocks; stump; shares; stock; counter for small plants",
+    "d": 6
+  },
+  {
+    "q": "巻。\nカン 、 ケン 、 まく 、 まき 、 まき",
+    "a": "scroll; volume; book; part; roll up; wind up; tie; coil; counter for texts (or book scrolls)",
+    "d": 6
+  },
+  {
+    "q": "干。\nカン 、 ほす 、 ほし- 、 -ぼし 、 ひる",
+    "a": "dry; parch",
+    "d": 6
+  },
+  {
+    "q": "看。\nカン 、 みる",
+    "a": "watch over; see",
+    "d": 6
+  },
+  {
+    "q": "灰。\nカイ 、 はい",
+    "a": "ashes; puckery juice; cremate",
+    "d": 6
+  },
+  {
+    "q": "拡。\nカク 、 コウ 、 ひろがる 、 ひろげる 、 ひろめる",
+    "a": "broaden; extend; expand; enlarge",
+    "d": 6
+  },
+  {
+    "q": "閣。\nカク",
+    "a": "tower; tall building; palace",
+    "d": 6
+  },
+  {
+    "q": "革。\nカク 、 かわ",
+    "a": "leather; become serious; skin; hide; pelt",
+    "d": 6
+  },
+  {
+    "q": "割。\nカツ 、 わる 、 わり 、 わり 、 われる 、 さく",
+    "a": "proportion; comparatively; divide; cut; separate; split",
+    "d": 6
+  },
+  {
+    "q": "宇。\nウ",
+    "a": "eaves; roof; house; heaven",
+    "d": 6
+  },
+  {
+    "q": "映。\nエイ 、 うつる 、 うつす 、 はえる 、 -ばえ",
+    "a": "reflect; reflection; projection",
+    "d": 6
+  },
+  {
+    "q": "延。\nエン 、 のびる 、 のべる 、 のべ 、 のばす",
+    "a": "prolong; stretching",
+    "d": 6
+  },
+  {
+    "q": "沿。\nエン 、 そう 、 -ぞい",
+    "a": "run alongside; follow along; run along; lie along",
+    "d": 6
+  },
+  {
+    "q": "我。\nガ 、 われ 、 わ 、 わが- 、 わが-",
+    "a": "ego; I; selfish; our; oneself",
+    "d": 6
+  },
+  {
+    "q": "異。\nイ 、 こと 、 ことなる 、 け",
+    "a": "uncommon; queerness; strangeness; wonderful; curious; unusual",
+    "d": 6
+  },
+  {
+    "q": "遺。\nイ 、 ユイ 、 のこす",
+    "a": "bequeath; leave behind; reserve",
+    "d": 6
+  },
+  {
+    "q": "域。\nイキ",
+    "a": "range; region; limits; stage; level",
+    "d": 6
+  }
+]
