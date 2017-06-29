@@ -1,11 +1,12 @@
 var question = document.getElementById('question')
 var answer = document.getElementById('answer')
+var useWana = document.getElementById('wana')
 var button = document.getElementById('add')
 var output = document.getElementById('json')
 var difficulty = document.getElementById('difficulty')
 
 var sentences = []
-wanakana.bind(question)
+var bound = false
 
 var dump = function () {
   output.innerHTML = JSON.stringify(
@@ -43,6 +44,19 @@ question.addEventListener('input', append)
 answer.addEventListener('input', append)
 difficulty.addEventListener('input', append)
 button.addEventListener('click', add)
+useWana.addEventListener('click', function (e) {
+  if (useWana.checked) {
+    if (!bound) {
+      wanakana.bind(question)
+      bound = true
+    }
+  } else {
+    if (bound) {
+      bound = false
+      wanakana.unbind(question)
+    }
+  }
+})
 
 var isCtrl = false
 document.onkeyup = function (e) {
