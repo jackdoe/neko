@@ -73,7 +73,7 @@ export default class Local extends Component {
     let answer = {}
     let total = 0
     let correct = []
-    for (let s of data.tokenize(sentence.a)) {
+    for (let s of sentence.tokenized_answer) {
       answer[s] = (answer[s] || 0) + 1
       total++
     }

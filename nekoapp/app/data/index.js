@@ -52,7 +52,7 @@ class StoredClassifier {
   }
 
   learn (document, klass) {
-    this.classifier.addDocument(document, klass)
+    this.classifier.addDocument(tokenize(document), klass)
     this.classifier.train()
   }
 
@@ -74,10 +74,11 @@ class StoredClassifier {
 }
 
 var tokenize = function (s) {
-  return s.toLowerCase().split(/[\s"'_.,\-\\?]+/).filter(e => {
+  return s.toLowerCase().split(/[\W]+/).filter(e => {
     return e.length > 0
   })
 }
+
 var timed = function (title, cb) {
   let t0 = +new Date()
 
@@ -88,9 +89,11 @@ var timed = function (title, cb) {
 
 var reclassify = function (sentences, classifier) {
   for (let s of sentences) {
-    s.classification = classifier.classify(s.a)
+    s.a_tokenized = s.tokenized_answer || (s.tokenized_answer = tokenize(s.a))
+    s.classification = classifier.classify(s.tokenized_answer)
     s.score_positive = 0
     s.score_negative = 0
+
     if (s.classification.length > 0) {
       for (let v of s.classification) {
         if (v.label === POSITIVE) {
@@ -125,7 +128,7 @@ var resort = function (lang) {
 
 var sortAndClassify = function (lang) {
   let classifier = CLASSIFIERS[lang]
-  reclassify(SENTENCES[lang], classifier)
+  timed('reclasify', () => reclassify(SENTENCES[lang], classifier))
   resort(lang)
 }
 
