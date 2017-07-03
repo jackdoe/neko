@@ -150,6 +150,7 @@ export default class Local extends Component {
     return (
       <View style={{ flex: 1 }}>
         <ScrollView
+          keyboardShouldPersistTaps="always"
           showsHorizontalScrollIndicator={false}
           showsVerticalScrollIndicator={false}
         >
@@ -182,24 +183,26 @@ export default class Local extends Component {
               style={{
                 flex: 1,
                 flexDirection: 'row',
-                justifyContent: 'space-between',
-                alignItems: 'center'
+                justifyContent: 'space-between'
               }}
             >
-              <View style={{ flex: 1 }}>
-                <TouchableOpacity
-                  activeOpacity={0.5}
-                  onPress={() => {
-                    this.setState({ showAnswer: !this.state.showAnswer })
-                  }}
-                >
-                  <View>
-                    <Text style={ts.h6}>
-                      {this.state.showAnswer ? 'Hide' : 'Show'}
-                    </Text>
-                  </View>
-                </TouchableOpacity>
-              </View>
+              <TouchableOpacity
+                style={{
+                  flex: 1,
+                  justifyContent: 'center',
+                  alignItems: 'flex-start'
+                }}
+                activeOpacity={0.5}
+                onPress={() => {
+                  this.setState({ showAnswer: !this.state.showAnswer })
+                }}
+              >
+                <View>
+                  <Text style={ts.h6}>
+                    {this.state.showAnswer ? 'Hide' : 'Show'}
+                  </Text>
+                </View>
+              </TouchableOpacity>
               <View style={{ flex: 1, alignItems: 'center' }}>
                 <Text style={ts.h8}>
                   score: {this.state.score}
@@ -213,16 +216,19 @@ export default class Local extends Component {
                   </View>
                 </TouchableOpacity>
               </View>
-              <View style={{ flex: 1, alignItems: 'flex-end' }}>
-                <TouchableOpacity
-                  activeOpacity={0.5}
-                  onPress={() => this.pickNewSentence(this.props.language)}
-                >
-                  <View>
-                    <Text style={[ts.h6, { paddingLeft: 10 }]}>Next</Text>
-                  </View>
-                </TouchableOpacity>
-              </View>
+              <TouchableOpacity
+                style={{
+                  flex: 1,
+                  alignItems: 'flex-end',
+                  justifyContent: 'center'
+                }}
+                activeOpacity={0.5}
+                onPress={() => this.pickNewSentence(this.props.language)}
+              >
+                <View>
+                  <Text style={ts.h6}>Next</Text>
+                </View>
+              </TouchableOpacity>
             </View>
             <Text style={[ts.h10, { paddingTop: 20 }]}>
               {this.state.showAnswer
