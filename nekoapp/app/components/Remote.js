@@ -197,6 +197,7 @@ export default class Remote extends Component {
     return (
       <View style={{ flex: 1 }}>
         <ScrollView
+          keyboardShouldPersistTaps="always"
           showsHorizontalScrollIndicator={false}
           showsVerticalScrollIndicator={false}
         >
