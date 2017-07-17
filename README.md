@@ -9,5 +9,6 @@
 
 ## run
 ```
+$ sh neko/sentences/copy.sh # to copy the sentence data in the correct directories
 cd nekoapp && npm install && react-native run-ios
 ```
