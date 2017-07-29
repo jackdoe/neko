@@ -252,7 +252,7 @@ export default class Local extends Component {
                     { textAlign: 'center', color: '#0c0c0c', padding: 5 }
                   ]}
                 >
-                  re-sort (learn)
+                  re-sort ( learn )
                 </Text>
 
               </TouchableOpacity>

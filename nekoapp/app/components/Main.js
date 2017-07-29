@@ -11,6 +11,7 @@ import {
 import Local from './Local'
 import Remote from './Remote'
 import KeyboardAware from './KeyboardAware'
+import CodePush from 'react-native-code-push'
 
 const { ts } = require('./textSizes')
 const data = require('../data')
@@ -82,7 +83,7 @@ class HelpScreen extends React.Component {
             }}
           >
             <View>
-              <Text textDecorationLine="underline" style={{ color: 'navy' }}>
+              <Text textDecorationLine='underline' style={{ color: 'navy' }}>
                 want to contribute? go to https://github.com/jackdoe/neko and make a pull request :)
               </Text>
             </View>
@@ -194,8 +195,9 @@ class HomeScreen extends React.Component {
     )
   }
 }
+let codePushOptions = { checkFrequency: CodePush.CheckFrequency.MANUAL }
 
-export default class Main extends React.Component {
+class Main extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -217,6 +219,17 @@ export default class Main extends React.Component {
   _persist = x => {
     let entry = this.state.screens[this.state._current.screen]
     entry.persist = { ...entry.persist, ...x }
+  }
+
+  componentDidMount () {
+    try {
+      CodePush.sync({
+        updateDialog: true,
+        installMode: CodePush.InstallMode.IMMEDIATE
+      })
+    } catch (error) {
+      CodePush.log(error)
+    }
   }
 
   render () {
@@ -264,3 +277,5 @@ export default class Main extends React.Component {
     )
   }
 }
+Main = CodePush(codePushOptions)(Main)
+export default Main
