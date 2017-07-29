@@ -7,6 +7,8 @@ import {
   ActivityIndicator,
   TouchableOpacity,
   Platform,
+  FlatList,
+  StyleSheet,
   AppState
 } from 'react-native'
 import Speak from './Speak'
@@ -26,13 +28,15 @@ export default class Local extends Component {
   }
 
   componentDidMount () {
-    if (Platform.OS !== 'browser')
+    if (Platform.OS !== 'browser') {
       AppState.addEventListener('change', this._handleAppStateChange)
+    }
   }
 
   componentWillUnmount () {
-    if (Platform.OS !== 'browser')
+    if (Platform.OS !== 'browser') {
       AppState.removeEventListener('change', this._handleAppStateChange)
+    }
     data.save(this.props.language)
   }
   _handleAppStateChange = nextAppState => {
@@ -42,12 +46,20 @@ export default class Local extends Component {
   }
 
   _pickNewSentence (language) {
+    let sentence = data.pick(language)
+    let answer = {}
+    for (let word of sentence.tokenized_answer) {
+      answer[word] = (answer[word] || 0) + 1
+    }
+    let words = [].concat(sentence.tokenized_answer, sentence.random_answer)
+    data.shuffle(words)
     return {
-      sentence: data.pick(language),
+      sentence: sentence,
+      answer: answer,
       score: 0,
-      correct: [],
       showAnswer: false,
-      text: ''
+      selectedWords: {},
+      words: words
     }
   }
 
@@ -59,59 +71,87 @@ export default class Local extends Component {
       data.save(this.props.language)
     }, 0)
   }
-
-  pickNewSentence (language, ev) {
-    if (!ev) {
-      ev = this.evaluate(this.state.sentence, this.state.text)
-    }
-    data.learn(this.props.language, ev.correct, ev.missing)
-    this.setState(this._pickNewSentence(language))
-    this.nSuccessfull += this.state.score
-  }
-
-  evaluate (sentence, text) {
-    let answer = {}
-    let total = 0
+  evaluate () {
+    let sentence = this.state.sentence
+    let missing = []
     let correct = []
-    for (let s of sentence.tokenized_answer) {
-      answer[s] = (answer[s] || 0) + 1
-      total++
-    }
-
-    let score = 0
-    for (let s of data.tokenize(text)) {
-      let freq = answer[s]
-
-      if (freq) {
-        correct.push(s)
-
-        if (--answer[s] === 0) {
-          delete answer[s]
-        }
-        score++
+    for (let word of sentence.tokenized_answer) {
+      if (this.state.selectedWords[word]) {
+        correct.push(word)
+      } else {
+        missing.push(word)
       }
     }
-
-    return {
-      score: (score / total).toFixed(2),
-      correct: correct,
-      missing: Object.keys(answer)
-    }
+    return { correct: correct, missing: missing }
   }
 
-  _handleTextChange = text => {
-    let ev = this.evaluate(this.state.sentence, text)
+  pickNewSentence (language) {
+    let score = this.evaluate()
+    data.learn(this.props.language, score.correct, score.missing)
+    this.setState(this._pickNewSentence(language))
+  }
 
-    if (ev.score > 0.99) {
-      this.pickNewSentence(this.props.language, ev)
-    } else {
-      this.setState({
-        score: ev.score,
-        correct: ev.correct,
-        text: text,
-        missing: ev.missing
-      })
+  renderWord = ({ item, index }) => {
+    let word = item
+    let backgroundColor = '#F1FAEE'
+    let textColor = '#1D3557'
+    if (this.state.selectedWords[word]) {
+      textColor = '#fff'
+      if (this.state.answer[word]) {
+        backgroundColor = '#457B9D'
+      } else {
+        backgroundColor = '#e63946'
+      }
     }
+    return (
+      <View style={{ padding: 2 }}>
+        <TouchableOpacity
+          style={{
+            backgroundColor: backgroundColor
+          }}
+          onPress={() => {
+            let current = Object.assign({}, this.state.selectedWords)
+            current[word] = true
+            this.setState({
+              selectedWords: current
+            })
+          }}
+        >
+          <Text
+            style={{
+              fontSize: 20,
+              padding: 10,
+              textAlign: 'center',
+              color: textColor
+            }}
+          >
+            {word}
+          </Text>
+        </TouchableOpacity>
+      </View>
+    )
+  }
+  renderWords () {
+    let sentence = this.state.sentence
+    let answer = {}
+    let total = 0
+
+    for (let s of sentence.tokenized_answer) {
+      answer[s] = (answer[s] || 0) + 1
+    }
+
+    return (
+      <FlatList
+        keyExtractor={(item, index) => index}
+        contentContainerStyle={{
+          justifyContent: 'center',
+          flexDirection: 'row',
+          flexWrap: 'wrap'
+        }}
+        data={this.state.words}
+        renderItem={this.renderWord}
+      />
+    )
   }
 
   spinner () {
@@ -147,38 +187,26 @@ export default class Local extends Component {
       )
     }
     let sentence = this.state.sentence
+    let score = this.evaluate()
+    let nextColor = '#457B9D'
+    if (score.missing.length === 0) {
+      nextColor = '#E63946'
+    }
     return (
       <View style={{ flex: 1 }}>
         <ScrollView
-          keyboardShouldPersistTaps="always"
           showsHorizontalScrollIndicator={false}
           showsVerticalScrollIndicator={false}
         >
           {this.spinner()}
           <View>
+            <View style={{ height: 40 }} />
             <View style={{ alignItems: 'center' }}>
               <Speak text={sentence.q} language={this.props.language} />
             </View>
             <View style={{ height: 40 }} />
-            <TextInput
-              autoCorrect={false}
-              underlineColorAndroid="transparent"
-              autoCapitalize="none"
-              placeholder="translate as many words as you can.."
-              autoFocus
-              style={{
-                height: 40,
-                borderColor: 'gray',
-                borderWidth: 0.5,
-                paddingLeft: 10,
-                paddingRight: 10
-              }}
-              onChangeText={this._handleTextChange}
-              value={this.state.text}
-            />
-            <View style={{ height: 10 }} />
-            <Text style={ts.h8}>{this.state.correct.join(', ')}</Text>
-            <View style={{ height: 10 }} />
+            {this.renderWords()}
+            <View style={{ height: 40 }} />
             <View
               style={{
                 flex: 1,
@@ -190,47 +218,68 @@ export default class Local extends Component {
                 style={{
                   flex: 1,
                   justifyContent: 'center',
-                  alignItems: 'flex-start'
+                  backgroundColor: '#457B9D',
+                  margin: 5
                 }}
                 activeOpacity={0.5}
                 onPress={() => {
                   this.setState({ showAnswer: !this.state.showAnswer })
                 }}
               >
-                <View>
-                  <Text style={ts.h6}>
-                    {this.state.showAnswer ? 'Hide' : 'Show'}
-                  </Text>
-                </View>
-              </TouchableOpacity>
-              <View style={{ flex: 1, alignItems: 'center' }}>
-                <Text style={ts.h8}>
-                  score: {this.state.score}
-                </Text>
-                <TouchableOpacity
-                  activeOpacity={0.5}
-                  onPress={() => this.resort()}
+                <Text
+                  style={[
+                    ts.h6,
+                    { textAlign: 'center', color: '#fff', padding: 5 }
+                  ]}
                 >
-                  <View>
-                    <Text style={ts.h6}>re-sort (learn)</Text>
-                  </View>
-                </TouchableOpacity>
-              </View>
+                  {this.state.showAnswer ? 'Hide' : 'Show'}
+                </Text>
+              </TouchableOpacity>
               <TouchableOpacity
                 style={{
                   flex: 1,
-                  alignItems: 'flex-end',
+                  justifyContent: 'center',
+                  backgroundColor: '#A8DADC',
+                  margin: 5
+                }}
+                activeOpacity={0.5}
+                onPress={() => this.resort()}
+              >
+
+                <Text
+                  style={[
+                    ts.h6,
+                    { textAlign: 'center', color: '#0c0c0c', padding: 5 }
+                  ]}
+                >
+                  re-sort (learn)
+                </Text>
+
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={{
+                  flex: 1,
+                  backgroundColor: nextColor,
+                  margin: 5,
                   justifyContent: 'center'
                 }}
                 activeOpacity={0.5}
                 onPress={() => this.pickNewSentence(this.props.language)}
               >
-                <View>
-                  <Text style={ts.h6}>Next</Text>
-                </View>
+                <Text
+                  style={[
+                    ts.h6,
+                    { textAlign: 'center', color: '#fff', padding: 5 }
+                  ]}
+                >
+                  Next
+                </Text>
               </TouchableOpacity>
             </View>
-            <Text style={[ts.h10, { paddingTop: 20 }]}>
+            <Text style={[ts.h8, { paddingTop: 20 }]}>
+              {this.state.showAnswer ? sentence.a : ''}
+            </Text>
+            <Text style={[ts.h8, { paddingTop: 20 }]}>
               {this.state.showAnswer
                 ? 'positive: ' +
                     sentence.score_positive.toFixed(2) +
@@ -239,9 +288,6 @@ export default class Local extends Component {
                     ', sort score: ' +
                     sentence.score.toFixed(2)
                 : ''}
-            </Text>
-            <Text style={[ts.h8, { paddingTop: 20 }]}>
-              {this.state.showAnswer ? sentence.a : ''}
             </Text>
           </View>
         </ScrollView>

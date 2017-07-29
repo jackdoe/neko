@@ -30,6 +30,26 @@ function random () {
   return result + 0.5
 }
 
+const shuffle = function (array) {
+  let counter = array.length
+
+  // While there are elements in the array
+  while (counter > 0) {
+    // Pick a random index
+    let index = Math.floor(Math.random() * counter)
+
+    // Decrease counter by 1
+    counter--
+
+    // And swap the last element with it
+    let temp = array[counter]
+    array[counter] = array[index]
+    array[index] = temp
+  }
+
+  return array
+}
+
 class StoredClassifier {
   constructor (params) {
     this.name = params.name
@@ -86,11 +106,26 @@ var timed = function (title, cb) {
 
   console.log(title + ' took', +new Date() - t0)
 }
-
+const getRandom = function (arr) {
+  return arr[Math.floor(Math.random() * arr.length)]
+}
 var reclassify = function (sentences, classifier) {
+  let randomWords = []
+  shuffle(sentences)
+  let i = 0
   for (let s of sentences) {
-    s.a_tokenized = s.tokenized_answer || (s.tokenized_answer = tokenize(s.a))
+    s.tokenized_answer = s.tokenized_answer || tokenize(s.a)
+    if (i++ < 500) {
+      randomWords = randomWords.concat(s.tokenized_answer)
+    }
+  }
+
+  for (let s of sentences) {
     s.classification = classifier.classify(s.tokenized_answer)
+    s.random_answer = []
+    for (let i = 0; i < s.tokenized_answer.length && i < 10; i++) {
+      s.random_answer.push(getRandom(randomWords))
+    }
     s.score_positive = 0
     s.score_negative = 0
 
@@ -103,13 +138,7 @@ var reclassify = function (sentences, classifier) {
         }
       }
     }
-    s.score =
-      Math.abs(
-        s.score_positive < 0.5 ? s.score_positive : 0.5 - s.score_positive
-      ) +
-      (0.01 - 0.01 * s.d) +
-      random() * 0.01 -
-      0.3 * (s.score_negative / 2)
+    s.score = s.score_positive - s.score_negative / 2 + Math.random()
   }
 }
 
@@ -171,6 +200,8 @@ module.exports = {
   pick,
   load,
   learn,
+  shuffle,
+  getRandom,
   save,
   sortAndClassify,
   tokenize,
