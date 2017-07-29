@@ -16,19 +16,7 @@ const POSITIVE = 'p'
 const NEGATIVE = 'n'
 var CLASSIFIERS = {}
 var CURSOR = {}
-
-var m_w = +new Date()
-var m_z = 987654321
-var mask = 0xffffffff
 var SEEN = {}
-
-function random () {
-  m_z = (36969 * (m_z & 65535) + (m_z >> 16)) & mask
-  m_w = (18000 * (m_w & 65535) + (m_w >> 16)) & mask
-  var result = ((m_z << 16) + m_w) & mask
-  result /= 4294967296
-  return result + 0.5
-}
 
 const shuffle = function (array) {
   let counter = array.length
@@ -123,7 +111,7 @@ var reclassify = function (sentences, classifier) {
   for (let s of sentences) {
     s.classification = classifier.classify(s.tokenized_answer)
     s.random_answer = []
-    for (let i = 0; i < s.tokenized_answer.length && i < 10; i++) {
+    for (let i = 0; i < Math.min(s.tokenized_answer.length, 5) && i < 10; i++) {
       s.random_answer.push(getRandom(randomWords))
     }
     s.score_positive = 0
