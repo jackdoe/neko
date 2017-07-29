@@ -1,3 +1,4 @@
 <resources>
+    <string moduleConfig="true" name="reactNativeCodePush_androidDeploymentKey">qQ14-wUTp_FoMd3HNfWpcSzJoG-638e4c169-01ac-44ab-830f-b30365de0c4f</string>
     <string name="app_name">neko</string>
 </resources>
