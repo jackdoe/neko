@@ -44,18 +44,17 @@ class StoredClassifier {
     this.classifier = new BayesClassifier()
   }
   load () {
-    if (Platform.OS !== 'browser') {
-      return AsyncStorage.getItem(this.name).then(data => {
-        if (!data) return
-        let state = JSON.parse(data)
-        try {
-          this.classifier.restore(state.classifier)
-        } catch (e) {
-          this.classifier = new BayesClassifier()
-        }
-        return true
-      })
-    }
+    return AsyncStorage.getItem(this.name).then(data => {
+      if (!data) return
+      let state = JSON.parse(data)
+      try {
+        this.classifier.restore(state.classifier)
+      } catch (e) {
+        this.classifier = new BayesClassifier()
+      }
+      return true
+    })
+
     return Promise.resolve(true)
   }
 
@@ -69,15 +68,13 @@ class StoredClassifier {
   }
 
   save () {
-    if (Platform.OS !== 'browser') {
-      AsyncStorage.setItem(
-        this.name,
-        JSON.stringify({
-          name: this.name,
-          classifier: this.classifier
-        })
-      )
-    }
+    AsyncStorage.setItem(
+      this.name,
+      JSON.stringify({
+        name: this.name,
+        classifier: this.classifier
+      })
+    )
   }
 }
 

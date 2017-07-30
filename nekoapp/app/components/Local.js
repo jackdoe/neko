@@ -28,15 +28,11 @@ export default class Local extends Component {
   }
 
   componentDidMount () {
-    if (Platform.OS !== 'browser') {
-      AppState.addEventListener('change', this._handleAppStateChange)
-    }
+    AppState.addEventListener('change', this._handleAppStateChange)
   }
 
   componentWillUnmount () {
-    if (Platform.OS !== 'browser') {
-      AppState.removeEventListener('change', this._handleAppStateChange)
-    }
+    AppState.removeEventListener('change', this._handleAppStateChange)
     data.save(this.props.language)
   }
   _handleAppStateChange = nextAppState => {
@@ -164,7 +160,7 @@ export default class Local extends Component {
             padding: 10
           }}
         >
-          {Platform.OS !== 'browser' ? <ActivityIndicator /> : <View />}
+          <ActivityIndicator />
           <Text style={ts.h10}>re-sorting the sentences based on new data</Text>
         </View>
       )
@@ -181,7 +177,7 @@ export default class Local extends Component {
             padding: 10
           }}
         >
-          {Platform.OS !== 'browser' ? <ActivityIndicator /> : <View />}
+          <ActivityIndicator />
           <Text style={ts.h10}>loading sentences..</Text>
         </View>
       )

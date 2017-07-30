@@ -246,9 +246,8 @@ class Main extends React.Component {
       />
     )
 
-    if (Platform.OS !== 'browser') {
-      inner = <KeyboardAware>{inner}</KeyboardAware>
-    }
+    inner = <KeyboardAware>{inner}</KeyboardAware>
+
     return (
       <View
         style={{
