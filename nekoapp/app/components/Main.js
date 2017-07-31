@@ -224,7 +224,7 @@ class Main extends React.Component {
   componentDidMount () {
     try {
       CodePush.sync({
-        updateDialog: true,
+        updateDialog: false,
         installMode: CodePush.InstallMode.IMMEDIATE
       })
     } catch (error) {
