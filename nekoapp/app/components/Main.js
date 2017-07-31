@@ -195,7 +195,6 @@ class HomeScreen extends React.Component {
     )
   }
 }
-let codePushOptions = { checkFrequency: CodePush.CheckFrequency.MANUAL }
 
 class Main extends React.Component {
   constructor (props) {
@@ -219,17 +218,6 @@ class Main extends React.Component {
   _persist = x => {
     let entry = this.state.screens[this.state._current.screen]
     entry.persist = { ...entry.persist, ...x }
-  }
-
-  componentDidMount () {
-    try {
-      CodePush.sync({
-        updateDialog: false,
-        installMode: CodePush.InstallMode.IMMEDIATE
-      })
-    } catch (error) {
-      CodePush.log(error)
-    }
   }
 
   render () {
@@ -276,5 +264,5 @@ class Main extends React.Component {
     )
   }
 }
-Main = CodePush(codePushOptions)(Main)
+Main = CodePush(Main)
 export default Main
