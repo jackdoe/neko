@@ -1,4 +1,4 @@
-# neko - translate as many words per sentence as you can (including multi player mode)
+# neko - language learning app using naive bayesian classifier (including multi player mode)
 
 Languages: Japanese, Dutch, German, Finnish, French, Italian, Spanish
 
