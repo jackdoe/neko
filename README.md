@@ -1,4 +1,4 @@
-# neko - language learning app using naive bayesian classifier (including multi player mode)
+# neko - language learning app using advancedturtle.com (including multi player mode)
 
 Languages: Japanese, Dutch, German, Finnish, French, Italian, Spanish
 
@@ -10,7 +10,7 @@ PlayStore: [Android App](https://play.google.com/store/apps/details?id=com.neko&
 
 !["screenshot"](https://raw.githubusercontent.com/jackdoe/neko/master/screenshot.png "screenshot")
 
-* uses naive bayesian classifier to sort sentences with 0.5 probability of success
+* uses adventureturtle.com sort sentences with 0.5 probability of success
 * multi player mode, where players have 1 minute to translate as many words as possible
 
 Once we get more sentences we can tweak the classifier to get better sentences
