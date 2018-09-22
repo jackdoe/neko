@@ -1,4 +1,4 @@
-# neko - language learning app using advancedturtle.com (including multi player mode)
+# neko - language learning app using adventureturtle.com (including multi player mode)
 
 Languages: Japanese, Dutch, German, Finnish, French, Italian, Spanish
 
