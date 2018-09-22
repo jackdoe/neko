@@ -7,6 +7,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "adventureturtle-client": "0.0.7",
     "babel-loader": "^7.0.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",

@@ -12,9 +12,8 @@ import Local from './Local'
 import Remote from './Remote'
 import KeyboardAware from './KeyboardAware'
 import CodePush from 'react-native-code-push'
-
+import { available } from '../data/'
 const { ts } = require('./textSizes')
-const data = require('../data')
 
 class HelpScreen extends React.Component {
   render () {
@@ -112,7 +111,7 @@ class HomeScreen extends React.Component {
 
   render () {
     const { navigate, persist } = this.props.navigation
-    let available = data.available()
+    let av = available()
     let items = []
     let i = 0
     const lcMap = {
@@ -124,7 +123,7 @@ class HomeScreen extends React.Component {
       it: 'Italian',
       fr: 'French'
     }
-    for (let language of available) {
+    for (let language of av) {
       i++
       let title = lcMap[language]
       items.push(
