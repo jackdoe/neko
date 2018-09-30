@@ -1,20 +1,12 @@
 'use strict'
-import {AsyncStorage, Platform} from 'react-native'
-import AdventureTurtle from 'adventureturtle-client';
+import { AsyncStorage, Platform} from 'react-native'
+import { AdventureTurtle } from 'adventureturtle-client';
 var timed = function (title, cb) {
   let t0 = +new Date()
 
   cb()
 
   console.log(title + ' took', + new Date() - t0)
-}
-
-var storeLocally = async function (k, v) {
-  return await AsyncStorage.setItem(k, v)
-}
-
-var loadLocally = async function (k) {
-  return await AsyncStorage.getItem(k);
 }
 
 var tokenize = function (s) {
@@ -54,22 +46,15 @@ const LOADED = {
   fr: require('./sentences/fr.json')
 }
 
-function uuidv4() {
-  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-    var r = Math.random() * 16 | 0,
-      v = c == 'x'
-        ? r
-        : (r & 0x3 | 0x8);
-    return v.toString(16);
-  });
-}
 
 class Sentences {
   constructor(lang) {
     this.sentences = LOADED[lang];
     shuffle(this.sentences);
 
-    this.turtle = new AdventureTurtle({apiKey: '03d59831-423f-403c-b307-9a515330f84e', loadFunction: loadLocally, storeFunction: storeLocally});
+    this.turtle = new AdventureTurtle(); // generate one key per app
+    this.turtle.setLoadFunction(AsyncStorage.getItem)
+    this.turtle.setSaveFunction(AsyncStorage.setItem)
 
     var randomWords = [];
     let i = 0;
@@ -88,37 +73,26 @@ class Sentences {
           .push(getRandom(randomWords))
       }
     }
-    this.onlySort()
     this.cursor = 0;
   }
 
+  initialize = () => {
+    return this.turtle.loadLocally()
+  }
   getUserContext() {
     return {
       features: [
-        "uuid=" + this.uuid,
         "os=" + Platform.OS,
         "version=" + Platform.Version,
-        "hour=" + new Date().getHours()
+        "hour=" + new Date().getHours(),
+        "day=" + new Date().getDay()
       ]
     };
   }
 
-  initialize = () => {
-    return AsyncStorage
-      .getItem('uuid')
-      .then((data) => {
-        if (data) {
-          this.uuid = data
-        } else {
-          u = uuidv4();
-          this.uuid = u;
-          return AsyncStorage.setItem('uuid', u)
-        }
-      })
-  }
-
   onlySort = () => {
     shuffle(this.sentences);
+
     this.sentences = this
       .turtle
       .scoreInplace(this.sentences, this.getUserContext());
@@ -133,6 +107,7 @@ class Sentences {
         return (b.score - 0.5) - (a.score - 0.5)
       });
   }
+
   sort = () => {
     return this
       .turtle

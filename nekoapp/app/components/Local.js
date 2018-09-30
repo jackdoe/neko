@@ -25,19 +25,17 @@ export default class Local extends Component {
   }
 
   componentWillMount() {
-    setTimeout(() => {
-      this
-        .sentences
-        .initialize()
-        .then(this.sentences.sort)
-        .then(() => {
-          let s = this._pickNewSentence()
-          this.setState({
-            initializing: false,
-            ...s
-          })
+    this
+      .sentences
+      .initialize()
+      .then(this.sentences.onlySort)
+      .then(() => {
+        let s = this._pickNewSentence()
+        this.setState({
+          initializing: false,
+          ...s
         })
-    }, 0);
+      })
   }
 
   _pickNewSentence() {
@@ -65,15 +63,13 @@ export default class Local extends Component {
 
   resort() {
     this.setState({spinner: true})
-    setTimeout(() => {
-      this
-        .sentences
-        .sort()
-        .then(() => {
-          this.setState({spinner: false})
-          this.pickNewSentence()
-        })
-    }, 0)
+    this
+      .sentences
+      .sort()
+      .then(() => {
+        this.setState({spinner: false})
+        this.pickNewSentence()
+      })
   }
 
   evaluate() {
@@ -92,11 +88,13 @@ export default class Local extends Component {
 
   pickNewSentence() {
     let score = this.evaluate()
+
     setTimeout(() => {
       this
         .sentences
         .track(score.correct, score.missing)
-    }, 0);
+    },0)
+
 
     this.setState(this._pickNewSentence())
   }
