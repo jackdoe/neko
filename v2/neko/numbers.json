@@ -1,0 +1,94 @@
+[
+	{
+		"romanization": "0",
+		"kanji": "零",
+		"character": "れい",
+		"on-yomi": [ "ゼロ" ]
+	},
+	{
+		"romanization": "1",
+		"kanji": "一",
+		"character": "ひと",
+		"on-yomi": [ "イチ", "イッ" ]
+	},
+	{
+		"romanization": "2",
+		"kanji": "二",
+		"character": "ふた",
+		"on-yomi": [ "ニ" ]
+	},
+	{
+		"romanization": "3",
+		"kanji": "三",
+		"character": "みっ",
+		"on-yomi": [ "サン" ]
+	},
+	{
+		"romanization": "4",
+		"kanji": "四",
+		"character": "よん",
+		"on-yomi": [ "シ" ]
+	},
+	{
+		"romanization": "5",
+		"kanji": "五",
+		"character": "いつ",
+		"on-yomi": [ "ゴ" ]
+	},
+	{
+		"romanization": "6",
+		"kanji": "六",
+		"character": "むっ",
+		"on-yomi": [ "ロク", "ロッ" ]
+	},
+	{
+		"romanization": "7",
+		"kanji": "七",
+		"character": "なな",
+		"on-yomi": [ "シチ" ]
+	},
+	{
+		"romanization": "8",
+		"kanji": "八",
+		"character": "やっ",
+		"on-yomi": [ "ハチ", "ハッ" ]
+	},
+	{
+		"romanization": "9",
+		"kanji": "九",
+		"character": "ここの",
+		"on-yomi": [ "キュウ", "ク" ]
+	},
+	{
+		"romanization": "10",
+		"kanji": "十",
+		"character": "とむ",
+		"on-yomi": [ "ジュウ", "ジュッ" ]
+	},
+	{
+		"romanization": "20",
+		"character": "はた"
+	},
+	{
+		"romanization": "30",
+		"character": "みそ"
+	},
+	{
+		"romanization": "100",
+		"kanji": "百",
+		"character": "もも",
+		"on-yomi": [ "ヒャク", "ピャク", "ビャク" ]
+	},
+	{
+		"romanization": "1000",
+		"kanji": "千",
+		"character": "ち",
+		"on-yomi": [ "セン", "ゼン" ]
+	},
+	{
+		"romanization": "10000",
+		"kanji": "万",
+		"character": "よとず",
+		"on-yomi": [ "マン" ]
+	}
+]
