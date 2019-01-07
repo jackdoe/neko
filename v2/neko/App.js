@@ -283,7 +283,7 @@ class Row extends Component {
 	}
 }
 const numberOfItems = 5;
-const difficultyInterval = 2000;
+const difficultyInterval = 1000;
 const limit = 10;
 
 export default class App extends Component {
@@ -294,7 +294,6 @@ export default class App extends Component {
 			level: 0,
 			success: 0
 		};
-		this.seen = {};
 	}
 
 	getRandomRow = (level) => {
@@ -303,12 +302,13 @@ export default class App extends Component {
 			out.push(hiragana.pick(level));
 		}
 		let key = out.map((e) => e.character).join('_');
-		if (!this.seen[key]) {
-			this.seen[key] = true;
-			return out;
+		for (r of this.state.rows) {
+			let other = r.map((e) => e.character).join('_');
+
+			if (key === other) return this.getRandomRow(level);
 		}
 
-		return this.getRandomRow(level);
+		return out;
 	};
 
 	_storeLevel = (s) => {
