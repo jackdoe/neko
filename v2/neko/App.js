@@ -11,9 +11,15 @@ import {
 } from 'react-native';
 const randomColor = require('randomcolor');
 const Speech = Platform.OS === 'ios' ? require('react-native-speech') : undefined;
+const jStat = require('jStat');
 
 Array.prototype.randomElement = function() {
 	return this[Math.floor(Math.random() * this.length)];
+};
+
+Array.prototype.randomWithBeta = function(a, b) {
+	let r = jStat.beta.sample(a, b);
+	return this[Math.floor(r * this.length)];
 };
 
 const titles = [ 'Dragon', 'Royal Wyvern', 'Wyvern', 'Gryphon', 'Bear', 'Wolf', 'Dog', 'Cat' ].reverse();
@@ -63,7 +69,7 @@ class Elements {
 				possible.push(d);
 			}
 		}
-		return possible.randomElement();
+		return possible.randomWithBeta(3, 1);
 	};
 }
 
@@ -288,6 +294,7 @@ export default class App extends Component {
 			level: 0,
 			success: 0
 		};
+		this.seen = {};
 	}
 
 	getRandomRow = (level) => {
@@ -295,22 +302,25 @@ export default class App extends Component {
 		for (let i = 0; i < numberOfItems; i++) {
 			out.push(hiragana.pick(level));
 		}
-		return out;
+		let key = out.map((e) => e.character).join('_');
+		if (!this.seen[key]) {
+			this.seen[key] = true;
+			return out;
+		}
+
+		return this.getRandomRow(level);
 	};
 
-	_storeLevel = (level) => {
-		AsyncStorage.setItem('@neko:state', '' + level);
+	_storeLevel = (s) => {
+		AsyncStorage.setItem('@neko:state', JSON.stringify(s));
 	};
 
 	_retrieveLevel = () => {
 		return AsyncStorage.getItem('@neko:state')
 			.then((value) => {
-				if (v) {
-					let v = parseInt(value);
-					if (v == NaN) {
-						return 0;
-					}
-					return v;
+				if (value) {
+					let decoded = JSON.parse(value);
+					return decoded.level;
 				}
 				return 0;
 			})
@@ -322,7 +332,6 @@ export default class App extends Component {
 
 	componentWillMount() {
 		this._retrieveLevel().then((level) => {
-			console.log('starting with level', level);
 			this.setState(
 				{
 					level: level,
