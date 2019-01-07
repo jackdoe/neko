@@ -181,7 +181,7 @@ class Hero extends Component {
 	stop = () => this.mummy.stop();
 }
 
-const fontSize = 30;
+const fontSize = 25;
 class Word extends Component {
 	speak(text, lang = 'ja-JP') {
 		if (!Speech || !current) return;
@@ -249,7 +249,7 @@ class Row extends Component {
 			<View
 				style={{
 					flexDirection: 'column',
-					paddingTop: 40
+					paddingTop: 30
 				}}
 			>
 				<View
@@ -284,7 +284,7 @@ class Row extends Component {
 }
 const numberOfItems = 5;
 const difficultyInterval = 2000;
-const limit = 5;
+const limit = 10;
 
 export default class App extends Component {
 	constructor(props) {
