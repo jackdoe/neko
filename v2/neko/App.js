@@ -31,29 +31,39 @@ var getSound = function(url, numberOfLoops) {
 		}
 
 		player.setNumberOfLoops(numberOfLoops);
-		player.setVolume(1);
+		player.setVolume(0.7);
 	});
 	return player;
 };
 
 var coinSound = getSound('coin.wav', 0);
-var funnySounds = [ getSound('cute.mp3', -1), getSound('jazzyfrenchy.mp3', -1) ];
-let current = funnySounds.randomElement();
-
+var funnySounds = [ getSound('happyrock.mp3', -1), getSound('cute.mp3', -1), getSound('jazzyfrenchy.mp3', -1) ];
+let current = funnySounds[0];
+let currentIndex = 1;
 setTimeout(() => {
 	current.play();
 }, 1000);
 
 class Elements {
-	constructor(data, baseLevel) {
-		this.data = data;
+	constructor(data, baseLevel = 0) {
+		this.levels = [];
+		let i = 0;
 		for (let d of data) {
-			d.level = baseLevel + Math.floor(d / 5);
+			d.level = baseLevel + Math.floor(i / 5);
+			i++;
 		}
+
+		this.data = data;
 	}
 
 	pick = (level) => {
-		return this.data.randomElement();
+		let possible = [];
+		for (let d of this.data) {
+			if (d.level <= level) {
+				possible.push(d);
+			}
+		}
+		return possible.randomElement();
 	};
 }
 
@@ -73,8 +83,9 @@ class Hero extends Component {
 	}
 
 	levelUp = () => {
+		let nextSong = funnySounds[currentIndex++ % funnySounds.length];
 		current.stop();
-		current = funnySounds.randomElement();
+		current = nextSong;
 		current.play();
 	};
 
@@ -91,7 +102,7 @@ class Hero extends Component {
 					flexDirection: 'row',
 					justifyContent: 'space-between',
 					alignItems: 'center',
-					padding: 20
+					padding: 10
 				}}
 			>
 				<SpriteSheet
@@ -143,7 +154,8 @@ class Hero extends Component {
 						fontWeight: '500'
 					}}
 				>
-					{titles[Math.min(Math.floor(this.props.level / 10), titles.length)]} level {this.props.level}
+					{titles[Math.min(Math.floor(this.props.level / 10), titles.length)]}, level: {this.props.level},
+					score: {this.state.score}
 				</Text>
 			</View>
 		);
@@ -192,7 +204,7 @@ class Word extends Component {
 
 	render() {
 		return (
-			<TouchableOpacity onPress={this.props.onPress} onLongPress={this._speak}>
+			<TouchableOpacity onPress={this.props.onPress} style={{ flex: 1 }} onLongPress={this._speak}>
 				<Text
 					style={{
 						fontSize: fontSize,
@@ -231,12 +243,14 @@ class Row extends Component {
 			<View
 				style={{
 					flexDirection: 'column',
-					paddingTop: 20
+					paddingTop: 40
 				}}
 			>
 				<View
 					style={{
-						flexDirection: 'row'
+						flexDirection: 'row',
+						justifyContent: 'space-between',
+						alignItems: 'center'
 					}}
 				>
 					{this.props.words.map((e, i) => (
@@ -248,16 +262,12 @@ class Row extends Component {
 							word={e.character}
 						/>
 					))}
-					<Text
-						style={{
-							flex: 1
-						}}
-					/>
 				</View>
 				<Text
 					style={{
-						fontSize: 30,
-						color: 'white'
+						fontSize: fontSize,
+						color: 'white',
+						textAlign: 'center'
 					}}
 				>
 					{this.state.clue.romanization}
@@ -266,38 +276,41 @@ class Row extends Component {
 		);
 	}
 }
-const numberOfItems = 4;
-const difficultyInterval = 3000;
+const numberOfItems = 5;
+const difficultyInterval = 2000;
 const limit = 5;
 
 export default class App extends Component {
 	constructor(props) {
 		super(props);
-		let level = 0;
 		this.state = {
 			rows: [],
-			success: 0,
-			level: 0
+			level: 0,
+			success: 0
 		};
 	}
 
-	getRandomRow = () => {
+	getRandomRow = (level) => {
 		let out = [];
 		for (let i = 0; i < numberOfItems; i++) {
-			out.push(hiragana.pick(this.state.level));
+			out.push(hiragana.pick(level));
 		}
 		return out;
 	};
 
 	_storeLevel = (level) => {
-		AsyncStorage.setItem('@neko:level', '' + level);
+		AsyncStorage.setItem('@neko:state', '' + level);
 	};
 
 	_retrieveLevel = () => {
-		return AsyncStorage.getItem('@neko:level')
+		return AsyncStorage.getItem('@neko:state')
 			.then((value) => {
-				if (value !== null) {
-					return parseInt(value);
+				if (v) {
+					let v = parseInt(value);
+					if (v == NaN) {
+						return 0;
+					}
+					return v;
 				}
 				return 0;
 			})
@@ -309,32 +322,41 @@ export default class App extends Component {
 
 	componentWillMount() {
 		this._retrieveLevel().then((level) => {
-			this.setState({
-				level: level,
-				rows: [ getRandomRow(), getRandomRow(), getRandomRow(), getRandomRow(), getRandomRow() ]
-			});
-			this.retimer();
+			console.log('starting with level', level);
+			this.setState(
+				{
+					level: level,
+					rows: [ this.getRandomRow(level), this.getRandomRow(level), this.getRandomRow(level) ]
+				},
+				() => {
+					this.retimer();
+				}
+			);
 		});
 	}
 	addRow = () => {
 		if (this.state.rows.length > limit) return;
 		let copy = this.state.rows.slice();
-		copy = [ getRandomRow() ].concat(copy);
+		copy = [ this.getRandomRow(this.state.level) ].concat(copy);
 		this.setState({ rows: copy });
 	};
 
 	_onSuccess = (idx) => {
 		let copy = this.state.rows.slice();
-
+		let s = this.state.success + 1;
 		copy.splice(idx, 1);
 		if (this.hero) {
 			this.hero.score(1);
-			this.hero.levelUp();
+			if (s % 10 == 0) {
+				let newLevel = this.state.level + 1;
+				this.setState({ level: newLevel });
+				this._storeLevel({ level: newLevel });
+
+				this.hero.levelUp();
+			}
 		}
-		let newLevel = this.state.level + 1;
-		this.setState({ level: newLevel });
-		this._storeLevel({ level: newLevel });
-		this.setState({ rows: copy });
+
+		this.setState({ rows: copy, success: s });
 	};
 
 	retimer = () => {
@@ -382,7 +404,7 @@ export default class App extends Component {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		margin: 40,
+		margin: 10,
 		justifyContent: 'flex-end',
 		flexDirection: 'column'
 	}
