@@ -347,6 +347,7 @@
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* nekoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = nekoTests.m; sourceTree = "<group>"; };
 		04F24FC221E3F0C3004D4CFD /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "../../../nekoapp/ios/neko/Launch Screen.storyboard"; sourceTree = "<group>"; };
+		04F2500721E4A4CC004D4CFD /* neko.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = neko.entitlements; path = neko/neko.entitlements; sourceTree = "<group>"; };
 		04F6412221E36E9F002D4C37 /* cute.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = cute.mp3; path = ../../assets/cute.mp3; sourceTree = "<group>"; };
 		04F6412421E37162002D4C37 /* coin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = coin.wav; path = ../../assets/coin.wav; sourceTree = "<group>"; };
 		04F6415E21E3E1C5002D4C37 /* jazzyfrenchy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = jazzyfrenchy.mp3; path = ../../assets/jazzyfrenchy.mp3; sourceTree = "<group>"; };
@@ -547,6 +548,7 @@
 		13B07FAE1A68108700A75B9A /* neko */ = {
 			isa = PBXGroup;
 			children = (
+				04F2500721E4A4CC004D4CFD /* neko.entitlements */,
 				04F24FC221E3F0C3004D4CFD /* Launch Screen.storyboard */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -759,10 +761,16 @@
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 23LTAYJ5Y8;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = 23LTAYJ5Y8;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -1254,6 +1262,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 23LTAYJ5Y8;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1286,6 +1295,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 23LTAYJ5Y8;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-sound/RNSound",
