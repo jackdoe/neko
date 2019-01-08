@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PureComponent } from 'react';
 import {
 	AsyncStorage,
 	Platform,
@@ -9,9 +9,17 @@ import {
 	SafeAreaView,
 	StatusBar
 } from 'react-native';
+import SpriteSheet from 'rn-sprite-sheet';
+
 const randomColor = require('randomcolor');
 const Speech = Platform.OS === 'ios' ? require('react-native-speech') : undefined;
 const jStat = require('jStat');
+const fontSize = 25;
+const titles = [ 'Dragon', 'Royal Wyvern', 'Wyvern', 'Gryphon', 'Bear', 'Wolf', 'Dog', 'Cat' ].reverse();
+const Sound = require('react-native-sound');
+const numberOfItems = 5;
+const difficultyInterval = 1000;
+const limit = 5;
 
 Array.prototype.randomElement = function() {
 	return this[Math.floor(Math.random() * this.length)];
@@ -22,14 +30,9 @@ Array.prototype.randomWithBeta = function(a, b) {
 	return this[Math.floor(r * this.length)];
 };
 
-const titles = [ 'Dragon', 'Royal Wyvern', 'Wyvern', 'Gryphon', 'Bear', 'Wolf', 'Dog', 'Cat' ].reverse();
-const Sound = require('react-native-sound');
-
 Sound.setCategory('Playback');
 
-import SpriteSheet from 'rn-sprite-sheet';
-
-var getSound = function(url, numberOfLoops) {
+var getSound = function(url, numberOfLoops, volume = 0.3) {
 	let player = new Sound(url, Sound.MAIN_BUNDLE, (error) => {
 		if (error) {
 			console.log('failed to load the sound', error);
@@ -37,12 +40,12 @@ var getSound = function(url, numberOfLoops) {
 		}
 
 		player.setNumberOfLoops(numberOfLoops);
-		player.setVolume(0.7);
+		player.setVolume(volume);
 	});
 	return player;
 };
 
-var coinSound = getSound('coin.wav', 0);
+var coinSound = getSound('coin.wav', 0, 1.0);
 var funnySounds = [ getSound('happyrock.mp3', -1), getSound('cute.mp3', -1), getSound('jazzyfrenchy.mp3', -1) ];
 let current = funnySounds[0];
 let currentIndex = 1;
@@ -51,16 +54,28 @@ setTimeout(() => {
 }, 1000);
 
 class Elements {
-	constructor(data, baseLevel = 0) {
+	constructor(sets) {
+		this.setup(sets);
+	}
+
+	setup(sets) {
 		this.levels = [];
+		let data = [];
 		let i = 0;
-		for (let d of data) {
-			d.level = baseLevel + Math.floor(i / 5);
-			i++;
+		for (let set of sets) {
+			for (let d of set) {
+				d.level = Math.floor(i / 5);
+				i++;
+				data.push(d);
+			}
 		}
 
 		this.data = data;
 	}
+
+	getMaxLevel = () => {
+		return this.data[this.data.length - 1].level;
+	};
 
 	pick = (level) => {
 		let possible = [];
@@ -77,112 +92,75 @@ var getColor = function(s, luminosity = 'dark', hue = 'blue') {
 	return randomColor({ luminosity: luminosity, hue: hue, seed: s });
 };
 
-var hiragana = new Elements(require('./hiragana.json'));
+var hiragana = new Elements([ require('./hiragana.json'), require('./katakana.json'), require('./numbers.json') ]);
 
-class Hero extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			mode: 'a',
-			score: 0
-		};
-	}
-
-	levelUp = () => {
-		let nextSong = funnySounds[currentIndex++ % funnySounds.length];
-		current.stop();
-		current = nextSong;
-		current.play();
-	};
-
-	score = (amount) => {
-		let s = this.state.score + amount;
-		this.setState({ score: s });
-		coinSound.play();
-	};
-
+class Hero extends PureComponent {
 	render() {
 		return (
-			<View
-				style={{
-					flexDirection: 'row',
-					justifyContent: 'space-between',
-					alignItems: 'center',
-					padding: 10
+			<SpriteSheet
+				ref={(ref) => (this.mummy = ref)}
+				source={require('./hero/tommy_128.png')}
+				columns={10}
+				rows={6}
+				width={64}
+				imageStyle={{
+					marginTop: -1
 				}}
-			>
-				<SpriteSheet
-					ref={(ref) => (this.mummy = ref)}
-					source={require('./hero/tommy_128.png')}
-					columns={10}
-					rows={6}
-					width={64}
-					imageStyle={{
-						marginTop: -1
-					}}
-					animations={{
-						a: [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ],
-						b: Array.from(
-							{
-								length: 10
-							},
-							(v, i) => i + 10
-						),
-						c: Array.from(
-							{
-								length: 10
-							},
-							(v, i) => i + 20
-						),
-						d: Array.from(
-							{
-								length: 10
-							},
-							(v, i) => i + 30
-						),
-						e: Array.from(
-							{
-								length: 10
-							},
-							(v, i) => i + 40
-						),
-						f: Array.from(
-							{
-								length: 7
-							},
-							(v, i) => i + 40
-						)
-					}}
-				/>
-				<Text
-					style={{
-						color: 'white',
-						fontWeight: '500'
-					}}
-				>
-					{titles[Math.min(Math.floor(this.props.level / 10), titles.length)]}, level: {this.props.level},
-					score: {this.state.score}
-				</Text>
-			</View>
+				animations={{
+					a: [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ],
+					b: Array.from(
+						{
+							length: 10
+						},
+						(v, i) => i + 10
+					),
+					c: Array.from(
+						{
+							length: 10
+						},
+						(v, i) => i + 20
+					),
+					d: Array.from(
+						{
+							length: 10
+						},
+						(v, i) => i + 30
+					),
+					e: Array.from(
+						{
+							length: 10
+						},
+						(v, i) => i + 40
+					),
+					f: Array.from(
+						{
+							length: 7
+						},
+						(v, i) => i + 40
+					)
+				}}
+			/>
 		);
 	}
 
-	componentDidMount() {
+	componentDidMount = () => {
 		this.play({ type: 'b', fps: 4, loop: true });
-
-		this.timer = setInterval(() => {
+		this.heroTimer = setInterval(() => {
 			let type = [ 'a', 'b', 'c', 'd', 'e', 'f' ].randomElement();
 			this.stop();
 			this.play({ type: type, fps: 3, loop: true });
-			this.setState({ mode: type });
 		}, 5000);
-	}
+	};
+
+	componentWillUnmount = () => {
+		clearInterval(this.heroTimer);
+	};
+
 	play = (config) => this.mummy.play(config);
 	stop = () => this.mummy.stop();
 }
 
-const fontSize = 25;
-class Word extends Component {
+class Word extends PureComponent {
 	speak(text, lang = 'ja-JP') {
 		if (!Speech || !current) return;
 
@@ -226,7 +204,7 @@ class Word extends Component {
 	}
 }
 
-class Row extends Component {
+class Row extends PureComponent {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -249,7 +227,7 @@ class Row extends Component {
 			<View
 				style={{
 					flexDirection: 'column',
-					paddingTop: 30
+					paddingTop: 40
 				}}
 			>
 				<View
@@ -282,9 +260,6 @@ class Row extends Component {
 		);
 	}
 }
-const numberOfItems = 5;
-const difficultyInterval = 1000;
-const limit = 10;
 
 export default class App extends Component {
 	constructor(props) {
@@ -296,14 +271,18 @@ export default class App extends Component {
 		};
 	}
 
+	keyForRow(row) {
+		return row.map((e) => e.character).join('_');
+	}
+
 	getRandomRow = (level) => {
 		let out = [];
 		for (let i = 0; i < numberOfItems; i++) {
 			out.push(hiragana.pick(level));
 		}
-		let key = out.map((e) => e.character).join('_');
+		let key = this.keyForRow(out);
 		for (r of this.state.rows) {
-			let other = r.map((e) => e.character).join('_');
+			let other = this.keyForRow(r);
 
 			if (key === other) return this.getRandomRow(level);
 		}
@@ -330,23 +309,28 @@ export default class App extends Component {
 			});
 	};
 
-	componentWillMount() {
+	componentDidMount() {
 		this._retrieveLevel().then((level) => {
-			this.setState(
-				{
-					level: level,
-					rows: [ this.getRandomRow(level), this.getRandomRow(level), this.getRandomRow(level) ]
-				},
-				() => {
-					this.retimer();
-				}
-			);
+			this.forceLevel(level);
 		});
+
+		this.timer = setInterval(() => {
+			this.addRow();
+		}, difficultyInterval);
 	}
+
+	componentWillUnmount() {
+		clearInterval(this.timer);
+	}
+
 	addRow = () => {
-		if (this.state.rows.length > limit) return;
-		let copy = this.state.rows.slice();
-		copy = [ this.getRandomRow(this.state.level) ].concat(copy);
+		if (!this.state || this.state.rows.length > limit) return;
+
+		let copy = [ this.getRandomRow(this.state.level) ];
+		for (let r of this.state.rows) {
+			copy.push(r);
+		}
+
 		this.setState({ rows: copy });
 	};
 
@@ -354,34 +338,32 @@ export default class App extends Component {
 		let copy = this.state.rows.slice();
 		let s = this.state.success + 1;
 		copy.splice(idx, 1);
-		if (this.hero) {
-			this.hero.score(1);
-			if (s % 10 == 0) {
-				let newLevel = this.state.level + 1;
-				this.setState({ level: newLevel });
-				this._storeLevel({ level: newLevel });
 
-				this.hero.levelUp();
-			}
+		coinSound.play();
+
+		if (s % 10 == 0) {
+			let newLevel = this.state.level + 1;
+			this.setState({ level: newLevel });
+			this._storeLevel({ level: newLevel });
+			let nextSong = funnySounds[currentIndex++ % funnySounds.length];
+
+			current.stop();
+			current = nextSong;
+			current.play();
 		}
 
 		this.setState({ rows: copy, success: s });
 	};
 
-	retimer = () => {
-		clearInterval(this.timer);
-		this.timer = setInterval(() => {
-			this.addRow();
-		}, this.getDuration());
-	};
+	forceLevel = (level) => {
+		if (level < 0) level = 0;
 
-	getDuration = () => {
-		return difficultyInterval;
+		this._storeLevel({ level: level });
+		this.setState({
+			level: level,
+			rows: [ this.getRandomRow(level), this.getRandomRow(level), this.getRandomRow(level) ]
+		});
 	};
-
-	componentWillUnmount() {
-		clearInterval(this.timer);
-	}
 
 	render() {
 		return (
@@ -392,18 +374,42 @@ export default class App extends Component {
 				}}
 			>
 				<SafeAreaView style={styles.container}>
-					<StatusBar hidden={true} />
 					{this.state.rows.map((e, i) => (
 						<Row
 							onSuccess={() => {
 								this._onSuccess(i);
 							}}
-							key={'_' + e.map((x) => x.character).join('_')}
+							key={this.keyForRow(e)}
 							words={e}
 						/>
 					))}
-
-					<Hero level={this.state.level} ref={(ref) => (this.hero = ref)} />
+					<View
+						style={{
+							flexDirection: 'row',
+							justifyContent: 'space-between',
+							alignItems: 'center',
+							padding: 10
+						}}
+					>
+						<Hero />
+						<TouchableOpacity
+							onPress={() => {
+								this.forceLevel(this.state.level + 1);
+							}}
+							onLongPress={() => {
+								this.forceLevel(this.state.level - 1);
+							}}
+						>
+							<Text
+								style={{
+									color: 'white'
+								}}
+							>
+								{titles[Math.min(Math.floor(this.state.level / 10), titles.length - 1)]}, level:{' '}
+								{this.state.level}, score: {this.state.success}
+							</Text>
+						</TouchableOpacity>
+					</View>
 				</SafeAreaView>
 			</View>
 		);

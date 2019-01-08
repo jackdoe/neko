@@ -1329,8 +1329,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nl.prymr.neko;
+				PRODUCT_BUNDLE_IDENTIFIER = neko.science;
 				PRODUCT_NAME = neko;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1354,8 +1355,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nl.prymr.neko;
+				PRODUCT_BUNDLE_IDENTIFIER = neko.science;
 				PRODUCT_NAME = neko;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
